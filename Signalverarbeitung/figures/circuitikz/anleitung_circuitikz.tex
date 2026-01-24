@@ -1,0 +1,619 @@
+% Dieses Dokument ist eine Anleitung zur Benutzung von Circuitikz.
+% Dabei werden einzelne Aspekte von Tikz und der Circuitikz Bibliothek
+% Erklärt. Die gesamte Komposition eines Bildes wird hier nicht im Detail
+% erläutert, dafür sind die jeweils einzelnen erstellten Bilder besser geeignet.
+
+% Dieses Dokument kann direkt mit pdflatex kompiliert werden und
+% ergibt ein PDF-Bild das mit Tikz gezeichnet wurde
+% um einen Compile-Prozess zu starten, ist es sinnvoll, in der Kommandozeile
+% 	latexmk -pdf anleitung_circuitikz.tex
+% auszuführen um die Datei anleitung_circuitikz.pdf zu erhalten
+% Die beim Kompilieren entstehenden Hilfsdateien können mit
+% 	latexmk -C
+% wieder entfernt werden.
+
+% Als documentclass wird für gewöhnlich ein standalone Projekt verwendet.
+% Dadurch ist keine "Blattgröße" vorgegeben und das Dokument wird nur so groß
+% wie das darin gezeichnete Bild.
+%
+%\documentclass[border=2mm]{standalone}
+%
+% Leider lässt sich in einem standalone Projekt nur eine einzige Seite und somit
+% auch nur ein einziges Bild erstellen.
+% Für diese Anleitung, die mehrere Bilder beinhaltet, ist das etwas
+% hinderlich. Deswegen wird % hier auf die article documentclass zurückegriffen.
+\documentclass[a4paper,11pt]{article}
+
+% Die Circuitikz Bibliothek bindet automatisch auch die Tikz Bibliothek ein.
+\usepackage{circuitikz}
+
+% Circuitikz unterstützt verschiedene Stile von Logikgattern.
+% Hier wird der IEC Stil verwendet, der in Europa üblich ist.
+% Alternativ könnte der amerikanische US Stil mit
+% \usetikzlibrary{circuits.logic.US}
+% verwendet werden.
+\usetikzlibrary{circuits.logic.IEC}
+
+% Um mathematische Ausdrücke im Bild verwenden zu können wird amsmath benötigt.
+\usepackage{amssymb}
+
+% Für die Darstellung von Einheiten wird siunitx verwendet.
+\usepackage{siunitx}
+% Hier wird die deutsche Lokalisierung verwendet, damit das Komma
+% als Dezimaltrennzeichen verwendet wird.
+\sisetup{locale = DE}
+
+% Beginn des Dokumentes, in dem sich das Bild befindet.
+\begin{document}
+% Ab hier werden vereinzelt Tikz Bilder mit Circuitikz gezeichnet und auf den Seiten verteilt
+% Die Bilder sind alle ausführlich dokumentiert, damit der Erstellungsprozess nachvollziehbar ist.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Kapitel 1: Grundlagen %
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Jedes Tikz Bild beginnt mit einer 'tikzpicture' Umgebung.
+% Eine Circuitikz Umgebung ist eine spezielle Tikz Umgebung, in der
+% die Circuitikz Bibliothek automatisch eingebunden wird.
+% Hierbei wird mit dem [european] flag vorgegeben, dass der europäische Stil verwendet wird.
+\begin{circuitikz}[european]
+	% Eine Tikz Umgebung besteht aus einer Reihe von '\draw' und '\node' Anweisungen.
+	% wobei auch nodes in einer Draw Anweisung erstellt werden können. Tikz ermöglicht es,
+	% das Ziel auf sehr viele verschiedene Weisen zu erreichen.
+	% Deswegen beschreibt dieses Dokument nur einen möglichen Weg,
+	% versucht dabei aber, seinen eigenen Stil konsequent durchzuhalten.
+
+	% Tikz unterscheidet zwischen folgenden Elementen:
+	% 1. Koordinaten: Jedes Tikz-Bild existiert in einem fiktiven Koordinatensystem.
+	%    Koordinaten werden in runden Klammern angegeben, z.B. (0,0) für den Ursprung.
+	%    Koordinaten können einen willkürlichen Bereich aufspannen, der sowohl positive als auch
+	% 	 negative Werte enthalten kann. Dabei muss der Ursprung auch nicht die Mitte des Bildes sein
+	%    sondern kann sich an einer willkürlich gewählten Stelle befinden.
+	%	   Alle Koordinaten in Tikz sind in gewisser Weise willkürlich, da es kein fest
+	%		 vorgeschriebenes Konzept dafür gibt, wie die Koordinaten gewählt werden sollen.
+	%    Es ist aber sinnvoll, sich an einem Raster zu orientieren, um die Übersicht zu behalten.
+	% 2. Nodes: Nodes sind Objekte, die an einer bestimmten Koordinate positioniert werden.
+	%		 Es gibt verschiedene Arten von Nodes, z.B. Textnodes, die einfach nur Text an einer
+	%		 bestimmten Koordinate darstellen. Es gibt aber auch Nodes, die komplexere Objekte
+	%		 darstellen, z.B. Logikgatter, Widerstände, Kondensatoren, usw. Diese Knoten werden z.T.
+	%    durch die Circuitikz Bibliothek bereitgestellt.
+	%		 Ein Knoten kann auch einen Namen bekommen, über den er später referenziert werden kann.
+	%		 Dieser Name ist wie eine Variable, die die Koordinaten des Knotens speichert.
+	% 	 Für gewöhnlich hat ein Knoten fest definierte Ankerpunkte, die ebenfalls
+	%    referenziert werden können.
+	% 3. Pfade: Pfade sind Linien, die zwei oder mehr Koordinaten oder Knoten miteinander verbinden.
+	% 	 Dabei können Pfade auch verschiedene Stile und Formen haben. Manche Objekte in der Circuitikz
+	%    Bibliothek werden auch durch Pfade realisiert, z.B. Widerstände, Kondensatoren, Dioden.
+
+	% Zu Beginn schauen wir uns mal ein einfaches Beispiel an: Wir zeichnen eine Linie zwischen zwei Koordinaten.
+	\draw
+		(0,0) -- (4,0)
+	;
+	% Die \draw Anweisung beginnt mit dem \draw Befehl und endet mit einem Semikolon. Dazwischen stehen
+	% die Anweisungen, die ausgeführt werden sollen. In diesem Fall wird eine Linie zwischen
+	% den Koordinaten (0,0) und (4,0) gezeichnet. Die Linie wird durch zwei Bindestriche '--' erzeugt.
+	% Ein Koordinaten-Paar besteht aus einer X- und einer Y-Koordinate, die durch ein Komma getrennt sind.
+	% Dabei verläuft die X-Achse horizontal und mit zunehmendem Wert nach rechts.
+	% Die Y-Achse verläuft vertikal und mit zunehmendem Wert nach oben.
+	% Die hier gezeichnete Linie verläuft also parallel zur X-Achse.
+
+\end{circuitikz} \\
+Bild 1: Eine einfache Linie zwischen zwei Koordinaten.
+
+%%%%%%%%%%%%%%%%%%%%%
+% Kapitel 2: Linien %
+%%%%%%%%%%%%%%%%%%%%%
+
+% Das nächste Bild soll die Koordinaten eines Tikz Bildes verdeutlichen.
+\begin{circuitikz}[european]
+	% Wie bereits gesagt können die Koordinaten eines Tikz Bildes willkürlich gewählt werden.
+	% Das Bild würde identisch aussehen, wenn stattdessen folgende Anweisungen verwendet würden:
+	\draw
+		(-2,1) -- (2,1)
+	;
+	% Die Linie bleibt gleich lang und das Bild erscheint identisch.
+	% Im PDF-Dokument sollten also zwei Linien zu sehen sein, die exakt übereinander liegen.
+
+	% An dieser Stelle ist noch ein Hinweis über die Linie sinnvoll, die mit '--' erzeugt wird.
+	% Dabei handelt es sich um einen sogenannten Pfad.
+	% Mit Pfaden werden zwei Koordinaten verbunden.
+\end{circuitikz} \\
+Bild 2: Dieselbe Linie an der selben Position, obwohl die Koordinaten anders gewählt wurden.
+
+\begin{circuitikz}[european]
+	% Wir können die Art der Verbindungslinie anpassen. Für gewöhnlich wird eine gerade Linie die
+	% beeiden Koordinaten direkt verbinden. Das kann zur Folge haben, dass die Linie auch diagonal verläuft.
+	\draw
+		(0,0) -- (4,2)
+	;
+	% In diesem Fall verläuft die Linie diagonal von (0,0) nach (4,2).
+	% In manchen Fällen ist das aber nicht gewünscht. Stattdessen kann mit '-|' und '|-'
+	% angegeben werden, dass die Linie zuerst horizontal und dann vertikal verlaufen soll bzw. umgekehrt.
+	% Das Ergebnis sieht dann so aus:
+	\draw
+		(5,0) |- (9,2) % Zuerst vertikal dann horizontal
+	;
+	\draw
+		(10,2) |- (12,0) % Zuerst horizontal dann vertikal
+	;
+	% Man sieht hier übrigens auch, dass sehr viele draw Befehle in einem circuitikz Bild stehen können.
+\end{circuitikz} \\
+Bild 3: Diagonale, Horizontal-Vertikale Linien und Vertikal-Horizontale Linien.
+
+\begin{circuitikz}[european]
+	% Koordinaten können auch relativ zueinander angegeben werden. Dazu wird die Koordinate
+	% in runde Klammern gesetzt und mit einem '++' vorangestellt.
+	% Das bedeutet, dass die Koordinate in Klammern zur vorherigen Koordinate addiert wird um
+	% die Ziel-Koordinate zu erhalten.
+	% Dieses Beispiel hier zeigt ein paar Linien, die mit relativen Koordinaten zueinander gezeichnet wurden.
+	\draw
+		(0,0) -- ++ (4,2) -- ++ (2,-1) -- ++ (-1,-3) -- (0,0)
+	;
+	% Die Linie beginnt bei (0,0) und verläuft dann 4 Einheiten nach rechts und 2 Einheiten nach oben.
+	% Von dort aus verläuft sie 2 Einheiten nach rechts und 1 Einheit nach unten.
+	% Dann verläuft sie 1 Einheit nach links und 3 Einheiten nach unten.
+	% Zum Schluss verläuft sie wieder zurück zum Ursprung (0,0). Hier wurde keine relative Koordinate verwendet.
+	% In Tikz kann also jederzeit zwischen absoluten und relativen Koordinaten gewechselt werden.
+	% Das Ergebnis ist eine geschlossene Linie, die wieder am Ausgangspunkt endet.
+	%
+	% Ein weiterer Interessanter Aspekt ist, dass die Linien in einer einzigen draw Anweisung stehen. 
+	% Tikz überlässt dem Benutzer die Wahl, ob er viele einzelne draw Anweisungen verwenden möchte
+	% oder alles in eine einzige draw Anweisung packt.
+	% Die Relativen Kordinaten können ebenfalls mit '-|' und '|-' kombiniert werden.
+	\draw
+		(6,0) -- ++ (2,2) |- ++ (2,-1) -| ++ (2,1) -- ++ (-6,-4)
+	;
+\end{circuitikz} \\
+Bild 4: Linien, die mit relativen Koordinaten gezeichnet wurden.
+
+% Damit die Arbeit mit Koordinaten nicht zu verwirrend wird,
+% gibt es eine einfache Möglichkeit, sich während der Arbeit am Bild
+% ein Koordinatensystem zeichnen zu lassen.
+\begin{circuitikz}[european]
+	% Dazu kann der \draw Befehl mit Parametern aufgefordert werden,
+	% das Koordinatensystem im Stil von 'help lines'
+	% zu zeichnen:
+	\draw[help lines] (0,0) grid (3,2);
+	% Dieser Befehl zeichnet ein Grid um das Koordinatensystem darzustellen
+	% Nachdem das Bild fertig gezeichnet wurde, kann man diese Zeile wieder auskommentieren
+	\draw (0.5,0) -- ++ (2,1.5);
+	% Koordinaten müssen keine ganzen Zahlen sein. Dabei wird der Punkt '.'
+	% als Dezimaltrennzeichen verwendet.
+\end{circuitikz} \\
+Bild 5: Ein Koordinatensystem, das die Arbeit erleichtert
+
+
+%%%%%%%%%%%%%%%%%%%%%
+% Kapitel 3: Knoten %
+%%%%%%%%%%%%%%%%%%%%%
+
+% Bisher haben wir uns Koordinaten und Pfade angeschaut.
+% Pfade verbinden **zwei** Koordinaten.
+% Knoten sind da anders: Sie befinden sich an **einer** Koordinate.
+
+% Als Knoten lässt sich jedes Objekt bezeichnen, das "komplizierter als eine Linie" ist.
+% Schauen wir uns dazu mal einfache Knoten an:
+\begin{circuitikz}[european]
+	% Knoten können einerseits über den \node Befehl erstelle werden.
+	% Dabei gibt der 'at' Operator die Position des Knoten an:
+	\node at (0,0) {A simple text node};
+	% Wir können dem node-Befehl ein paar parameter übergeben.
+	% Beispielsweise können wir für den Knoten einen Rand zeichnen lassen
+	\node[draw] at (0,-1) {A text node with a border};
+	% Die angegebene Koordinate bezieht sich dabei jeweils auf den Mittelpunkt des Knoten.
+	% Wir können die Knoten aber auch an einem anderen Ankerpunkt als dem Mittelpunkt ausrichten
+	% uns damit dafür sorgen, dass der Text sich z.B. links oder rechts von einer vorgegebenen Koordinate
+	% befindet
+	\node[left, draw] at (4.5,-2) {A left node};
+	\node[right, draw] at (5.5,-2) {A right node};
+	% Drunter und drüber sind auch zwei Möglichkeiten
+	\node[above] at (5,-3) {A node above the specified coordinate};
+	\node[below, draw] at (5,-3) {A node below the specified coordinate};
+	% zur besseren Darstellung wurde über den 'draw' Parameter der Rand des Knoten gezeichnet,
+	% damit die Text-Knoten im gerenderten Bild besser auseinander gehalten werden können.
+\end{circuitikz} \\
+Bild 6: Einfache Text-Knoten
+
+% Auf Dauer kann es etwas anstrengend werden, wenn jeder Knoten in einem eigenen
+% \node Befehl platziert werden kann. Wie bereits erwähnt gibt es mit Tikz mehrere Wege
+% zum Ziel. Knoten können auch genau so gut in einem \draw Befehl platziert werden:
+\begin{circuitikz}[european]
+	\draw
+		(0,0) node[draw] {Noch ein Text-Knoten}
+	;
+	% Fürs erste wirkt da vielleicht etwas komisch, da es plötzlich zwei
+	% verschiedene Möglichkeiten gibt, Knoten zu erstellen, aber
+	% der \draw Befehl wird sich als die weitaus flexiblere Möglichkeit
+	% erweisen, Knoten zu platzieren.
+	% Das liegt daran, dass im \draw Befehl relative Koordinaten und
+	% Pfade verwendet werden können und so ein Knoten abhängig von der Position eines
+	% anderen Knoten platziert werden kann.
+	% Mit dem \node Befehl wäre das etwas aufwendiger:
+	\draw
+		(1,-1) node[draw, right] {Rechter Text-Knoten}
+		% jetzt können wir einen relativen Sprung von der vorherigen Koordinaten aus vornehmen
+		++ (0,-0.5) node[below] {Und noch ein Knoten darunter}
+		% Dabei ist folgendes zu beachten:
+		% Die angegebene Koordinate (1,-1) wurde auf den linken Ankerpunkt des ersten
+		% knoten gelegt. Der Text befindet sich rechts von der Koordinate
+		% Danach wurde ein Sprung um 0.5 Einheiten nach unten vorgenommen um einen weiteren
+		% knoten an dieser Stelle zu platzieren. Für diesen Knoten wurde aber der oberste Punkt
+		% als Anker angegebene (below), was dazu führt, dass der Text auf der horizontal-Achse
+		% um diese Koordinate herum seinen Mittelpunkt hat. Deswegen sind die Texte nicht nur vertikal,
+		% sondern auch horizontal verschoben.
+	;
+\end{circuitikz} \\
+Bild 7: Noch mehr Knoten
+
+% In dieser Anleitung wird für die meisten Bilder der \draw Befehl verwendet um Knoten
+% zu zeichnen. Dies liegt darin, dass der \draw Befehl mehr Flexibilität in der Platzierung
+% der Knoten ermöglicht. Weiterhin ist es damit auch möglich, das gesamte Bild in einem
+% einzigen (vielleicht etwas langem) \draw Befehl auszudrücken.
+
+%%%%%%%%%%%%%%%%%%%%
+% Kapitel 4: Anker %
+%%%%%%%%%%%%%%%%%%%%
+
+% Vorhin haben wir bereits bei den Text-Knoten Ankerpunkte verwendet, um den Text über, unter,
+% links und rechts von einer Koordinate zu platzieren.
+% Diese 4 Schlüsselwärter sind für Text-Knoten in Tikz gängig, aber es gibt für alle Knoten
+% noch allgemeinere Ankerpunkte, die etwas mehr Flexibilität bereitstellen.
+%
+% Die Ankerpunkte eines Knoten sind wie auf einem Kompass verteilt:
+%
+%		north west			north				north east
+%				*-------------*-------------*
+%				|														|
+%				|														|
+%				|														|
+%				|														|
+%  west *							* center			* east
+%				|														|
+%				|														|
+%				|														|
+%				|														|
+%				*-------------*-------------*
+%		south west			south				south east
+%
+% Diese Ankerpunkte sind im eigentlichen Sinne Koordinaten, die referenziert werden können.
+% Das ganze soll an ein paar Beispielen erklärt werden:
+\begin{circuitikz}[european]
+	% Ab hier werden die Bilder alle in einem einzigen Draw Befehl gezeichnet,
+	% der zum Schluss mit einem einzigen Semikolon abschließt.
+	\draw
+		(0,0) -- (1,0)  % Zu erst eine Linie
+		node[anchor=west] {Linie}  % und ein Text-Knoten rechts davon
+
+		% Dabei ist die zweite Zeile identisch zu der Anweisung
+		% node[right] {Linie}
+		(0,-1) -- (1,-1)  % Zu erst eine Linie
+		node[right] {Linie}
+
+		% Bis jetzt war alles noch schön und gut. Jetzt beginnt der eigentliche Spaß mit Knoten:
+		% Wie bereits erwähnt, sind die Ankerpunkte Koordinaten. Diese Koordinaten können auch
+		% referenziert werden um z.B. weitere Knoten an ihnen zu platzieren oder Linien zu diesen
+		% Ankerpunkten zu ziehen.
+		% Damit wir das machen können, müssen wir mit der vollständigen Syntax eines Knoten
+		% vertraut werden:
+		%
+		%		node[parameter] (Referenz) {Text}
+		% 
+		% - Die Parameter bestimmen die Knoten-Art und geben damit vor, wie der Knoten gezeichnet
+		%   werden soll. Dazu hatten wir bereits die Beispiele left, right, ... und die Option
+		%	  anchor=... verwendet.
+		% - Über die Referenz wurde bisher noch nichts erwähnt. Die Referenz ist eine Möglichkeit,
+		%		den Knoten in einer **Variablen** zu speichern und später über diese Variable
+		%		wieder zu referenzieren. Dazu folgen gleich ein paar Beispiele
+		% - Der Inhalt war bei Text-Knoten bisher immer der darzustellende Text
+		%
+		% Schauen wir uns mal ein par Beispiele dazu an, wie mit Referenzen gearbeitet wird:
+		% (Hinweis: Wir befinden uns immer noch in der \draw Anweisung)
+		(0,-2) node[right] (R1) {Knoten R1}
+		% Hiermit haben wir einen Knoten angelegt, den wir über die Variable (R1) ansprechen können
+		% jetzt wollen wir rechts davon eine Linie zeichnen
+		(R1.east) -- ++ (1,0)
+		% und dann einen weiteren Knoten platzieren
+		node[anchor=north west] (NW1) {Knoten NW1}
+		% Wenn wir wollen, können wir jetzt eine Linie quer durch den Knoten NW1 ziehen
+		(NW1.south west) -- (NW1.north east)
+		% Man sieht also: Die Ankerpunkte von Knoten sind wie Variablen und folgen auch derselben
+		% Syntax: Sie werden in runden Klammern (...) referenziert.
+		% Zum Schluss können wir auch den Rahmen um einen Knoten selber zeichnen:
+		(-1,-3) node[anchor=center] (C) {Rahmen, aber ohne den 'draw' Parameter}
+		(C.north west) -| (C.south east) -| (C.north west)
+		% Hierbei handelt es sich wieder um einen geschlossenen Streckenzug wie er bei den
+		% ersten Beispielen mit Linien gezeichnet wurde.
+	;
+\end{circuitikz} \\
+Bild 8: Die Verwendung von Ankern
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Kapitel 5: Circuitikz Knoten %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Ab jetzt schauen wir uns einmal an, welche Knoten die Circuitikz Bibliothek mitliefert.
+%
+% Circuitikz stellt eine große Anzahl an Knoten-Objekten bereit um Logikgatter, Transistoren und
+% andere elektronische Bauteile zu zeichnen.
+% Dabei sind alle Bauteile ausführlich in der Circuitikz Dokumentation beschrieben:
+%		https://ctan.dcc.uchile.cl/graphics/pgf/contrib/circuitikz/doc/circuitikzmanual.pdf
+% Hierbei ist es sinnvoll, sich nicht die Minimalbeispiele in der Dokumentation anzuschauen,
+% sondern im Kapitel "The Components: List" nach den Bauteilen zu suchen die platziert werden sollen.
+% Dort werden auch alle Ankerpunkte für die Komponenten definiert.
+% Die Ankerpunkte sind besonders wichtig, da sie die Stellen sind, an denen die Bauteile
+% miteinander verbunden werden.
+%
+% Schauen wir uns dazu erst einmal ein paar Beispiele an:
+\begin{circuitikz}[european]
+	\draw
+		% zuerst platzieren wir einen NPN Bipolar-Transistor:
+		(0,0) node[npn, anchor=B] (T1) {T1}
+		% dieser Bekommt die Bauteilbeschriftung T1, die in den geschweiften Klammern
+		% {...} angegeben wird.
+		% Der Ankerpunkt 'B' (Basis) wird auf die Koordinate (0,0) gelegt.
+		% Die anderen Ankerpunkte sind der Collektor (C) und der Emitter (E).
+		% Über die Variable kann der Transistor (T1) später referenziert werden.
+		%
+		% jetzt zeichnen wir eine Linie vom Collektor (C) des Transistors zur Basis eines
+		% weiteren Transistors:
+		(T1.C) -- ++ (2,0) node[npn, anchor=B] (T2) {T2}
+		%
+		% Wenn in elektrischen Schaltplänen Linien, die sich kreuzen, miteinander verbunden sind,
+		% wird dies häufig durch einen Punkt dargestellt. Dieser kann durch einen 'circ' node erstellt werden:
+		(0,-2) -| (3,-4)
+		(3,-2) node[circ] {} -- (5,-2)
+		% Der 'circ' node hat keine Bauteilbeschriftung, die Geschweiften Klammern {...} sind leer.
+		% Dennoch ist es verpflichtend, die Geschweiften Klammern nach der Platzierung eines Nodes
+		% zu setzen. Die runden Klammern sind optional, die geschweiften sind verpflichtend.
+		% Andernfalls resultiert dies in einer Fehlermeldung beim Kompilieren.
+		%
+		% Es gibt den Punkt auch in der 'ocirc' Version, bei der das Innere weiß ist.
+		% Diese Version is sinnvoll, wenn es darum geht, bei einer logischen Schaltung einen
+		% Eingang oder einen Ausgang zu kennzeichnen.
+		% Alternativ kann man damit bei einem Logikgatter auch eine Negation des Ausgangssignals
+		% kennzeichnen. Das vorherige Beispiel wird nun um einen Eingangs-Port bzw. einen Ausgangs-Port
+		% mit der Beschriftung A, B und Y erweitert (die Ports sind nur fiktiv und haben in dem
+		% Beispiel keine Bedeutung)
+		(0,-2) node[ocirc, anchor=west] {} node[left] {A}
+		(3,-4) node[ocirc, anchor=south] {} node[below] {B}
+		(5,-2) node[ocirc, anchor=east] {} node[right] {Y}
+		% Warum wurde in diesem Beispiel für jeden 'ocirc' Node der Ankerpunkte genau so gewählt?
+		% Schauen wir uns dazu mal die erste Zeile an: Die Linie beginnt bei (0,-2) und geht nach
+		% rechts. Wenn wir uns nun den 'ocorc' Node weg denken, dann bleibt nur noch die Beschriftung
+		% {A} rechts von der beginnenden Linie übrig. Das stimmt schon mal. Falls wir jetzt aber
+		% den Kreis ebenfalls rechts von der beginnenden Linie setzen, haben wir das Problem,
+		% dass der 'ocirc' node und der Buchstabe "A" sich sehr nahe kommen bzw. überlappen können.
+		% Das würde nicht schön aussehen. Deshalb wird der 'ocirc' node **rechts** von der beginnenden
+		% Linie platziert. Weil das Innere des Kreises weiß aufgefüllt wird (und nicht transparent
+		% ist), wird damit der Beginn der Linie übermalt. Das Bild sieht damit am besten aus.
+	;
+\end{circuitikz} \\
+Bild 9: Eine Sammlung an einfachen Circuitikz Bauteilen
+
+% Nun werfen wir den Blick mal auf eine bestimmte Gruppe an Circuitikz Bauteilen: Logikgatter.
+% Die Symbole für Logikgatter sind historisch gewachsen, weshalb es mehrere, zum Teil
+% konkurrierende Standards dafür gibt. Leider ist Circuitikz davon nicht
+% verschont geblieben.
+% Für die europäischen Symbole gibt es in Kapitel 4.22.3 der Circuitikz Dokumentation eine
+% genauere Erklärung zu den Bauteilen.
+\begin{circuitikz}[european]
+	\draw
+		% Die '<gatter> port' Node Elemente sind eine ältere Gruppe an europäischen Symbolen.
+		% Diese Bauteile sind eine sehr alte Gruppe, die aus Kompatibilitätsgründen für immer
+		% ein Teil von Circuitikz bleiben wird. Eigentlich sollte sie durch einen Nachfolger
+		% abgelöst werden, der im Verlauf dieser Anleitung genauer beschrieben wird, aber diese
+		% Symbole sind für viele Zeichnungen immer noch besser geeignet als die neue Version.
+		% Aus diesem Grund wurde für die Praktikums-Anleitung maßgeblich auf die 'port style
+		% logic gates zurück gegriffen.
+		(0,0) node[and port, anchor=out] {}
+		% Ein 'port style logic gate' (so heißen diese Node-Typen) hat immer folgende Ankerpunkte:
+		% - 'in 1' und 'in 2' sind die Eingänge auf der Linken Seite des Gatters
+		% - 'out' ist der Ausgang auf der rechten Seite des Gatters
+		% zusätzlich gibt es noch Ankerpunkte direkt am Gatter an den jeweiligen Ein- und ausgängen:
+		% - 'bin 1' und 'bin 2' sind die Ankerpunkte für die Eingänge
+		% - 'bout' ist der Ausgang des Gatters
+		% die mit 'b' beginnenden Ankerpunkte werden demnächst wichtig, wenn es darum geht,
+		% die Ausgänge zu negieren:
+		%
+		% Die Tatsache, dass diese Logikgatter veraltet sind, bringt ein paar Nachteile mit sich.
+		% Einer dieser Nachteil wird sichtbar, wenn man sich z.B. das NAND Gatter anschaut:
+		(3,0) node[nand port, anchor=out] {}
+		% Die Grafische Darstellung zeigt den negierten Ausgang nicht mit einem Punkt an, wie es
+		% eigentlich in der IEC norm vorgesehen ist. Stattdessen befindet sich ein schräger Strich am
+		% Ausgang des Gatters. Diese Darstellung wird eigentlich nicht mehr verwendet.
+		% Für die Praktikums-Anleitung wurde deshalb auf einen Workaround zugegriffen:
+		% Die Logikgatter wurden in der nicht-negierten Form gezeichnet und der Kreis für die 
+		% Negation wurde nachträglich mit einem 'ocirc' node hinzugefügt. Für das NAND würde das
+		% folgendermaßen aussehen:
+		(6,0) node[and port, anchor=out] (NAND) {}
+		(NAND.bout) node[ocirc, right] {}
+		% Dieser Trick funktioniert für alle logikgatter. Wenn man ein NOT Gatter zeichnen möchte,
+		% muss man dafür das 'buffer port' Gatter negieren:
+		(9,0) node[buffer port, anchor=out] (NOT) {}
+		(NOT.bout) node[ocirc, right] {}
+		% Warum wird für die Platzierung des NOT Gatters als Anker eigentlich 'out' verwendet?
+		% Der Grund ist, dass in diesem Beispiel die Gatter in einer Reihe gezeichnet
+		% werden sollen. Das NOT Gatter hat aber nur einen Eingang. Wenn wir den Ankerpunkt
+		% 'in 1' verwenden würden, wäre ein Höhen-Abstand zwischen dem NOT Gatter und den
+		% vorherigen Gattern sichtbar, weil der eine Eingang auf einer anderen Höhe liegt.
+		% Deswegen wird der Ankerpunkt 'out' verwendet, der für alle Gatter auf derselben Höhe liegt.
+	;
+\end{circuitikz} \\
+Bild 10: Ein paar Logikgatter
+
+% Wie bereits erwähnt gibt es eine zweite Gruppe and Logikelementen, die für das Praktikum
+% aber selten verwendet wurde. Dies wird hier kurzgefasst erklärt.
+\begin{circuitikz}[european, circuit logic IEC]
+	\draw
+		% Die '<gatter> gate' Node Elemente sind eine alternative Gruppe an Logikgattern.
+		% Damit die Zeichnung auch erfolgreich kompiliert, muss der 'circuit logic IEC' Parameter
+		% in der circuitikz Umgebung angegeben werden! (siehe vier Zeilen oben).
+		(0,0) node[and gate, anchor=output] {}
+		% Die Anker heißen 'input 1', 'input 2' und 'output', d.h. der Name wird ausgeschrieben.
+		% Diese Gruppe stellt die Negierung eines Ausgangs richtig dar:
+		(3,0) node[nand gate, anchor=output] (NAND) {}
+		(6,0) node[not gate, anchor=output] (NOT) {}
+		% Ein Nachteil an diesen Gates ist aber, dass keine Linien an den Ein- und Ausgängen
+		% gezeichnet werden. Dazu müssen von den Ankerpunkte aus manuell Linien gezeichnet werden.
+		% Hier einmal für das NOT Gatter:
+		(NOT.output) -- ++ (0.25,0)
+		(NOT.input) -- ++ (-0.25,0)
+		% und hier für das NAND Gatter:
+		(NAND.input 1) -- ++ (-0.25,0)
+		(NAND.input 2) -- ++ (-0.25,0)
+		(NAND.output) -- ++ (0.25,0)
+	;
+\end{circuitikz} \\
+Bild 11: Ein paar anders aussehende Logikgatter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Kapitel 5: komplexe Logik-Schaltungen %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Meistens bestehen logische Schaltungen aus mehreren Gattern, die miteinander verbunden sind
+% Dazu soll hier einmal ein Beispiel gezeigt werden, um zu erklären, wie man solche Schaltungen
+% sinnvoll mit Circuitikz zusammenstellen kann.
+%
+% Für gewöhnlich wird eine Schaltung von links nach rechts "gelesen". Die Eingänge befinden sich
+% links und die Ausgänge rechts. Die meisten Schaltungen, die im Praktikum verwendet werden,
+% haben viele Eingänge auf der linken und wenige Ausgänge (meistens einen) auf der rechten Seite.
+% Das bedeutet automatisch, dass die Schaltungen von rechts nach links eine Baum-Struktur
+% aufspannen. Es ist bei manchen Schaltungen also sinnvoll, beim Zeichnen von rechts nach links
+% vorzugehen, damit die Baum-Struktur verwendet werden kann um die Bauteile nahezu automatisch
+% anzuordnen.
+% Dies ist natürlich nicht immer der Fall, aber bei diesem Beispiel wird dieses Phänomen ausgenutzt.
+%
+% Dazu zeichnen wir einmal den "2-Bit Komparator" aus Aufgabe 2.3 des Praktikumsversuchs.
+\begin{circuitikz}[european, circuit logic IEC]
+	\draw
+		% wir beginnen mit dem AND Gatter ganz rechts. Die Wahl des Ursprungs ist bei Tikz egal.
+		(0,0) node[and port, anchor=out] (AND) {}
+		% Den Ausgang des AND Gatters beschriften wir mit einem Y und zeichnen einen Kreis.
+		% Wie bereits vorher erwähnt wird für den Kreis ein ungewöhnlicher Anker verwendet,
+		% damit er nicht zu nah am Buchstaben Y sitzt.
+		(AND.out) node[ocirc, left] {} node[right] {Y}
+
+		% Im nächsten Schritt zeichnen wir die beiden Eingänge des AND Gatters. Jeder Eingang ist mit
+		% einem XNOR verbunden (einem negierten XOR). Dazu verwenden wir jeweils ein XOR Gatter und
+		% malen den Punkt zur Negierung des Ausgangs manuell dazu.
+		% Fangen wir mal mit dem Oberen Gatter an:
+		(AND.in 1) -| ++ (0,0.5) node[xor port, anchor=out] (XNOR1) {}
+		% Der Ausgang wird negiert:
+		(XNOR1.bout) node[ocirc, right] {}
+		% Diese beiden Eingänge werden nun beschriftet, ähnlich wie der Ausgang:
+		(XNOR1.in 1) node[ocirc, right] {} node[left] {A1}
+		(XNOR1.in 2) node[ocirc, right] {} node[left] {B1}
+		
+		% Dasselbe nochmal: Zuerst das XNOR-Gatter:
+		(AND.in 2) -| ++ (0,-0.5) node[xor port, anchor=out] (XNOR2) {}
+		(XNOR2.bout) node[ocirc, right] {}
+		% Beschriftung der Ausgänge:
+		(XNOR2.in 1) node[ocirc, right] {} node[left] {A2}
+		(XNOR2.in 2) node[ocirc, right] {} node[left] {B2}
+		% Ob die Ein- und Ausgänge mit einem 'circ' oder 'ocirc' Node versehen werden,
+		% ist Geschmackssache. Manchmal sie die Schaltung damit besser aus und manchmal verwirrt das.
+	;
+\end{circuitikz} \\
+Bild 12: Die erste komplizierte Schaltung
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Kapitel 6: Pfad-Elemente %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Nicht alle Circuitikz-Bauteile sind Node-Elemente. Wenn ein Bauteil nur zwei Anschlüsse hat, dann
+% ist eine Beschreibung im Stil von "Zeichne einen Widerstand von Koordinate A nach Koordinate B"
+% kompakter als die Platzierung eines node-Widerstandes, welcher dann mit Linien verbunden
+% werden muss.
+% Solche Bauteile werden als Pfad-Elemente bezeichnet. In der Praktikums-Anleitung betrifft das
+% nur Widerstände und Dioden.
+\begin{circuitikz}[european]
+	\draw
+		% Ein Widerstand ist ein Pfad-Element, welches von einer Koordinate zu einer anderen
+	 	% Koordinate gezeichnet wird. Dabei kann der Widerstand mit einer Bauteilbeschriftung
+		% versehen werden.
+		(0,0) to[resistor, l=$R_1$] ++ (2,0)
+		% Anstelle der Bauteilbeschriftung kann das Bauteil auch mit einem Wert versehen werden
+		to[resistor, l=$\SI{10}{\ohm}$] ++ (2,0)
+		% Weitere Informationen über Widerstände sind im Circuitikz Manual in Kapitel 4.2 zu finden.
+
+		% Dioden verhalten sich ähnlich. Die Polarisation der Diode wird durch die Pfadrichtung
+		% (Quelle- -> Ziel-Koordinate) angegeben.
+		to[diode, l=D1] ++ (2,0)
+		% Dioden lassen sich auch einfärben, insbesondere LEDs:
+		to[led, fill=red, -] ++ (1.5,0)
+		
+		% ground und Vcc sind **keine** Pfad-Elemente:
+		node[ground] {}
+		(0,0) node[vcc] {\SI{5}{\volt}}
+
+		% Wenn sich zwei Pfade kreuzen und an dieser Stele elektrisch miteinander verbunden sein sollen,
+		% wird dies in der Schaltung mit einem Punkt dargestellt. Damit diese Punkte nicht manuell
+		% als 'circ' Node hinzugefügt werden müssen, gibt es die Möglichkeit, bei Pfaden automatisch
+		% Punkte an der Start- oder End-Koordinate zu zeichnen:
+		(2,0) to[resistor, l=$R_2$, *-] ++ (0,-2)
+		node[ground] {}
+		% - Der '*-' Parameter sorgt dafür, dass am Startpunkt des Pfades ein Punkt gezeichnet wird.
+		% - Der '-*' Parameter sorgt dafür, dass am Endpunkt des Pfades ein Punkt gezeichnet wird.
+		% - Mit '*-*' werden an beiden Enden Punkte gezeichnet.
+	;
+\end{circuitikz} \\
+Bild 13: Widerstände und Dioden in Circuitikz
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Kapitel 7: Schnitt-Koordinaten %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Ein sehr sinnvolles Feature in Tikz sind Schnittpunkt-Koordinaten.
+% Dazu schauen wir uns einmal folgendes Problem an:
+\begin{circuitikz}[european]
+	\draw
+		% Wir wollen den 1-Bit Multiplexer aus Aufgabe 4.1 zeichnen. Dieser besteht aus 2 AND und
+		% einem OR Gatter. Auch hier ist es sinnvoll, aufgrund der Baum-Struktur von rechts anzufangen.
+		%
+		% Wir beginnen mit dem rechten OR-Gatter
+		(0,0) node[or port, anchor=out] (OR) {}
+		(OR.out) node[right] {Y}
+
+		% Dann platzieren wir die beiden AND-Gatter Links davon, wobei das zweite einen negierten
+		% Eingang bekommt
+		(OR.in 1) -| ++ (0,0.5) node[and port, anchor=out] (AND1) {}
+		(OR.in 2) -| ++ (0,-0.5) node[and port, anchor=out] (AND2) {}
+		(AND2.bin 1) node[ocirc, left] {}
+
+		% Dann beschriften wir die Eingänge A und B
+		(AND1.in 1) -- ++ (-0.5,0) node[left] {A}
+		(AND2.in 2) -- ++ (-0.5,0) node[left] {B}
+
+		% Und hier beginnt das Problem: Wir müssen noch die "S" Leitung zeichnen. Diese hätten wir
+		% gerne in der Mitte zwischen dem A und dem B Eingang. Außerdem muss ein Punkt dafür platziert
+		% werden. Der Schönheit halber soll der Punkt ebenfalls mittig sein.
+		%
+		% Zuerst machen wir noch den einfachen Part: Wir verbinden die verbliebenen Eingänge
+		% der beiden Gatter:
+		(AND1.in 2) -- (AND2.in 1)
+		% Jetzt hätten wir den Punkt gerne in der Mitte der beiden Eingänge.
+		% Wir wissen: Die Mitte ist auf der Höhe von (OR.out). Der Punkt befindet sich also
+		% an der X-Koordinate von (OR.out) und der Y-Koordinate von (AND1.in 2) oder (AND2.in 1).
+		% Mit der nächsten Zeile lässt sich diese Koordinate bestimmen:
+		(AND1.in 2 |- OR.out) node[circ] {}
+		% Super. Von hier aus können wir noch die Beschriftung hinzufügen:
+		-- ++ (-0.5,0) node[left] {S}
+		% Der Ausdruck (A |- B) bestimmt eine Koordinate, die die X-Koordinate von A und die
+		% Y-Koordinate von B hat.
+		% Äquivalent dazu gibt es auch den Ausdruck (A -| B), der die Y-Koordinate von A und
+		% die X-Koordinate von B bestimmt.
+		%
+		%Schnittpunkt-Koordinaten werden selten verwendet, sind aber ein wichtiges Werkzeug in Tikz.
+	;
+\end{circuitikz} \\
+Bild 14: Ein Beispiel für Schnittpunkt-Koordinaten ist die Position des schwarzen Punktes
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Kapitel 8: Multiplexer %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Multiplexer sind ebenfalls in er Circuitikz-Bibliothek enthalten. Im Vergleich zu allen
+% anderen node-Elementen haben Multiplexer einen deutlich größeren Parameter-Umfang.
+% In der Circuitikz-Anleitung werden sie in Kapitel 4.24 im Detail beschrieben.
+
+\end{document}

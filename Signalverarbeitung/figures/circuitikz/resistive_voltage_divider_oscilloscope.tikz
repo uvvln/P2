@@ -1,0 +1,20 @@
+﻿\begin{tikzpicture}
+	\draw
+		% draw an attenuator with specified values that divides +-12V to +-3V
+		(0,0) node[ground] {}
+		to[resistor, l=$\SI{1}{\kilo\ohm}$, -*] ++ (0,2) coordinate (Center)
+		to[resistor, l=$\SI{1}{\kilo\ohm}$] ++ (0,2)
+		node[vcc] {$V_{cc}$}
+
+		(Center) to[short, -] ++ (3,0) coordinate (Rosc)
+		% draw the resister in reverse order to get the text to the right side
+		++ (0,-2) node[ground] {}
+		to[resistor, l=$\SI{1}{\mega\ohm}$, -*] (Rosc)
+		(Rosc) -- ++ (1.5,0) coordinate (Cosc)
+		to[capacitor, l=$\SI{15}{\pico\farad}$, *-] ++ (0,-2)
+		node[ground] {}
+		(Cosc) to[short, -o] ++ (1,0)
+		node[right] {Oszilloskop (Intern)}
+	;
+\end{tikzpicture}
+

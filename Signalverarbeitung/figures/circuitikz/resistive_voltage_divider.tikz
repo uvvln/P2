@@ -1,0 +1,42 @@
+﻿\begin{tikzpicture}
+	\draw
+		% start with the attenuator
+		(0,0) coordinate(U0b) % U_0 bottom
+		to[short, o-o] ++ (2,0) coordinate(U2b) % U_2 bottom
+		++ (-1,0) % jump back to the center of the line
+		to[resistor, l=$R_2$, -*] ++ (0,2) coordinate (Center) % Middle point between resistors
+		to[resistor, l=$R_1$] ++ (0,2)
+		++ (-1,0) coordinate(U0t) % U_0 top
+		to[short, o-o] ++ (2,0) coordinate(U1t) % U_1 top
+		(Center) to[short, -o] ++ (1,0) coordinate (Uc) % U center
+
+		% continue with the arrows and texts
+		(U0b) ++ (0,0.2) edge[->] ($(0,-0.2)+(U0t)$) % ($ ... $) is used for coordinate calculations
+		($(U0b)!0.5!(U0t)$) node[left] {$U_0$} % here, !0.5! means the midpoint between two coordinates
+
+		(U2b) ++ (0,0.2) edge[->] ($(0,-0.2)+(Uc)$)
+		($(U2b)!0.5!(Uc)$) node[right] {$U_2 = R_2 \cdot \frac{U_0}{R_1 + R_2}$}
+
+		(Uc) ++ (0,0.2) edge[->] ($(0,-0.2)+(U1t)$)
+		($(Uc)!0.5!(U1t)$) node[right] {$U_1 = R_1 \cdot \frac{U_0}{R_1 + R_2}$}
+
+		% draw the label (a) for the left half of the image
+		(2,-1.5) node {(a)}
+	;
+
+	\tikzset{shift={(8,0)}} % move coordinate origin to the right
+	\draw
+		% draw an attenuator with specified values that divides +-12V to +-3V
+		(0,0) node[ground] {}
+		to[resistor, l2=$R_2$ and $\SI{1}{\kilo\ohm}$, -*] ++ (0,2) coordinate (A)
+		to[short, -o] ++ (1,0)
+		node[auto, anchor=west] {$\pm\SI{3}{\volt}$}
+		(A) to[resistor, l2=$R_1$ and $\SI{3}{\kilo\ohm}$] ++ (0,2)
+		node[vcc] {$\pm{}\SI{12}{\volt}$}
+
+
+		% draw the label (b) for the right half of the image
+		(0,-1.5) node {(b)}
+	;
+\end{tikzpicture}
+

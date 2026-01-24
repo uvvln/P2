@@ -1,0 +1,42 @@
+* A resistive voltage divider
+* with the input resistance and capacitance
+* of an oscilloscope as load.
+
+* This simulation plots the rectangular input and
+* the distorted output signal
+
+* Define a voltage source which
+* provides the square signal for the attenuator
+Vsource Vsource 0 PULSE(0 5 0.0000005 0 0 0.0000005 0.000001 10000000)
+
+* now add a resistor which is connected to Vsource on one end
+* and to the virtual wire Vout at the other end
+R1 Vsource Vout 10K
+* Add the second resistor which continues the path to ground (= 0)
+R2 Vout 0 10k
+
+* Add the oscilloscope load resistor to the output of the
+* voltage divider
+Rosc Vout 0 1000K
+* now add the Capacitor
+Cosc Vout 0 15pF
+
+* Now define the simulation parameters
+* We want to perform a transient analysis, which
+* simulates the time behaviour of the circuit
+* The duration of the simulation is set to 2 milliseconds
+* and the time steps are set to 100 nano seconds
+* a finer step size increases the resolution but also
+* needs more time to simulate
+.tran 0.1n 5u
+
+* Here we define what er wand ngspice to perform and report in the end
+.control
+* run the simulation
+run
+
+* plot the voltage on some interesting virtual wires
+plot v(Vsource) v(Vout) title "input and output voltage"
+* plot v(VAFEout1) title "ADC signal"
+.endc
+.end
