@@ -1,0 +1,33 @@
+﻿\begin{tikzpicture}
+	\draw
+		(0,0) node[ground] {}
+		to[european voltage source, l=$U_{+}$] ++ (0,1)
+		to[resistor, l=$R_2$, -*] ++ (0,2) coordinate (Center)
+		to[resistor, l=$R_1$] ++ (0,2)
+		node[vcc] {$U_{in}$}
+		(Center) to[short, -o] ++ (1,0) node[auto, anchor=west] {$U_{out}$}
+
+		(0,-1) node[below] {(a)}
+	;
+	\tikzset{shift={(5,0)}} % move coordinate origin to the right
+	\draw
+		(0,0) node[ground] (gnd) {}
+		to[european voltage source, l=$\SI{1,71}{\volt}$] ++ (0,1) coordinate (Voffset)
+		to[resistor, l2=$R_2$ and $\SI{7}{\kilo\ohm}$, -*] ++ (0,2) coordinate (Center)
+		to[resistor, l2=$R_1$ and $\SI{1}{\kilo\ohm}$] ++ (0,2)
+		node[vcc] (vcc) {$\SI{\pm12}{\volt}$}
+		(Center) to[short, -*] ++ (1,0) coordinate (Center) 
+		to[capacitor, l2=$C_2$ and $\SI{70}{\pico\farad}$] ++ (0,-2)
+		to[short, *-*] (Voffset)
+		(vcc) to[short, *-] ++ (1,0)
+		to[capacitor, l2=$C_1$ and $\SI{10}{\pico\farad}$] (Center)
+		(Center) to[short, -*] ++ (2,0) coordinate (Center)
+		to[vC, l=$C_T$, *-] ++ (0,-2)
+		to[short, *-] (Voffset)
+		(Center) to[short, -o] ++ (1,0)
+		node[auto, anchor=west] {$\SI{0}{\volt} \to \SI{3}{\volt}$}
+
+		(0,-1) node[below] {(b)}
+	;
+\end{tikzpicture}
+

@@ -14,7 +14,9 @@ Install the Program `Ngspice`
 3. A window which plots the relevant results should appear
 4. In this window, use the "save as SVG" option to save the plot as an SVG file.
 5. Quit ngspice by typing `exit` into the prompt.
-6. Edit this SVG file to replace the dark background with a white one and adjust the colors if needed.
+6. Edit this SVG file to replace the dark background with a white one and adjust the colors if needed. You have no influence on the color of the plots from ngspice, so you have to change them manually.
+
+**Whenever you think abut changing small detail of the plots (e.g. the names of the plotted signals in the plot legend) consider doing this with inkscape first!**
 
 ## Use imagemagick to invert the color:
 ```bash

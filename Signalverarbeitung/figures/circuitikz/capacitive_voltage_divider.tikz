@@ -1,0 +1,9 @@
+﻿\begin{tikzpicture}
+	\draw (0,0) node[ground] {}
+		to[C, l=$C_2$, -*] ++ (0,2) coordinate (A)
+		to[short, -o] ++ (1,0)
+		node[auto, anchor=west] {$U_{out}$}
+		(A) to[C, l=$C_1$] ++ (0,2)
+		node[vcc] {$\sim U_{0}$}
+	;
+\end{tikzpicture}
