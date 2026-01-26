@@ -156,7 +156,7 @@ Für die Beschreibung der Funktionsweise nehmen gehen wir davon aus, dass der We
 $$
 \begin{align*}
 % Wegen einem Bug im LaTeX-Renderer KaTeX muss in der 2. Zeile das + durch \char"002B ersetzt werden. Andernfalls wird die Gleichung nicht dargestellt.
-U_{2} & = U_{2} + U_{+} \\
+U_{out} & = U_{2} + U_{+} \\
     & = (U_{in} - U_{\char"002B}) \frac{R_{2}}{R_{1} + R_{2}} + U_{+} \\
     & = U_{in} \frac{R_{2}}{R_{1} + R_{2}} + U_{+} \left(1 - \frac{R_{2}}{R_{1} + R_{2}}\right) \\
     & = U_{in} \frac{R_{2}}{R_{1} + R_{2}} + U_{+} \frac{R_{1}}{R_{1} + R_{2}}.
