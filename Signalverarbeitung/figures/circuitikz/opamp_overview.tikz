@@ -1,0 +1,76 @@
+﻿\begin{tikzpicture}
+	\draw
+		(0,0) node[op amp, noinv input up](OA) {}
+		(OA.out) node[ocirc] {} node[right] {$V_\mathrm{out}$}
+		(OA.+) node[ocirc] {} node[left] {$V_+$}
+		(OA.-) node[ocirc] {} node[left] {$V_-$}
+		(OA.up) -- ++ (0,0.25) node[vcc] {$V_\mathrm{S+}$}
+		(OA.down) -- ++ (0,-0.25) node[vee] {$V_\mathrm{S-}$} coordinate (vee)
+
+		% draw ground symbol
+		(OA.out|-vee) node[rground] {} node[ocirc] {}
+
+		% draw the arrows for the currents
+		% First: Output Current
+		(OA.bout) ++ (0,0.25) coordinate (Start)
+		edge[->, >=latex] (Start-|OA.out) coordinate (End)
+		(Start) node[above] {$\mathrm{I_{out}}$}
+
+		% Second: Non-inverting Input Current
+		(OA.+) ++ (-0.25,0.25) coordinate (Start)
+		edge[->, >=latex] ($(Start-|OA.b+)+(-0.25,0)$) coordinate (End)
+		(Start) node[above] {$\mathrm{I_{in+}}$}
+
+		% Third: Inverting Input Current
+		(OA.-) ++ (-0.25,-0.25) coordinate (Start)
+		edge[->, >=latex] ($(Start-|OA.b-)+(-0.25,0)$) coordinate (End)
+		(Start) node[below] {$\mathrm{I_{in-}}$}
+
+		% add label (a)
+		(vee) ++ (0,-1.5) node[below] (label) {(a)}
+	;
+	\tikzset{shift={(3,0)}} % move coordinate origin to the right
+	\draw
+		node[anchor=west] (DIP8) {\pgfimage[interpolate=true,height=3cm]{../A200_DIP-8.png}}
+		(DIP8.south|-label.north) node[below] {(b)}
+	;
+
+	\tikzset{shift={(6.5,0)}} % move coordinate origin to the right
+	%\ctikzset{multipoles/thickness=4}  % line thickness
+  %\ctikzset{multipoles/external pins thickness=2}  % line thickness
+	% This is a trick to remove the "output" of the op amp symbol within the IC
+	\ctikzset{tripoles/op amp/port width=1,
+		tripoles/op amp/width=1.19, % 1.7*0.7
+	}
+	\draw
+		(0,0) node[dipchip, num pins=8, hide numbers, external pins width=0.3, external pad fraction=4] (IC) {}
+		(IC.south) node[below] {MCP6002}
+		% label all Pins
+		% left
+		(IC.pin 1) node[left, font=\tiny] {$\mathrm{V_{out, A}}$}
+		(IC.pin 2) node[left, font=\tiny] {$\mathrm{V_{in-, A}}$}
+		(IC.pin 3) node[left, font=\tiny] {$\mathrm{V_{in+, A}}$}
+		(IC.pin 4) node[left, font=\tiny] {$\mathrm{V_{S-}}$}
+		% right
+		(IC.pin 5) node[right, font=\tiny] {$\mathrm{V_{in+, B}}$}
+		(IC.pin 6) node[right, font=\tiny] {$\mathrm{V_{in-, B}}$}
+		(IC.pin 7) node[right, font=\tiny] {$\mathrm{V_{out, B}}$}
+		(IC.pin 8) node[right, font=\tiny] {$\mathrm{V_{S+}}$}
+		
+		% draw the right Op-Amps inside the IC package
+		(IC.bpin 7) -- ++ (-0.4,0) node[op amp, noinv input up, anchor=out, rotate=90, scale=0.3](OAa) {}
+		(OAa.-) |- (IC.bpin 6)
+		(OAa.+) |- (IC.bpin 5)
+
+		% draw the left Op-Amps inside the IC package
+		(IC.bpin 1) -- ++ (0.4,0) node[op amp, noinv input up, anchor=out, rotate=90, scale=0.3, yscale=-1](OAb) {}
+		(OAb.-) |- (IC.bpin 2)
+		(OAb.+) |- (IC.bpin 3)
+
+
+
+		% label sub-figure
+		(IC.south|-label.north) node[below] {(c)}
+	;
+\end{tikzpicture}
+
