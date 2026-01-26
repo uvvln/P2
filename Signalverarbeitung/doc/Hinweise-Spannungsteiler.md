@@ -155,9 +155,10 @@ In einigen Schaltungen ist es notwendig, zu einer Wechselspannung einen Gleichsp
 Für die Beschreibung der Funktionsweise nehmen gehen wir davon aus, dass der Wert der Eingangs- und Ausgangsspannung sich immer auf die Masse bezieht. Der Widerstand $R_{2}$ des Spannungsteiler wird eine Spannungsquelle verbunden, die eine konstante Offset-Spannung $U_{+}$ liefert. Mit den bekannten Gleichungen können wir den Spannungsabfall an Widerstand $R_{2}$ berechnen, berücksichtigt werden muss, dass die Spannung $U_{0}$ aus **Abbildung 1** in diesem Fall zur Spannung $U_{in} - U_{+}$ wird. Die Ausgangsspannung $U_{out}$ setzt sich aus der am Widerstand $R_{2}$ abfallenden Spannung und der Offset-Spannung $U_{+}$ zusammen.
 $$
 \begin{align*}
-U_{2} & = U_{2} + U_{+} \\\\
-    & = (U_{in} - U_{+}) \frac{R_{2}}{R_{1} + R_{2}} + U_{+} \\\\
-    & = U_{in} \frac{R_{2}}{R_{1} + R_{2}} + U_{+} \left(1 - \frac{R_{2}}{R_{1} + R_{2}}\right) \\\\
+% Wegen einem Bug im LaTeX-Renderer KaTeX muss in der 2. Zeile das + durch \char"002B ersetzt werden. Andernfalls wird die Gleichung nicht dargestellt.
+U_{2} & = U_{2} + U_{+} \\
+    & = (U_{in} - U_{\char"002B}) \frac{R_{2}}{R_{1} + R_{2}} + U_{+} \\
+    & = U_{in} \frac{R_{2}}{R_{1} + R_{2}} + U_{+} \left(1 - \frac{R_{2}}{R_{1} + R_{2}}\right) \\
     & = U_{in} \frac{R_{2}}{R_{1} + R_{2}} + U_{+} \frac{R_{1}}{R_{1} + R_{2}}.
 \end{align*}
 $$
@@ -166,7 +167,7 @@ Die Gleichung zeigt, dass eine Eingangsspannung $U_{in}$ um den Faktor $U_{+} \f
 Wie lässt sich diese Schaltung in der Praxis einsetzen? Dazu betrachten wir folgendes Beispiel: Eine $\pm12 \mathrm{V}$ Eingangsspannung soll auf den Bereich von $0\mathrm{V}$ bis $3\mathrm{V}$ abgebildet werden. Für den Entwurf der Schaltung wird zuerst der Spannungsteiler richtig dimensioniert. Dabei ist der intuitive Gedanke, die Eingangsspannung auf $\pm3\mathrm{V}$ zu reduzieren nicht hilfreich, weil durch Hinzufügen eines Offsets die Spannung größer wird und die $3\mathrm{V}$ Obergrenze wieder überschreitet. Stattdessen muss die Spannung auf die Hälfte des Zielbereichs, in diesem Fall $\pm1,5\mathrm{V}$ reduziert werden. Für die Widerstände gilt dementsprechend:
 $$
 \begin{align*}
-U_{2} & = U_{0} \cdot \frac{R_{2}}{R_{1} + R_{2}} \\\\
+U_{2} & = U_{0} \cdot \frac{R_{2}}{R_{1} + R_{2}} \\
 \frac{R_{1}}{R_{2}} &= \frac{U_{0}}{U_{2}} - 1
 \end{align*}
 $$
@@ -180,8 +181,8 @@ Die Gleichung ist erfüllt, wenn die gewählten Widerstände die Gleichung $R_{1
 Das Eingangssignal liegt nun in dem Bereich $\pm1,5\mathrm{V}$ vor. Durch eine Addition von $1,5\mathrm{V}$ wird es auf den gewünschten Zielbereich verschoben. Die Offset-Spannung für den Spannungsteiler berechnet sich dementsprechend zu:
 $$
 \begin{align*}
-1,5\mathrm{V} & = U_{+} \cdot \frac{R_{1}}{R_{1} + R_{2}} \\\\
-U_{+} & = 1,5\mathrm{V} \left(1 + \frac{R_{2}}{R_{1}}\right) \\\\
+1,5\mathrm{V} & = U_{+} \cdot \frac{R_{1}}{R_{1} + R_{2}} \\
+U_{+} & = 1,5\mathrm{V} \left(1 + \frac{R_{2}}{R_{1}}\right) \\
 & = 1,5\mathrm{V} \cdot \frac{8}{7} \approx 1,71\mathrm{V}
 \end{align*}
 $$
