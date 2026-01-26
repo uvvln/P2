@@ -1,22 +1,33 @@
-# Hinweise für den Versuch **Operationsverstärker (OPV)**
+# Hinweise für den Versuch **Signalverarbeitung**
 
 ## Einführung Operationsverstärker
 
-Ein [Operationsverstärker](https://de.wikipedia.org/wiki/Operationsverst%C3%A4rker) (OPV) ist ein aus mehreren Transistoren bestehendes [Netzwerk](https://de.wikipedia.org/wiki/Netzwerk_(Elektrotechnik)). In der Praxis werden OPVs i.a. als Blackbox mit wohl-definiertem Ein- und Ausgangsverhalten verwendet. Das Schaltsymbol ist in **Abbildung 1 (a)** gezeigt:
+Ein [Operationsverstärker](https://de.wikipedia.org/wiki/Operationsverst%C3%A4rker) (OPV) ist ein integrierter Schaltkreis mit vielen verschiedenen Einsatzzwecken. In diesem Versuch werden einfache Schaltungen mit dem OPV aufgebaut und untersucht. Um diese Schaltungen zu verstehen, sind einige Grundkenntnisse über den OPV notwendig.
+
+Das Schaltsymbol eines OPVs ist in **Abbildung 1 (a)** mit seinen Anschlüssen gezeigt:
+
+- Ein invertierender (-) und ein nicht-invertierender (+) Eingang
+- Ein Ausgang
+- Zwei Anschlüsse für die Spannungsversorgung ($\mathrm{V_{S\pm}}$), die in Schaltbildern i.a. nicht gezeigt werden und daher in den weiteren Bildern weggelassen sind.
 
 ---
 
-<img src="../figures/OPV_Symbol.png" width="750" style="zoom:100%;"/>
+<img src="../figures/opamp_overview.png" width="750" style="zoom:100%;"/>
 
-**Abbildung 1**: (In Abbildung (a) ist das Schaltsymbol eines OPV mit Definition der relevanten Ströme und Spannungen gezeigt. Abbildung (b) zeigt das Anschlussschema des OPV $\mathrm{\mu A741}$, wie er in diesem Versuch verwendet wird. $V_{S\pm}$ bezeichnet die Versorgungsspannung. NC steht für *not connected*. Die Beschaltung im Inneren, sowie die Versorgungsspannung(en) werden in Schaltbildern i.a. nicht gezeigt)
+**Abbildung 1**: (In Abbildung (a) ist das Schaltsymbol eines OPV mit Definition der relevanten Anschlüssen, Spannungen und Strömen gezeigt. Abbildung (b) zeigt das Gehäuse, in dem der MCP6002 verbaut ist. Abbildung \(c\) zeigt das Anschlussschema des OPV MCP6002, wie er in diesem Versuch verwendet wird. $V_{S\pm}$ bezeichnet die Versorgungsspannung. Die Beschaltung im Inneren des OPV, sowie die Versorgungsspannung(en) werden in Schaltbildern i.a. nicht gezeigt)
 
 ---
 
-**Abbildung 1 (b)** zeigt das Anschlussschema des MCP6002. Ein OPV besitzt mindestens fünf Klemmen: 
+**Abbildung 1 \(c\)** zeigt das Anschlussschema des MCP6002, welcher für diesen Versuch verwendet wird und gleich zwei OPVs in einem Gehäuse bereitstellt. Das Gehäuse ist in **Abbildung 1 (b)** dargestellt.
 
-- Einen (N) invertierenden und einen (P) nicht-invertierenden Signaleingang. 
-- Einen Signalausgang. 
-- Mindestens zwei (in Schaltbildern nicht gezeigte) Anschlüsse zur Spannungsversorgung. 
+
+**TODO: Continue**
+
+
+
+
+
+
 
 Im allgemeinen ist der P-Eingang als hochohmiger Spannungseingang ausgeführt; der N-Eingang ist je nach OPV-Typ ebenfalls ein hochohmiger Spannungs- oder ein niederohmiger Stromeingang. Der OPV kann i.a. in guter Näherung als [ideale Strom- oder Spannungsquelle](https://gitlab.kit.edu/kit/etp-lehre/p1-praktikum/students/-/blob/main/Elektrische_Messverfahren/doc/Hinweise-Spannungsquellen.md) (relativ zum Massenpotential) angesehen und verwendet werden. Die häufigste Verwendung ist die als **Spannungsverstärker** (engl. *voltage feedback operational amplifier*, VFA) mit zwei hochohmigen Spannungseingängen. 
 
