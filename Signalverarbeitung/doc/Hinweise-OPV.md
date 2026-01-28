@@ -76,7 +76,7 @@ Der einfache Fall, in dem das Feedback aus einer direkten Verbindung von Ausgang
 
 ---
 
-Bei einer bekannten Feedback-Schleife lässt sich das veränderte Ausgangssignal des OPVs bestimmen. Die Feedback-Schleife transformiert eine Spannung $U$ wie eine mathematische Funktion $\mathfrak{F}(U)$. Da das Feedback-Signal am invertierenden Eingang anliegt und zum Eingangssignal identisch ist, muss das Ausgangssignal des OPVs so gewählt werden, dass gilt:
+Bei einer Feedback-Schleife mit bekannter Transformation lässt sich das veränderte Ausgangssignal des OPVs bestimmen bestimmen. Die Feedback-Schleife transformiert eine Spannung $U$ wie eine mathematische Funktion $\mathfrak{F}(U)$. Da das Feedback-Signal am invertierenden Eingang anliegt und zum Eingangssignal identisch ist, muss das Ausgangssignal des OPVs so gewählt werden, dass gilt:
 $$
 U_\mathrm{out} = \mathfrak{F}^{-1}(U_\mathrm{in})
 $$
@@ -94,17 +94,82 @@ mit der inversen Funktion $\mathfrak{F}^{-1}$ der Feedback-Funktion $\mathfrak{F
 
 Der Nicht-invertierende Verstärker verwendet einen Spannungsteiler in der Feedback-Schleife, um eine Spannungsverstärkung zu realisieren. Die Schaltung ist in **Abbildung 6** dargestellt.
 
-**TODO: Continue**
+---
 
+<img src="../figures/non-inverting-amplifier.png" width="300" style="zoom:100%;"/>
 
+**Abbildung 6**: (Grundschaltung des Nicht-invertierenden Verstärkers)
 
-# Fortsetzung: Die goldenen Regeln 
+---
 
-Die Verstärkerschaltungen lassen sich mit den goldenen Regeln erklären. Dennoch gibt es Grenzen, in denen die goldenen Regeln gelten:
+Die am invertierenden Eingang anliegende Spannung $U_{-}$ lässt sich über den Spannungsteiler berechnen:
+$$
+\begin{equation}
+U_{-} = U_{out} \cdot \frac{R_{2}}{R_{1} + R_{2}}
+\end{equation}
+$$
+Nach den goldenen Regeln gilt $U_{-} = U_{+} = U_\mathrm{in}$. Diese Gleichung lässt sich nach der Ausgangsspannung umstellen:
+$$
+\begin{equation}
+U_{out} = U_{in} \cdot \left(1 + \frac{R_{1}}{R_{2}}\right)
+\end{equation}
+$$
 
-- Die goldenen Regeln basieren auf dem Prinzip des negativen Feedbacks. Wenn kein Feedback ankommt (z.B. durch einen Kabelbruch oder einen extrem hochohmigen Widerstand in der Feedback-Schleife) oder wenn das Feedback nicht an dem invertierenden Eingang anliegt, gelten die goldenen Regeln nicht.
-- Die goldenen Regeln gelten nur, solange der OPV nicht gesättigt ist. Das bedeutet, dass die Ausgangsspannung des OPVs innerhalb der Grenzen der Versorgungsspannung liegen muss. Wenn die Ausgangsspannung diese Grenzen überschreitet, kann der OPV die dritte goldene Regel nicht mehr erfüllen, da er keine Spannung $\gt{}V_\mathrm{S+}$ oder $\lt{}V_\mathrm{S-}$ ausgeben kann.
-- Bei hohen Frequenzen verhält sich der OPV wie ein Tiefpass-Filter, wodurch die Verstärkung abfällt. Ebenfalls können schnelle Änderungen an den Eingangssignalen bei hoher Verstärkung nicht immer am Ausgang nachverfolgt werden (Slew-Rate-Beschränkung), da der OPV nur eine begrenzte Änderungsrate der Ausgangsspannung (für den LM358: $0,3 \frac{\mathrm{V}}{\mathrm{\mu{}s}}$) liefern kann.
+Das Eingangssignal wird um den Faktor $\left(1 + \frac{R_{1}}{R_{2}}\right)$ verstärkt.
+
+## Invertierender Verstärker
+
+Der invertierende Verstärker wird in **Abbildung 7** dargestellt. Hier wird das Eingangssignal über einen Widerstand $R_{1}$ in den invertierenden Eingang eingespeist. In der Feedback-Schleife befindet sich ein Widerstand $R_{2}$.
+
+---
+
+<img src="../figures/inverting-amplifier.png" width="400" style="zoom:100%;"/>
+
+**Abbildung 7**: (Grundschaltung des Invertierenden Verstärkers)
+
+---
+
+Der nicht-invertierende Eingang ist mit Masse verbunden. Nach der dritten goldenen Regel ist auch der invertierende Eingang auf Massepotential. Da keine direkte Verbindung zur Masse besteht, wird dieser Punkt als **virtuelle Masse** bezeichnet.
+
+Nach dem ohmschen Gesetz fallen die Spannungen an den Widerständen $R_{1}$ und $R_{2}$ wie folgt ab:
+$$
+\begin{align*}
+U_\mathrm{in} &= R_1 \cdot I \\
+U_\mathrm{out} &= - R_2 \cdot I \\
+\end{align*}
+$$
+Der Strom durch den zweiten Resistor wird negativ angegeben, da der Eingangsstrom auf den Knotenpunkt zuläuft, während der Ausgangsstrom vom Knotenpunkt abfließt. Da kein Anteil des Stroms $I$ in den Eingang des OPVs fließt (erste goldene Regel), muss er durch beide Widerstände identisch sein. Daraus folgt:
+$$
+\begin{align*}
+\frac{U_\mathrm{in}}{R_1} &= -\frac{U_\mathrm{out}}{R_2} \\
+U_\mathrm{out} &= -U_\mathrm{in} \cdot \frac{R_2}{R_1}
+\end{align*}
+$$
+
+Durch das Vorzeichen wird die Invertierung des Eingangssignals, als Phasenverschiebung um $e^{i\pi} = 1$ , deutlich gemacht. Das Eingangssignal wird betragsmäßig um den Faktor $\frac{R_2}{R_1}$ verstärkt.
+
+# Die goldenen Regeln: Cont'd
+
+Die Verstärkerschaltungen lassen sich mit den goldenen Regeln erklären. Dennoch gibt es Grenzen, innerhalb deren die goldenen Regeln angewendet werden können:
+
+- Die goldenen Regeln basieren auf dem Prinzip des negativen Feedbacks. Wenn kein Feedback am invertierenden Eingang ankommt, gelten die Regeln nicht. Dies kann auftreten, wenn z.B.
+    - einen Wackelkontakt oder ein Kabelbruch vorliegt
+    - einen extrem hochohmiger Widerstand in der Feedback-Schleife zu sehr großen Spannungsabfällen führt
+    - In der Feedback-Loop Dioden verbaut sind, die in Sperrrichtung geschaltet sein können und dadurch den Feedback-Pfad unterbrechen. Hier ist von *conditional feedback* die Rede.
+    - das Feedback-Signal versehentlich am nicht-invertierenden Eingang anliegt
+- Die Ausgangsspannung ist des OPV ist durch die Versorgungsspannungen $U_{s\pm}$ limitiert. Daher lässt kann dir dritte goldene Regel nur angewendet werden, solange der OPV sich nicht in der Sättigung befindet.
+- Bei hohen Frequenzen verhält sich der OPV wie ein Tiefpass-Filter, wodurch die Verstärkung abfällt. Ebenfalls können schnelle Änderungen an den Eingangssignalen bei hoher Verstärkung nicht immer am Ausgang nachverfolgt werden (Slew-Rate-Beschränkung), da der OPV nur eine begrenzte Änderungsrate der Ausgangsspannung liefern kann (für den LM358: $0,3 \frac{\mathrm{V}}{\mathrm{\mu{}s}}$).
+
+In der Realität sind die ersten zwei goldenen Regeln auch nie exakt erfüllt, da der Eingangswiderstand und der Ausgangswiderstand des OPVs immer einen realistischen Wert haben. In die Eingänge $+$ und $-$ fließt auch immer ein kleiner Strom, der sogenannte **Eingangsruhestrom** ($I^{+(0)}$ und $I^{-(0)}$). Dennoch sind die Abweichungen in den meisten Fällen vernachlässigbar, sodass die goldenen Regeln als Näherung sehr gut funktionieren. In der folgenden Tabelle sind einige charakteristische Eigenschaften von idealen und realen OPVs gegenübergestellt:
+
+| Eigenschaft           | idealer OPV  | realer OPV                                   | $\mathrm{\mu A741}$             |
+| :-------------------- | -----------  | ----------------------------------------     | ------------------------------- |
+| $R_\mathrm{in}$       | $\infty$     | $10^{7}\ \Omega\ldots 10^{12}\ \Omega$       | $\mathcal{O}(\mathrm{M\Omega})$ |
+| $R_\mathrm{out}$      | $0$          | $10\ \Omega\ldots 10^{3}\ \Omega$            | $300\ \Omega$                   |
+| $I^{-(0)},\ I^{+(0)}$ | $0$          | $0.1\,\mathrm{nA}\ldots 25\ \mathrm{nA}$     | ${\approx}35\ \mathrm{nA}$      |
+| $V_{S\pm}$            | $\pm \infty$ | $\pm 3\ \mathrm{V}\ldots \pm 20\ \mathrm{V}$ | $\pm 15\ \mathrm{V}$            |
+
+<!-- Stimmt das mit I^{\pm{}0} und V_{S\pm}? Sowohl im Text als auch in der Tabelle bin ich mir da überhaupt nicht sicher! TODO: Nochmal genauer nachschauen -->
 
 
 ## Essentials
@@ -117,7 +182,9 @@ Was Sie ab jetzt wissen sollten:
 ## Testfragen
 
 1. Was macht eine ideale Spannungsquelle aus?
-2. Was sagt die dritte Goldene Regel zur Dimenionsierung von OPVs über $X_{a}$ aus?
+2. Wie lauten die goldenen Regeln für den Operationsverstärker?
+3. Ihr Signal besteht aus einer geringen Aufladung eines Kondensators. Was passiert, wenn Sie versuchen diese Aufladung als Spannungsantieg mit einem Spannungsmessgerät mit moderatem Innenwiderstand zu messen?
+4. Welche Grundschaltung kann für eine Verstärkung mit Verstärkungsfaktor $\lt 1$ verwendet werden?
 
 # Navigation
 

@@ -1,0 +1,20 @@
+﻿\begin{tikzpicture}
+	\draw
+		(0,0) node[op amp](OA) {}
+		(OA.+) -| ++ (-0.5,-0.5)
+		node[rground] {}
+
+		(OA.out) to[short, -o] ++ (0.5,0)
+		node[right] {$V_\mathrm{out}$}
+
+		% feedback resistors
+		(OA.-) |- ++ (0,1) coordinate(Top)
+		to[resistor, l=$R_2$] (Top-|OA.out)
+		to[short, -*] (OA.out)
+
+		(OA.-) ++ (-2,0)
+		node[left] {$V_\mathrm{in}$}
+		to[resistor, l=$R_1$, o-*] (OA.-)
+	;
+\end{tikzpicture}
+
