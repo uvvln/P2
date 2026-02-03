@@ -16,11 +16,11 @@ An den Eingängen und am Ausgängern des OPV sind die die relevanten Spannungen 
 
 <img src="../figures/opamp_overview.png" width="750" style="zoom:100%;"/>
 
-**Abbildung 1**: (In Abbildung (a) ist das Schaltsymbol eines OPV mit Definition der relevanten Anschlüssen, Spannungen und Strömen gezeigt. Abbildung (b) zeigt das Gehäuse, in dem der MCP6002 verbaut ist. Abbildung \(c\) zeigt das Anschlussschema des OPV MCP6002, wie er in diesem Versuch verwendet wird. $V_{S\pm}$ bezeichnet die Versorgungsspannung. Die Beschaltung im Inneren des OPV, sowie die Versorgungsspannung(en) werden in Schaltbildern i.a. nicht gezeigt)
+**Abbildung 1**: (In Abbildung (a) ist das Schaltsymbol eines OPV mit Definition der relevanten Anschlüssen, Spannungen und Strömen gezeigt. Abbildung (b) zeigt das Gehäuse, in dem der LM358. Abbildung \(c\) zeigt das Anschlussschema des OPV LM358, wie er in diesem Versuch verwendet wird. $V_{S\pm}$ bezeichnet die Versorgungsspannung. Die Beschaltung im Inneren des OPV, sowie die Versorgungsspannung(en) werden in Schaltbildern i.a. nicht gezeigt)
 
 ---
 
-**Abbildung 1 \(c\)** zeigt das Anschlussschema des MCP6002, welcher für diesen Versuch verwendet wird und gleich zwei OPVs in einem Gehäuse bereitstellt. Das Gehäuse ist in **Abbildung 1 (b)** dargestellt.
+**Abbildung 1 \(c\)** zeigt das Anschlussschema des LM358, welcher für diesen Versuch verwendet wird und gleich zwei OPVs in einem Gehäuse bereitstellt. Das Gehäuse ist in **Abbildung 1 (b)** dargestellt.
 
 Ein OPV lässt sich auf viele verschiedene Weisen beschalten und bietet damit eine Vielzahl von verschiedenen Einsatzmöglichkeiten. In diesem Praktikumsversuch werden die wichtigsten Schaltungen, die auf dem Prinzip der [Gegenkopplung](https://de.wikipedia.org/wiki/Negative_R%C3%BCckkopplung) basieren, erklärt und untersucht.
 
@@ -162,7 +162,7 @@ Die Verstärkerschaltungen lassen sich mit den goldenen Regeln erklären. Dennoc
 
 In der Realität sind die ersten zwei goldenen Regeln auch nie exakt erfüllt, da der Eingangswiderstand und der Ausgangswiderstand des OPVs immer einen realistischen Wert haben. In die Eingänge $+$ und $-$ fließt auch immer ein kleiner Strom, der sogenannte **Eingangsruhestrom** ($I^{+(0)}$ und $I^{-(0)}$). Dennoch sind die Abweichungen in den meisten Fällen vernachlässigbar, sodass die goldenen Regeln als Näherung sehr gut funktionieren. In der folgenden Tabelle sind einige charakteristische Eigenschaften von idealen und realen OPVs gegenübergestellt:
 
-| Eigenschaft           | idealer OPV  | realer OPV                                   | $\mathrm{\mu A741}$             |
+| Eigenschaft           | idealer OPV  | realer OPV                                   | LM358                           |
 | :-------------------- | -----------  | ----------------------------------------     | ------------------------------- |
 | $R_\mathrm{in}$       | $\infty$     | $10^{7}\ \Omega\ldots 10^{12}\ \Omega$       | $\mathcal{O}(\mathrm{M\Omega})$ |
 | $R_\mathrm{out}$      | $0$          | $10\ \Omega\ldots 10^{3}\ \Omega$            | $300\ \Omega$                   |
