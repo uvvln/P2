@@ -1,0 +1,46 @@
+* Use the SPICE model for the op amp
+.include LM358.lib
+
+* Define a voltage source which
+* provides the sine input signal for the attenuator
+Vsource Vsource 0 SIN(0 3 1k 0 0 0 100)
+
+* OPV Supply Voltage
+V12 V12 0 DC 12
+Vn12 Vn12 0 DC -12
+
+* use the same resistor twice
+.param r=2.49k
+* Connect input signal to non-inv OPV input
+R1 Vsource VopIn r
+* Connect feedback loop
+R2 VopIn Vout r
+* OPV instantiations
+* connections:      non-inverting input
+*                   |   inverting input
+*                   |   |   positive power supply
+*                   |   |   |   negative power supply
+*                   |   |   |   |   output
+*                   |   |   |   |    |
+*                   |   |   |   |    |
+XOP1 								0 VopIn V12 Vn12 Vout LM358
+
+
+* Now define the simulation parameters
+* We want to perform a transient analysis, which
+* simulates the time behaviour of the circuit
+* The duration of the simulation is set to 5µs
+* and the time steps are set to 0.1 nano seconds
+* a finer step size increases the resolution but also
+* needs more time to calculate the transient analysis.
+.tran 1u 2m
+
+* Here we define what we want ngspice to perform and report in the end
+.control
+* run the simulation
+run
+
+* plot the voltage on some interesting virtual wires
+plot v(Vsource) v(Vout) title "input and output voltage"
+.endc
+.end
