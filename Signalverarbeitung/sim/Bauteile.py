@@ -90,9 +90,9 @@ U_out_final = N * (best_R4 / (best_R3 + best_R4))
 print(f"Achieved generated voltage: {U_out_final} V")
 
 
-######################################
-# Exercise 3, B: inverting Amplifier #
-######################################
+###############################################
+# Exercise 2, A and 3, B: inverting Amplifier #
+###############################################
 
 print("\nExercise 2, A and 3, B")
 
@@ -119,6 +119,26 @@ print(f"Best resistor values for the inverting amplifier: R_ex3 = {R_ex3} Ohm, R
 # But: For the next exercise we need a 1.15kΩ resistor, and we already have the 2.26kΩ
 # resistor, which have the same ratio. Therefore: Use them instead (*10e-1)
 print("Best resistor values for the inverting amplifier: R_1 = 2260 Ohm, R_2 = 1150 Ohm, achieved ratio: {R_ex3 / R_other}")
+
+
+####################################
+# Exercise 2, C: Gain Verification #
+####################################
+
+# result from last exercise:
+R_1 = 2260  # Ohm
+N = 1  # V
+N_max = 9  # V (before the saturation starts)
+
+# find 5 equi-distantial gain values between N and N_max (endpoints not included)
+print("\nExercise 2, C")
+gain_values = [2, 3.5, 5, 7.5, 9]
+print("Gain values to be tested:", gain_values)
+
+# calculate the value for resistor R_2 for each gain value, using the formula: Gain = 1 + (R_1 / R_2)
+resistors = [R_1 / (gain - 1) for gain in gain_values]
+print("Resistor values for the gain verification:", resistors)
+print(f"The potentiometer should have a range from {min(resistors)} Ohm to {max(resistors)} Ohm")
 
 
 ####################################
