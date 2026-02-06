@@ -1,0 +1,55 @@
+* Use the SPICE model for the op amp
+.include LM358.lib
+
+* Define a voltage source which
+* provides the sine input signal for the attenuator
+Vsource Vsource 0 SIN(0 3 1k 0 0 0 100)
+
+* OPV Supply Voltage
+V12 V12 0 DC 12
+Vn12 Vn12 0 DC -12
+
+* Clamping Voltages
+V5 V5 0 DC 5
+Vn5 Vn5 0 DC -5
+
+* First configuration: Use  1 + (R1 / R2)
+* The amplification factor should be 3
+Ra1 VopOut Vatt 22.6k
+Ra2 Vatt 0 11.5k
+* OPV instantiations
+* connections:      non-inverting input
+*                   |   inverting input
+*                   |   |   positive power supply
+*                   |   |   |   negative power supply
+*                   |   |   |   |   output
+*                   |   |   |   |    |
+*                   |   |   |   |    |
+XOP1 					Vsource Vatt V12 Vn12 VopOut LM358
+
+
+* Define the model for the 1N4148 Diode
+.model 1N4148 D(Is=2.52e-9 Rs=0.568 N=1.906 Cjo=1e-11 M=0.333 Vj=0.75 Eg=1.11 Bv=100 Ibv=0.1u Tt=4e-9)
+
+* Add the clamping Diodes
+D1 Vn5 VopOut 1N4148
+D2 VopOut V5 1N4148
+
+* Now define the simulation parameters
+* We want to perform a transient analysis, which
+* simulates the time behaviour of the circuit
+* The duration of the simulation is set to 5µs
+* and the time steps are set to 0.1 nano seconds
+* a finer step size increases the resolution but also
+* needs more time to calculate the transient analysis.
+.tran 1u 2m
+
+* Here we define what we want ngspice to perform and report in the end
+.control
+* run the simulation
+run
+
+* plot the voltage on some interesting virtual wires
+plot v(Vsource) v(VopOut) title "input and output voltage"
+.endc
+.end
