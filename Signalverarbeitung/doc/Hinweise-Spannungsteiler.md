@@ -140,6 +140,8 @@ $$
 
 Widerstände lassen sich industriell mit hoher Genauigkeit fertigen, während Kapazitäten meist nur mit geringerer Genauigkeit verfügbar sind. Daher wird in der Praxis meist zuerst der Widerstandsteiler ausgelegt und zu den Kondensatoren zusätzlich ein Trimmerkondensator verbaut, in **Abbildung 6** als $C_{T}$ bezeichnet, mit dem die Kapazität $C_{2} \parallel C_{T}$ feinjustiert werden kann, um die Frequenzkompensation zu erreichen.
 
+Ein Frequenzkompensierter Spannungsteiler ist ebenfalls in den Tastköpfen für Oszilloskope verbaut, um die Verzerrung des Signals durch die Kapazität des Oszilloskops zu minimieren. Hier müssen sie ebenfalls den Trimer-Kondensator anpassen um die Frequenzkompensation zu erreichen.
+
 ## Offset-Addition
 
 In einigen Schaltungen ist es notwendig, zu einer Wechselspannung einen Gleichspannugsanteil zu addieren. Ein beispiel dafür wäre die Verschiebung einer Wechselspannung in den positiven Bereich, wenn ein Messgerät nicht für die Messung von negativen Spannungen ausgelegt ist. Eine einfache Möglichkeit dies zu erreichen, ist die Modifikation eines Spannungsteilers durch hinzufügen einer weiteren Spannungsquelle, wie in **Abbildung 7 (a)** dargestellt. Dabei wird in der Abbildung nur ein ohmscher Spannungsteiler dargestellt, aber das Prinzip lässt sich auch auf kapazitive und Frequenzkompensierte Spannungsteiler übertragen.

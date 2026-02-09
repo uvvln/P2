@@ -1,31 +1,38 @@
 ﻿\begin{tikzpicture}
 	\draw
+
 		(0,0) node[op amp, noinv input up, anchor=out](OA) {}
-		-- ++ (0,1) coordinate (Voffset)
+		-- ++ (1,0) coordinate (Voffset)
 		to[resistor, l2=$R_2$ and $\SI{2,26}{\kilo\ohm}$, -*] ++ (0,2) coordinate (Center)
 		to[resistor, l2=$R_1$ and $\SI{11,5}{\kilo\ohm}$] ++ (0,2)
 		node[vcc] (vcc) {$\SI{\pm9}{\volt}$}
 		(Center) to[short, -*] ++ (1,0) coordinate (Center) 
 		to[capacitor, l2=$C_2$ and $\SI{470}{\pico\farad}$] ++ (0,-2)
-		to[short, *-*] (Voffset)
-		(vcc) to[short, *-] ++ (1,0)
+		to[short, -*] (Voffset)
+		(vcc) to[short, *-] ++ (1,0) coordinate (Top)
 		to[capacitor, l2=$C_1$ and $\SI{82}{\pico\farad}$] (Center)
-		(Center) to[short, -*] ++ (2,0) coordinate (Center)
-		to[vC, l2=$C_T$ and $\SI{\approx 15}{\pico\farad}$, *-] ++ (0,-2)
-		to[short, *-] (Voffset)
-		(Center) to[short, -o] ++ (1,0)
+		(Top) to[short, *-] ++ (2,0) coordinate (Top)
+		to[vC, l2=$C_T$ and $\SI{\approx 15}{\pico\farad}$, -] ++ (0,-2) coordinate (Middle)
+		to[short, *-] (Center)
+		(Middle) to[short, -o] ++ (1,0)
 		node[auto, anchor=west] {$\SI{0}{\volt} \to \SI{3}{\volt}$}
 
 		% Add the attenuator at the op amp
 		(OA.-) -- ++ (0,-1)
-		-| (OA.out) node[circ] {}
+		-| (Voffset) node[circ] {}
 
 		(OA.+) -- ++ (-1,0)
 		++ (0,-2) node[rground] {}
 		to[R, l2=$R_3$ and $\SI{2,87}{\kilo\ohm}$] ++ (0,2)
-		node[circ] {}
+		node[circ] {} coordinate (VopIn)
 		to[R, l2=$R_4$ and $\SI{16,2}{\kilo\ohm}$] ++ (0,2)
 		node[vcc] {$\SI{12}{\volt}$}
+
+		% Add the smooting capacitor to the offset voltage
+		(VopIn) ++ (-2.5,-2)
+		node[rground] {}
+		to[capacitor, l2=$C_3$ and $\SI{100}{\nano\farad}$] ++ (0,2)
+		to[short, -*] (VopIn)
 	;
 \end{tikzpicture}
 
