@@ -30,7 +30,7 @@ $$
 \end{equation*}
 $$
 
-Der Spannungsteiler kann verwendet werden, um am Abgriff zwischen den beiden Widerständen eine bestimmte Spannung $U_{2}$ zu erzeugen, die kleiner ist als die Eingangsspannung $U_{0}$. In **Abbildung 1 (b)** ist beispielhaft ein Spannungsteiler dargestellt, der am unteren Ende mit der Masse verbunden ist. Die Widerstände wurden so gewählt, dass eine Eingangsspannung von $\pm12 \mathrm{V}$ auf eine Ausgangsspannung von $\pm 3 \mathrm{V}$ reduziert wird. Der Spannungsteiler funktioniert in diesem Fall unabhängig davon, ob die Eingangsspannung positiv oder negativ ist.
+Der Spannungsteiler kann verwendet werden, um am Abgriff zwischen den beiden Widerständen eine bestimmte Spannung $U_{2}$ zu erzeugen, die kleiner ist als die Eingangsspannung $U_{0}$. In **Abbildung 1 (b)** ist beispielhaft ein Spannungsteiler dargestellt, der am unteren Ende mit der Masse verbunden ist. Die Widerstände wurden so gewählt, dass eine Eingangsspannung von $\pm{} 9 \mathrm{V}$ auf eine Ausgangsspannung von $\pm 1,5 \mathrm{V}$ reduziert wird. Der Spannungsteiler funktioniert in diesem Fall unabhängig davon, ob die Eingangsspannung positiv oder negativ ist.
 
 ---
 
@@ -164,7 +164,7 @@ U_{out} & = U_{2} + U_{+} \\
 $$
 Die Gleichung zeigt, dass eine Eingangsspannung $U_{in}$ um den Faktor $U_{+} \frac{R_{1}}{R_{1} + R_{2}}$ verschoben wird.
 
-Wie lässt sich diese Schaltung in der Praxis einsetzen? Dazu betrachten wir folgendes Beispiel: Eine $\pm12 \mathrm{V}$ Eingangsspannung soll auf den Bereich von $0\mathrm{V}$ bis $3\mathrm{V}$ abgebildet werden. Für den Entwurf der Schaltung wird zuerst der Spannungsteiler richtig dimensioniert. Dabei ist der intuitive Gedanke, die Eingangsspannung auf $\pm3\mathrm{V}$ zu reduzieren nicht hilfreich, weil durch Hinzufügen eines Offsets die Spannung größer wird und die $3\mathrm{V}$ Obergrenze wieder überschreitet. Stattdessen muss die Spannung auf die Hälfte des Zielbereichs, in diesem Fall $\pm1,5\mathrm{V}$ reduziert werden. Für die Widerstände gilt dementsprechend:
+Wie lässt sich diese Schaltung in der Praxis einsetzen? Dazu betrachten wir folgendes Beispiel: Eine $\pm9 \mathrm{V}$ Eingangsspannung soll auf den Bereich von $0\mathrm{V}$ bis $3\mathrm{V}$ abgebildet werden. Für den Entwurf der Schaltung wird zuerst der Spannungsteiler richtig dimensioniert. Dabei ist der intuitive Gedanke, die Eingangsspannung auf $\pm3\mathrm{V}$ zu reduzieren nicht hilfreich, weil durch Hinzufügen eines Offsets die Spannung größer wird und die $3\mathrm{V}$ Obergrenze wieder überschreitet. Stattdessen muss die Spannung auf die Hälfte des Zielbereichs, in diesem Fall $\pm1,5\mathrm{V}$ reduziert werden. Für die Widerstände gilt dementsprechend:
 $$
 \begin{align*}
 U_{2} & = U_{0} \cdot \frac{R_{2}}{R_{1} + R_{2}} \\
@@ -173,26 +173,35 @@ U_{2} & = U_{0} \cdot \frac{R_{2}}{R_{1} + R_{2}} \\
 $$
 Die Gleichung ist erfüllt, wenn die gewählten Widerstände die Gleichung $R_{1} = 7 \cdot R_{2}$ erfüllen. Für die Kondensatoren im Frequenzkompensierten Spannungsteiler gilt das Inverse dieses Verhältnisses: $C_{2} = 7 \cdot C_{2}$. Zur Vereinfachung der Rechnung werden die Bauteile auf folgende Werte festgelegt:
 
-- $R_{1} = 7\mathrm{k\Omega}$
-- $R_{2} = 1\mathrm{k\Omega}$
-- $C_{1} = 10\mathrm{pF}$
-- $C_{2} = 70\mathrm{pF}$
+- $R_{1} = 11,5\mathrm{k\Omega}$
+- $R_{2} = 2,26\mathrm{k\Omega}$
+- $C_{1} = 82\mathrm{pF}$
+- $C_{2} = 470\mathrm{pF}$
+- $C_{T} = 6 \mathrm{pF} - 30 \mathrm{pF}$
 
 Das Eingangssignal liegt nun in dem Bereich $\pm1,5\mathrm{V}$ vor. Durch eine Addition von $1,5\mathrm{V}$ wird es auf den gewünschten Zielbereich verschoben. Die Offset-Spannung für den Spannungsteiler berechnet sich dementsprechend zu:
 $$
 \begin{align*}
 1,5\mathrm{V} & = U_{+} \cdot \frac{R_{1}}{R_{1} + R_{2}} \\
 U_{+} & = 1,5\mathrm{V} \left(1 + \frac{R_{2}}{R_{1}}\right) \\
-& = 1,5\mathrm{V} \cdot \frac{8}{7} \approx 1,71\mathrm{V}
+& = 1,5\mathrm{V} \cdot \frac{6}{5} = 1,8\mathrm{V}
 \end{align*}
 $$
 Mit diesen Werten lässt sich die Schaltung in **Abbildung 7 (b)** aufbauen. Zum Feinjustieren der Kapazitäten in der Schaltung wird ebenfalls ein Trimmer-Kondensator ($C_{T}$) eingebaut. Eine Simulation zur Verifikation der Funktion dieser Schaltung ist in **Abbildung 8** dargestellt.
+
+Um die Offset-Spannung von $1,8 \mathrm{V}$ bereitzustellen, können Sie die $12 \mathrm{V}$ Spannungsversorgung verwenden und einen Spannungsteiler aus einem $16.2 \mathrm{k\Omega}$ und einem $2.87 \mathrm{k\Omega}$ Widerstand aufbauen. Damit Sie diesen Spannungsteiler als spannungsversorgung anschließen können, müssen Sie ihn mit einem Impedanzwandler verbinden, da er ansonsten belastet wird und keine stabile Ausgangsspannung liefert. Weitere Informationen zum Impedanzwandler finden Sie in der Datei [Hinweise-OPV.md](./Hinweise-OPV.md). Die fertige Schaltung ist in **Abbildung 9** zu sehen.
 
 ---
 
 <img src="../figures/simulation_ofset.png" width="600" style="zoom:100%;"/>
 
 **Abbildung 8**: (Simulation der in **Abbildung 7 (b)** dargestellten Schaltung.)
+
+---
+
+<img src="../figures/offset_addition_impedance_converter.png" width="600" style="zoom:100%;"/>
+
+**Abbildung 9**: (Realisierung der in **Abbildung 7** gezeigten Schaltung. Hierbei wird die Offset-Spannung über einen Spannungsteiler und einen Impedanzwandler aus der Versorgungsspannung bezogen.)
 
 ---
 
@@ -205,7 +214,7 @@ Was Sie ab jetzt wissen sollten:
 - Sie sollten in der Lage sein, einen Frequenzkompensierten Spannungsteiler für vorgegebene Eingangs- und Ausgangsspannungen zu dimensionieren.
 - Sie sollten die Funktionsweise der Offset-Addition verstehen und in der Lage sein, eine Schaltung mit vorgegebenen Parametern zu entwerfen.
 
-## Testfragen  TODO
+## Testfragen
 
 1. Wieso ist ein ohmscher Spannungsteiler keine gute Stromquelle?
 2. Warum verzerrt die Eingangskapazität eines Oszilloskops das Ausgangssignal eines ohmschen Spannungsteilers?

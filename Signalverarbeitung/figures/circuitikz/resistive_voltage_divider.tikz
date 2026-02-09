@@ -28,11 +28,11 @@
 	\draw
 		% draw an attenuator with specified values that divides +-12V to +-3V
 		(0,0) node[ground] {}
-		to[resistor, l2=$R_2$ and $\SI{1}{\kilo\ohm}$, -*] ++ (0,2) coordinate (A)
+		to[resistor, l2=$R_2$ and $\SI{2,26}{\kilo\ohm}$, -*] ++ (0,2) coordinate (A)
 		to[short, -o] ++ (1,0)
-		node[auto, anchor=west] {$\pm\SI{3}{\volt}$}
-		(A) to[resistor, l2=$R_1$ and $\SI{3}{\kilo\ohm}$] ++ (0,2)
-		node[vcc] {$\pm{}\SI{12}{\volt}$}
+		node[auto, anchor=west] {$\pm\SI{1,5}{\volt}$}
+		(A) to[resistor, l2=$R_1$ and $\SI{11,5}{\kilo\ohm}$] ++ (0,2)
+		node[vcc] {$\pm{}\SI{9}{\volt}$}
 
 
 		% draw the label (b) for the right half of the image
