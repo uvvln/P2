@@ -18,13 +18,13 @@
 		node[vcc] (vcc) {$\SI{\pm9}{\volt}$}
 		(Center) to[short, -*] ++ (1,0) coordinate (Center) 
 		to[capacitor, l2=$C_2$ and $\SI{470}{\pico\farad}$] ++ (0,-2)
-		to[short, *-*] (Voffset)
-		(vcc) to[short, *-] ++ (1,0)
+		to[short, -*] (Voffset)
+		(vcc) to[short, *-] ++ (1,0) coordinate (Top)
 		to[capacitor, l2=$C_1$ and $\SI{82}{\pico\farad}$] (Center)
-		(Center) to[short, -*] ++ (2,0) coordinate (Center)
-		to[vC, l2=$C_T$ and $\SI{\approx 15}{\pico\farad}$, *-] ++ (0,-2)
-		to[short, *-] (Voffset)
-		(Center) to[short, -o] ++ (1,0)
+		(Top) to[short, *-] ++ (2,0) coordinate (Top)
+		to[vC, l2=$C_T$ and $\SI{\approx 15}{\pico\farad}$, -] ++ (0,-2) coordinate (Middle)
+		to[short, *-] (Center)
+		(Middle) to[short, -o] ++ (1,0)
 		node[auto, anchor=west] {$\SI{0}{\volt} \to \SI{3}{\volt}$}
 
 		(0,-1) node[below] {(b)}
