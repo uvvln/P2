@@ -60,6 +60,8 @@ Um einen Summierverstärker zu realisieren, der eine Eingangsspannung von $\pm9 
 - $R_2 = 9,09 \mathrm{k\Omega}$
 - $R_f = 1,15 \mathrm{k\Omega}$
 
+Schließen Sie das Ausgangssignal des Signalgenerators an $V_1$ an und die Spannungsversorgung von $12 \mathrm{V}$ an $V_2$. Das Ausgangssignal des OPVs sollte nun eine Amplitude von $0 \mathrm{V} \to 3 \mathrm{V}$ haben.
+
 ## Essentials
 
 Was Sie ab jetzt wissen sollten:
