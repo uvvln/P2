@@ -44,7 +44,7 @@
 	}
 	\draw
 		(0,0) node[dipchip, num pins=8, hide numbers, external pins width=0.3, external pad fraction=4] (IC) {}
-		(IC.south) node[below] {MCP6002}
+		(IC.south) node[below] {LM358}
 		% label all Pins
 		% left
 		(IC.pin 1) node[left, font=\tiny] {$\mathrm{V_{out, A}}$}

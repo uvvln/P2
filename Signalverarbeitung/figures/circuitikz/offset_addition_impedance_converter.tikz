@@ -1,18 +1,7 @@
 ﻿\begin{tikzpicture}
 	\draw
-		(0,0) node[ground] {}
-		to[european voltage source, l=$U_{+}$] ++ (0,2)
-		to[resistor, l=$R_2$, -*] ++ (0,2) coordinate (Center)
-		to[resistor, l=$R_1$] ++ (0,2)
-		node[vcc] {$U_{in}$}
-		(Center) to[short, -o] ++ (1,0) node[auto, anchor=west] {$U_{out}$}
-
-		(0,-1) node[below] {(a)}
-	;
-	\tikzset{shift={(5,0)}} % move coordinate origin to the right
-	\draw
-		(0,0) node[ground] (gnd) {}
-		to[european voltage source, l=$\SI{1,8}{\volt}$] ++ (0,2) coordinate (Voffset)
+		(0,0) node[op amp, noinv input up, anchor=out](OA) {}
+		-- ++ (0,1) coordinate (Voffset)
 		to[resistor, l2=$R_2$ and $\SI{2,26}{\kilo\ohm}$, -*] ++ (0,2) coordinate (Center)
 		to[resistor, l2=$R_1$ and $\SI{11,5}{\kilo\ohm}$] ++ (0,2)
 		node[vcc] (vcc) {$\SI{\pm9}{\volt}$}
@@ -27,7 +16,16 @@
 		(Center) to[short, -o] ++ (1,0)
 		node[auto, anchor=west] {$\SI{0}{\volt} \to \SI{3}{\volt}$}
 
-		(0,-1) node[below] {(b)}
+		% Add the attenuator at the op amp
+		(OA.-) -- ++ (0,-1)
+		-| (OA.out) node[circ] {}
+
+		(OA.+) -- ++ (-1,0)
+		++ (0,-2) node[rground] {}
+		to[R, l2=$R_3$ and $\SI{2,87}{\kilo\ohm}$] ++ (0,2)
+		node[circ] {}
+		to[R, l2=$R_4$ and $\SI{16,2}{\kilo\ohm}$] ++ (0,2)
+		node[vcc] {$\SI{12}{\volt}$}
 	;
 \end{tikzpicture}
 

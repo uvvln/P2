@@ -3,18 +3,16 @@
 
 * Define a voltage source which
 * provides the sine input signal for the attenuator
-Vsource Vsource 0 SIN(0 3 1k 0 0 0 100)
+Vsource Vsource 0 SIN(0 9 1k 0 0 0 100)
 
 * OPV Supply Voltage
 V12 V12 0 DC 12
 Vn12 Vn12 0 DC -12
 
-* use the same resistor twice
-.param r=2.49k
 * Connect input signal to non-inv OPV input
-R1 Vsource VopIn r
+R1 Vsource VopIn 6.81k
 * Connect feedback loop
-R2 VopIn Vout r
+R2 VopIn Vout 1.15k
 * OPV instantiations
 * connections:      non-inverting input
 *                   |   inverting input
@@ -24,6 +22,26 @@ R2 VopIn Vout r
 *                   |   |   |   |    |
 *                   |   |   |   |    |
 XOP1 								0 VopIn V12 Vn12 Vout LM358
+
+* Add offset
+Radd V12 VopIn 9.09k
+
+* use the same resistor twice
+.param r=2.49k
+* Connect input signal to non-inv OPV input
+R3 Vout Vop2In r
+* Connect feedback loop
+R4 Vop2In Vpos r
+* OPV instantiations
+* connections:      non-inverting input
+*                   |   inverting input
+*                   |   |   positive power supply
+*                   |   |   |   negative power supply
+*                   |   |   |   |   output
+*                   |   |   |   |    |
+*                   |   |   |   |    |
+XOP2 				  			0 Vop2In V12 Vn12 Vpos LM358
+
 
 
 * Now define the simulation parameters
@@ -41,6 +59,6 @@ XOP1 								0 VopIn V12 Vn12 Vout LM358
 run
 
 * plot the voltage on some interesting virtual wires
-plot v(Vsource) v(Vout) title "input and output voltage"
+plot v(Vsource) v(Vout) v(Vpos) title "input and output voltage"
 .endc
 .end

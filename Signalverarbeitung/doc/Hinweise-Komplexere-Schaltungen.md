@@ -55,6 +55,11 @@ $$
 $$
 Die Ausgangsspannung setzt sich somit aus der Summe der einzelnen Eingangsspannungen mit ihren jeweiligen Verstärkungsfaktoren zusammen.
 
+Um einen Summierverstärker zu realisieren, der eine Eingangsspannung von $\pm9 \mathrm{V}$ in den Bereich von $-3 \mathrm{V} \to 0 \mathrm{V}$ umwandelt, verwenden Sie die folgenden Werte für die Widerstände:
+- $R_1 = 6,81 \mathrm{k\Omega}$
+- $R_2 = 9,09 \mathrm{k\Omega}$
+- $R_f = 1,15 \mathrm{k\Omega}$
+
 ## Essentials
 
 Was Sie ab jetzt wissen sollten:
