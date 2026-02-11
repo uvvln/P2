@@ -4,7 +4,7 @@
 		(OA.+)  -- ++ (-0.5,0)
 		node[ocirc] {} node[left] {$V_\mathrm{in}$}
 		(OA.-) -| ++ (-0.5,-1) -| (OA.out)
-		(OA.out) to[short, -o] ++ (0.5,0)
+		(OA.out) to[short, *-o] ++ (0.5,0)
 		node[right] {$V_\mathrm{out}$}
 	;
 \end{tikzpicture}
