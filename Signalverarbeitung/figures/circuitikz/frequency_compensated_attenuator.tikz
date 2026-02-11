@@ -11,7 +11,7 @@
 		-- ++ (-1,0)
 		(B) -- ++ (2,0)
 		to[vC, l=$C_T$, -] ++ (0,-2) coordinate (C)
-		to[short, -*] ++ (-2,0)
+		to[short, *-] ++ (-2,0)
 		(A) to[short] (C)
 		to[short] (C)
 		to[short, -o] ++ (1,0)

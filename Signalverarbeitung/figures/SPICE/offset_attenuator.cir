@@ -3,19 +3,19 @@
 
 * Define a voltage source which
 * provides the sine input signal for the attenuator
-Vsource Vsource 0 SIN(0 12V 500k 0 0 0 100)
+Vsource Vsource 0 SIN(0 9V 500k 0 0 0 100)
 * Vsource Vsource 0 PULSE(-12 12 0.5u 0 0 0.5u 1u 5)
 
 * now add a resistor which is connected to Vsource on one end
 * and to the virtual wire Vout at the other end
-R1 Vsource Vout 70K
+R1 Vsource Vout 11.5k
 * Add the second resistor which continues the path to ground (= 0)
-R2 Vout Voff 10k
+R2 Vout Voff 2.26k
 * Now add the capacitors
-C1 Vsource Vout 10p
-C2 Vout Voff 70p
+C1 Vsource Vout 94p
+C2 Vout Voff 470p
 
-Voff Voff 0 DC 1.71V
+Voff Voff 0 DC 1.8V
 
 
 * Now define the simulation parameters

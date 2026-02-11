@@ -5,7 +5,8 @@
 		node[ocirc] {} node[left] {$V_\mathrm{in}$}
 
 		% feedback resistors
-		(OA.out) to[R, l=$R_1$, -*] ++ (0,-2) coordinate (Center)
+		(OA.out) node[circ] {}
+		to[R, l=$R_1$, -*] ++ (0,-2) coordinate (Center)
 		to[R, l=$R_2$] ++ (0,-2)
 		node[rground] {}
 
@@ -14,7 +15,7 @@
 
 		(OA.out) -- ++ (0.5,0)
 		to[R, l=$\SI{1}{\kilo\ohm}$] ++ (2,0)
-		-- ++ (0.5,0) coordinate (Clamp)
+		to[short, -*] ++ (0.5,0) coordinate (Clamp)
 		to[short, -o] ++ (1,0) node[right] {$V_\mathrm{out}$}
 
 		(Clamp) ++ (0,-2) node[vee] {$\SI{-5}{\volt}$}

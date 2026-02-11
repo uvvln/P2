@@ -8,11 +8,11 @@
 		node[right] {$V_\mathrm{out}$}
 
 		% feedback resistors
-		(OA.-) |- ++ (0,1) coordinate(Top)
+		(OA.-) to[short, *-] ++ (0,1) coordinate(Top)
 		to[resistor, l=$R_f$] (Top-|OA.out)
 		to[short, -*] (OA.out)
 
-		(OA.-) -- ++ (-1.5,0) coordinate (NegIn)
+		(OA.-) to[short, -*] ++ (-1.5,0) coordinate (NegIn)
 		to[resistor, l=$R_1$, -o] ++ (-2,0)
 		node[left] {$V_1$}
 		(NegIn) -- ++ (0,-1)
