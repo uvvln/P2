@@ -117,7 +117,7 @@ $$
 
 Das Eingangssignal wird um den Faktor $\left(1 + \frac{R_{1}}{R_{2}}\right)$ verstärkt.
 
-Für diesen Versuch stehen Ihnen ein $22,6 \mathrm{k\Omega}$ und ein $11,5 \mathrm{k\Omega}$ Widerstand zur Verfügung. Welche Verstärkungs-Faktoren lassen sich damit realisieren?
+Für diesen Versuch stehen Ihnen ein $2,26 \mathrm{k\Omega}$ und ein $1,15 \mathrm{k\Omega}$ Widerstand zur Verfügung. Welche Verstärkungs-Faktoren lassen sich damit realisieren?
 
 ## Invertierender Verstärker
 
@@ -150,7 +150,7 @@ $$
 
 Durch das Vorzeichen wird die Invertierung des Eingangssignals, als Phasenverschiebung um $e^{i\pi} = 1$ , deutlich gemacht. Das Eingangssignal wird betragsmäßig um den Faktor $\frac{R_2}{R_1}$ verstärkt.
 
-Für diesen Versuch stehen Ihnen ein $22,6 \mathrm{k\Omega}$ und ein $11,5 \mathrm{k\Omega}$ Widerstand zur Verfügung. Welche Verstärkungs-Faktoren lassen sich damit realisieren?
+Für diesen Versuch stehen Ihnen ein $2,26 \mathrm{k\Omega}$ und ein $1,15 \mathrm{k\Omega}$ Widerstand zur Verfügung. Welche Verstärkungs-Faktoren lassen sich damit realisieren?
 
 # Die goldenen Regeln: Cont'd
 
