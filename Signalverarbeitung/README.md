@@ -8,7 +8,7 @@
 
 Versuch P2-191, 192, 193 (Stand: **Februar 2026**)
 
-[Raum F1-15](https://labs.physik.kit.edu/img/Klassische-Praktika/Lageplan_P1P2.png)
+[Raum F1-13](https://labs.physik.kit.edu/img/Klassische-Praktika/Lageplan_P1P2.png)
 
 # Signalverarbeitung
 
