@@ -6,7 +6,7 @@
 
 Versuch P2-151, 152, 153 (Stand: **February 2025**)
 
-[Raum F1-19](https://labs.physik.kit.edu/img/Klassische-Praktika/Lageplan_P1P2.png)
+[Raum F1-15](https://labs.physik.kit.edu/img/Klassische-Praktika/Lageplan_P1P2.png)
 
 
 

@@ -6,7 +6,7 @@
 
 Versuch P2-251, 252, 253 (Stand: **März 2025**)
 
-[Raum F1-13](https://labs.physik.kit.edu/img/Klassische-Praktika/Lageplan_P1P2.png)
+[Raum F1-19](https://labs.physik.kit.edu/img/Klassische-Praktika/Lageplan_P1P2.png)
 
 
 
