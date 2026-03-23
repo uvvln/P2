@@ -158,6 +158,8 @@ Für die Beschreibung der Funktionsweise nehmen gehen wir davon aus, dass der We
 $$
 \begin{align*}
 % Wegen einem Bug im LaTeX-Renderer KaTeX muss in der 2. Zeile das + durch \char"002B ersetzt werden. Andernfalls wird die Gleichung nicht dargestellt.
+% KaTeX kann die Gleichung nicht darstellen, wenn zwei mal `_{+}` in derselben Zeile steht.
+% Dies ist in einer neueren KaTeX Version bereits behoben. Die Gitlab Vorschau verwendet aber immer noch die alte Version.
 U_{out} & = U_{2} + U_{+} \\
     & = (U_{in} - U_{\char"002B}) \frac{R_{2}}{R_{1} + R_{2}} + U_{+} \\
     & = U_{in} \frac{R_{2}}{R_{1} + R_{2}} + U_{+} \left(1 - \frac{R_{2}}{R_{1} + R_{2}}\right) \\
@@ -179,7 +181,7 @@ Die Gleichung ist erfüllt, wenn die gewählten Widerstände die Gleichung $R_{1
 - $R_{2} = 2,26\mathrm{k\Omega}$
 - $C_{1} = 82\mathrm{pF}$
 - $C_{2} = 470\mathrm{pF}$
-- $C_{T} = 6 \mathrm{pF} - 30 \mathrm{pF}$
+- $C_{T} = 15 \mathrm{pF} - 85 \mathrm{pF}$
 
 Das Eingangssignal liegt nun in dem Bereich $\pm1,5\mathrm{V}$ vor. Durch eine Addition von $1,5\mathrm{V}$ wird es auf den gewünschten Zielbereich verschoben. Die Offset-Spannung für den Spannungsteiler berechnet sich dementsprechend zu:
 $$
@@ -190,6 +192,8 @@ U_{+} & = 1,5\mathrm{V} \left(1 + \frac{R_{2}}{R_{1}}\right) \\
 \end{align*}
 $$
 Mit diesen Werten lässt sich die Schaltung in **Abbildung 7 (b)** aufbauen. Zum Feinjustieren der Kapazitäten in der Schaltung wird ebenfalls ein Trimmer-Kondensator ($C_{T}$) eingebaut. Eine Simulation zur Verifikation der Funktion dieser Schaltung ist in **Abbildung 8** dargestellt.
+
+> **Hinweis**: Der Trimmer-Kondensator sollte auf einen theoretischen Wert von $15\,\mathrm{pF}$ eingestellt werden. Da das Steckbrett aber Streu-Kapazitäten in die Schaltung hinzufügt (ca. $2\,\mathrm{pF}$ bis $4\,\mathrm{pF}$ zwischen zwei Zeilen), muss der Trimmer hier weitaus größer gewählt werden, um die Streu-Kapazitäten zu kompensieren. Wenn Sie die Schaltung auf einer Plating aufbauen, tritt dieses Problem in den meisten Fällen nicht auf.
 
 Um die Offset-Spannung von $1,8 \mathrm{V}$ bereitzustellen, können Sie die $12 \mathrm{V}$ Spannungsversorgung verwenden und einen Spannungsteiler aus einem $16.2 \mathrm{k\Omega}$ und einem $2.87 \mathrm{k\Omega}$ Widerstand aufbauen. Damit Sie diesen Spannungsteiler als spannungsversorgung anschließen können, müssen Sie ihn mit einem Impedanzwandler verbinden, da er ansonsten belastet wird und keine stabile Ausgangsspannung liefert. Weitere Informationen zum Impedanzwandler finden Sie in der Datei [Hinweise-OPV.md](./Hinweise-OPV.md). Die fertige Schaltung ist in **Abbildung 9** zu sehen.
 
