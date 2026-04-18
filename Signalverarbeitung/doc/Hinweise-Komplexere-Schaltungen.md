@@ -1,6 +1,8 @@
 # Signalverarbeitung
 
-## Clamping-Dioden
+## Komplexere Schaltungen
+
+### Clamping-Dioden
 
 Ein OPV kann ein Eingangssignal $U_{\mathrm{in}}$ verstärken, aber er kann nicht verhindern, dass die Ausgangsspannung $U_{\mathrm{out}}$ einen bestimmten Wert überschreitet. Falls dies in einer gegebenen Anwendung nicht passieren darf, können Dioden als [**Clamping-Dioden**](https://de.wikipedia.org/wiki/Klemmschaltung_(Nachrichtentechnik)) verwendet werden. Sie werden so in die Schaltung eingebracht, dass sie bei Überschreiten der Schwellenspannung leitend werden, so dass die Spannung nicht über dieses Niveau hinausgehen kann. Die Dioden werden in der Regel in Sperrrichtung geschaltet, um sicherzustellen, dass sie nur bei Überschreiten der Schwellenspannung leitend werden.
 
@@ -32,7 +34,7 @@ Damit der Strom durch die Dioden nicht zu groß wird, muss er zusätzlich durch 
 
 🔔**In diesem Dokument haben wir die Polarisation der Dioden, die Sie für den Aufbau der Schaltungen verwenden, bewusst nicht erklärt.** 🔔 Führen Sie einen Dioden-Test an einer Diode durch, um die Polarität zu bestimmen, bevor Sie sie in Ihre Schaltung einbauen.
 
-## Summierverstärker
+### Summierverstärker
 
 Die Schaltung des Summierverstärkers ist in **Abbildung 3** dargestellt:
 
