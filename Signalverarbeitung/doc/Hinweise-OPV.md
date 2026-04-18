@@ -24,13 +24,13 @@ An den Ein- und am Ausgängen des OPV sind die relevanten Spannungen und Ströme
 
 Ein OPV lässt sich auf viele verschiedene Weisen beschalten und bietet damit eine Vielzahl verschiedener Einsatzmöglichkeiten. In diesem Versuch werden die wichtigsten Schaltungen, die auf dem Prinzip der [Gegenkopplung](https://de.wikipedia.org/wiki/Negative_R%C3%BCckkopplung) basieren, erklärt und untersucht.
 
-## Die goldenen Regeln
+### Die goldenen Regeln
 
 Das Prinzip der Gegenkopplung (auch negative Rückkopplung genannt) beruht darauf, dass ein Teil des Ausgangssignals mit invertiertem Vorzeichen auf den Eingang zurückgeführt wird. Darüber wird das Verhalten des OPVs kontrolliert und lässt sich, für einen idealisierten OPV, mit Hilfe der **goldenen Regeln** beschreiben:
 
-1. Es fließt kein Strom in die Eingänge des OPVs. Der Eingangswiderstand am invertierenden und am nicht-invertierenden Eingang wird als unendlich groß angenommen.
-2. Der OPV hat eine niedrige Ausgangsimpedanz und kann als [ideale Spannungsquelle](https://de.wikipedia.org/wiki/Spannungsquelle#Ideale_und_reale_Spannungsquellen) mit einem Ausgangswiderstand $R_{\mathrm{out}} = 0\ \Omega$ angenommen werden.
-3. Der OPV wählt seine Ausgangsspannung so, dass die Differenz der Eingangsspannungen verschwindet: $U_{+} - U_{-} = 0\mathrm{V}$. Dies ist nur möglich, wenn eine Gegenkopplung vorhanden ist.
+- Es fließt kein Strom in die Eingänge des OPVs. Der Eingangswiderstand am invertierenden und am nicht-invertierenden Eingang wird als unendlich groß angenommen.
+- Der OPV hat eine niedrige Ausgangsimpedanz und kann als [ideale Spannungsquelle](https://de.wikipedia.org/wiki/Spannungsquelle#Ideale_und_reale_Spannungsquellen) mit einem Ausgangswiderstand $R_{\mathrm{out}} = 0\ \Omega$ angenommen werden.
+- Der OPV wählt seine Ausgangsspannung so, dass die Differenz der Eingangsspannungen verschwindet: $U_{+} - U_{-} = 0\mathrm{V}$. Dies ist nur möglich, wenn eine Gegenkopplung vorhanden ist.
 
 Die drei goldenen Regeln sind in **Abbildung 2** zusammengefasst:
 
@@ -42,7 +42,7 @@ Die drei goldenen Regeln sind in **Abbildung 2** zusammengefasst:
 
 ---
 
-## Spannungsfolger (Impedanzwandler)
+### Spannungsfolger (Impedanzwandler)
 
 Die einfachste Schaltung, die mit dem OPV realisiert werden kann, ist der **Spannungsfolger** (engl. *voltage follower*), wie in **Abbildung 3** dargestellt: 
 
@@ -66,7 +66,7 @@ Nach dieser Schaltung wird die gleiche Spannung am Ausgang ausgegeben, die am ni
 
 💡 Der Spannungsfolger kann verwendet werden, um die Ausgangsspannung eines Spannungsteilers abzugreifen, ohne den Spannungsteiler zu belasten. 
 
-## Die Feedback-Schleife
+### Die Feedback-Schleife
 
 Der oben beschriebene einfachste Fall, in dem das *Feedback* aus einer direkten Verbindung des Ausgangs mit dem invertierenden Eingang besteht, kann durch das Einfügen weiterer Bauelemente in die *Feedback*-Schleife erweitert werden. Elektrische Bauelemente haben einen Einfluss auf die Spannung des rückführenden Signals wodurch sich die Ausgangsspannung des OPV verändert, um die dritte goldene Regel zu erfüllen. Dieses Konzept ist in **Abbildung 4**  dargestellt:
 
@@ -96,7 +96,7 @@ mit der inversen Funktion $\mathfrak{F}^{-1}$ der *Feedback*-Funktion $\mathfrak
 
 In den nachfolgenden Schaltungen wird die *Feedback*-Schleife zur Umsetzung gezielter Veränderungen des Eingangssignals entworfen.
 
-## Nicht-invertierender Verstärker
+### Nicht-invertierender Verstärker
 
 Der Nicht-invertierende Verstärker verwendet einen Spannungsteiler in der *Feedback*-Schleife, um eine Spannungsverstärkung zu realisieren. Die Schaltung ist in **Abbildung 6** dargestellt:
 
@@ -131,7 +131,7 @@ $$
 
 Für die Realisierung dieser Schaltung stehen Ihnen ein $2.26\  \mathrm{k\Omega}$ und ein $1.15\  \mathrm{k\Omega}$ Widerstand zur Verfügung.
 
-## Invertierender Verstärker
+### Invertierender Verstärker
 
 Der invertierende Verstärker ist in **Abbildung 7** dargestellt: 
 
@@ -177,7 +177,7 @@ $$
 
 Für die Realisierung dieser Schaltung stehen Ihnen ein $2.26\  \mathrm{k\Omega}$ und ein $1.15\  \mathrm{k\Omega}$ Widerstand zur Verfügung.
 
-## Grenzen der Anwendung der goldenen Regeln
+### Grenzen der Anwendung der goldenen Regeln
 
 Die goldenen Regeln basieren auf dem Prinzip des negativen *Feedbacks*. Wenn kein *Feedback* am invertierenden Eingang ankommt, gelten die Regeln nicht. Dies kann z.B. in den folgenden Situationen auftreten:
 - Es liegt einen Wackelkontakt oder Kabelbruch vor.

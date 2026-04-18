@@ -1,6 +1,8 @@
 # Signalverarbeitung
 
-## Ohmscher Spannungsteiler
+## Spannungsteiler und Offset-Addition
+
+### Ohmscher Spannungsteiler
 
 Ein ohmscher Spannungsteiler, wie in **Abbildung 1 (a)** zu sehen, ist eine einfache Schaltung, die aus zwei in Reihe geschalteten Widerständen besteht und eine Spannung $U_{0}$, nach dem ohmschen Gesetz in zwei Teilspannungen $U_{1},\ U_{2}$aufteilt. 
 
@@ -99,7 +101,7 @@ Ein weiteres Problem wird sichtbar, wenn wir ein Oszilloskop an den Ausgang der 
 
 :information_source: Zur Lösung dieses Problems schauen wir uns im nächsten Abschnitt einen anderen Spannungsteiler an, der **nicht aus Widerständen aufgebaut** ist.
 
-## Kapazitiver Spannungsteiler
+### Kapazitiver Spannungsteiler
 
 Für Wechselspannungen lässt sich ein Spannungsteiler auch aus Kondensatoren realisieren, wie in **Abbildung 5** gezeigt:
 
@@ -147,7 +149,7 @@ C_{\mathrm{p}} = C_{\mathrm{Osz}}+C_{2}\approx C_{2}
 $$
 und die Verzerrung von $U_{\mathrm{out}}$ durch $C_{\mathrm{Osz}}$ wird minimal.
 
-## Frequenzkompensierter Spannungsteiler
+### Frequenzkompensierter Spannungsteiler
 
 Aus der Kombination eines ohmschen mit einem kapazitiven Spannungsteiler lässt sich ein frequenzkompensierter Spannungsteiler, wie in **Abbildung 6** gezeigt konstruieren, der sich für Gleich- und Wechselspannungen gleichermaßen verwenden lässt:
 
@@ -175,7 +177,7 @@ Durch passend gewählte Lastwiderstände und -kapazitäten lassen sich damit Ver
 
 ℹ️ Ein frequenzkompensierter Spannungsteiler ist auch in den Tastköpfen für Oszilloskope verbaut, um die Verzerrung des Signals durch die Kapazität des Oszilloskops zu minimieren. Hier passen Sie mit einem Schraubendreher ebenfalls einen Trimmkondensator an, um die Frequenzkompensation zu erreichen.
 
-## Offset-Addition
+### Offset-Addition
 
 In einigen Schaltungen erweist es sich als notwendig, einen Gleichspannugsanteil $U_{\mathrm{off}}$ zu einem Wechselspannungssignal zu addieren. Eine typische Anwendung ist es ein Wechselspannungssignal in den Messbereich eines Geräts zu verschieben, das nicht für die Messung von negativen Spannungen ausgelegt ist. Dies lässt sich leicht erreichen, indem man einem Spannungsteiler eine weitere Spannungsquelle $U_{+}$, wie in **Abbildung 7 (a)** dargestellt, zufügt:
 

@@ -29,7 +29,7 @@ Wir listen im Folgenden auf, was wir von Ihnen erwarten, nachdem Sie diesen Vers
 
 - :white_check_mark: Sie kennen die Grundschaltung eines **frequenzkompensierten Spannungsteilers**.
 - :white_check_mark: Sie sind im **Umgang und Verständnis elektrischer Schaltungen** geübt.
-- :white_check_mark: Sie sind im **Einsatz und der Dimensionierung von Operationsverstärkern OPV** geübt. 
+- :white_check_mark: Sie sind im **Einsatz und der Dimensionierung von Operationsverstärkern OPV** geübt.
 - :white_check_mark: Sie haben ein grundsätzliches Verständnis der einzelnen Schritte, die hinter dem Signaleingang eines modernen Messgeräts, wie einem Datenlogger oder einem Digitaloszilloskop, ablaufen, um die Daten eines Experiments digital zu erfassen.
 
 ## Weiterführendes Angebot
