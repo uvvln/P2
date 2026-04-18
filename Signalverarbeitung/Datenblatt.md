@@ -17,7 +17,7 @@ Für den Versuch stehen Ihnen die folgenden Geräte und Apparaturen zur Verfügu
     - $470\ \mathrm{pF}$.
     - $82\ \mathrm{pF}$.
     - $100\ \mathrm{nF}$.
-- Ein Trimmkondensator mit variabler Kapazität im Bereich $15\ldots 85\ \mathrm{pF}$.
+- Ein Trimmkondensator mit variabler Kapazität im Bereich $15\ldots 85\ \mathrm{pF}$. 💡 Einige Bauformen von Trimmkondendsatoren haben drei Beine, zwei davon liegen dann auf dem gleichen Potential.
 - Dioden vom Typ 1N4148.
 - Ein Netzteil zur Spannungsversorgung der OPVs, das ${+}12\  \mathrm{V}$ und ${-}12\ \mathrm{V}$ bereitstellt.
 - Ein Tisch-Multimeter vom Typ [Kethley 169.](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/blob/main/doc/Keithley_169_Manual.pdf)
