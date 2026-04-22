@@ -1,0 +1,23 @@
+﻿\begin{tikzpicture}
+	\draw
+		(0,0) node[anchor=west] (ic1) {\pgfimage[interpolate=true,height=3cm]{../to-220.jpg}}
+		% pin labeling
+		(ic1.south) ++ (-0.3,0.7) node[anchor=north] {+\SI{12}{\volt} Input}
+		(ic1.south) ++ (1.7,0.6) node[anchor=north] {GND}
+		(ic1.south) ++ (2.6,1.3) node[anchor=north] {+\SI{5}{\volt} Output}
+
+		(2.5,2) node[anchor=center] {LM7805}
+	;
+
+	\tikzset{shift={(7,0)}} % move coordinate origin to the right
+	\draw
+		(0,0) node[anchor=west] (ic2) {\pgfimage[interpolate=true,height=3cm]{../to-220.jpg}}
+		% pin labeling
+		(ic2.south) ++ (0.2,0.7) node[anchor=north] {GND}
+		(ic2.south) ++ (2.2,0.6) node[anchor=north] {-\SI{12}{\volt} Input}
+		(ic2.south) ++ (2.6,1.3) node[anchor=north] {-\SI{5}{\volt} Output}
+
+		(2.5,2) node[anchor=center] {LM7905}
+	;
+\end{tikzpicture}
+
