@@ -16,19 +16,29 @@ In **Abbildung 1** ist eine Schaltung, bei der das Ausgangssignal auf $\pm{}5 \m
 
 ---
 
-Eine Simulation dieser Schaltung ist in **Abbildung 2** zu sehen: 
+Die $\pm{}5\,\mathrm{V}$ können Sie realisieren, indem Sie die ICs **LM7805** und **LM7905** verwenden. Dabei werden die Eingänge der ICs mit jeweils $\pm{}12\,\mathrm{V}$ und GND verbunden um am Ausgang $\pm{}5\,\mathrm{V}$ zu erhalten. Eine Übersicht über die Anschlüsse der beiden Integrierten Schaltkreise ist in **Abbildung 2** zu sehen.
+
+---
+
+<img src="../figures/to220_voltage_regulators.png" width="600" style="zoom:100%;"/>
+
+**Abbildung 2**: (Anschlüsse der ICs **LM7805** und **LM7905**.)
+
+---
+
+Eine Simulation dieser Schaltung ist in **Abbildung 3** zu sehen: 
 
 ---
 
 <img src="../figures/clamping_diodes_simulation.png" width="600" style="zoom:100%;"/>
 
-**Abbildung 2**: (Simulation der Schaltung aus **Abbildung 1**. Das verstärkte Ausgangssignal des OPV ist rot dargestellt. Es hat eine Amplitude von ${\pm}9\  \mathrm{V}$. Das von den Dioden beschränkte Ausgangssignal, in grün, wird nach Überschreiten der der Schwellenspannung der Dioden abgeschnitten)
+**Abbildung 3**: (Simulation der Schaltung aus **Abbildung 1**. Das verstärkte Ausgangssignal des OPV ist rot dargestellt. Es hat eine Amplitude von ${\pm}9\  \mathrm{V}$. Das von den Dioden beschränkte Ausgangssignal, in grün, wird nach Überschreiten der der Schwellenspannung der Dioden abgeschnitten)
 
 ---
 
 Damit der Strom durch die Dioden nicht zu groß wird, muss er zusätzlich durch einen Widerstand begrenzt werden.
 
-ℹ️ Die Simulation in **Abbildung 2** zeigt, dass die Dioden das Niveau nicht exakt im Rahmen von ${\pm}5\ \mathrm{V}$ halten. Dies liegt daran, dass die Dioden einen zusätzlichen Potentialunterschied von ${\approx}0.7\ \mathrm{V}$ (der [Diodenknickspannung](https://de.wikipedia.org/wiki/Schwellenspannung)) benötigen um leitfähig zu werden. Daher wird die Ausgangsspannung auf etwa ${\pm}5.7\ \mathrm{V}$ begrenzt.
+ℹ️ Die Simulation in **Abbildung 3** zeigt, dass die Dioden das Niveau nicht exakt im Rahmen von ${\pm}5\ \mathrm{V}$ halten. Dies liegt daran, dass die Dioden einen zusätzlichen Potentialunterschied von ${\approx}0.7\ \mathrm{V}$ (der [Diodenknickspannung](https://de.wikipedia.org/wiki/Schwellenspannung)) benötigen um leitfähig zu werden. Daher wird die Ausgangsspannung auf etwa ${\pm}5.7\ \mathrm{V}$ begrenzt.
 
 ℹ️ Clamping-Dioden werden verwendet, wenn durch zu hohe Ausgangsspannungen andere elektrische Bauteile, wie z.B. andere Operationsverstärker, Mikrocontroller oder Sensoren, beschädigt werden könnten.
 
@@ -36,13 +46,13 @@ Damit der Strom durch die Dioden nicht zu groß wird, muss er zusätzlich durch 
 
 ### Summierverstärker
 
-Die Schaltung des Summierverstärkers ist in **Abbildung 3** dargestellt:
+Die Schaltung des Summierverstärkers ist in **Abbildung 4** dargestellt:
 
 ---
 
 <img src="../figures/summing_amplifier.png" width="600" style="zoom:100%;"/>
 
-**Abbildung 3**: (Schaltung eines **Summierverstärkers**)
+**Abbildung 4**: (Schaltung eines **Summierverstärkers**)
 
 ---
 
