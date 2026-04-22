@@ -4,7 +4,7 @@ Für die verschiedenen Aufgaben des Versuchs **Elektrische Bauelemente** stehen 
 
 - Zwei Schaltbretter, einmal zur Widerstandsmessung mit Hilfe der [Wheatstoneschen Brückenschaltung](https://de.wikipedia.org/wiki/Wheatstonesche_Messbr%C3%BCcke) und einmal zur Kennlinienaufnahme am Oszilloskop.
  - Ein Tisch-Multimeter (vom Typ [Keithley, Modell 2100, 6-1/2-Digit](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/blob/main/doc/Keithley_2100_6p5_Manual.pdf)).
- - Ein USB-Oszilloskop (vom Typ [PicoScope 2204](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/blob/main/doc/PicoScope2204To2208UsersGuide.pdf)).
+ - Ein Oszilloskop (vom Typ [PeakTech 1255](https://gitlab.kit.edu/kit/etp-lehre/p1-praktikum/students/-/blob/main/doc/PeakTech_1240-1275_07-2020_DE-EN.pdf)).
  - Ein Ofen mit Leistungsregelung, bestückt mit einem eingebauten $\mathrm{NiCr}$-$\mathrm{Ni}$-Thermoelement mit passendem Messinstrument. Im Ofen fest verbaut sind: 
    - Eine Kupferspule; 
    - eine Konstantandrahtspule; 
