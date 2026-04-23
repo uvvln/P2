@@ -1,6 +1,6 @@
 # Technische Daten und Inventar für den Versuch **Ideales und reales Gas**
 
-Für die verschiedenen Aufgaben des Versuchs **Ideales und reales Gas** stehen Ihnen die folgenden Geräte und Materialien zur Verfügung:
+Für die verschiedenen Aufgaben des Versuchs stehen Ihnen die folgenden Geräte und Materialien zur Verfügung:
 
 - Ein Gasthermometer mit Becherglas, Heizpilz (mit der Heizleistung $P=320\ \mathrm{W}$) und Rührvorrichtung.
 - Ein [Kathetometer](https://de.wikipedia.org/wiki/Kathetometer) mit dem Sie die Manometer-Anzeige ablesen können.
@@ -11,7 +11,7 @@ Für die verschiedenen Aufgaben des Versuchs **Ideales und reales Gas** stehen I
 - Ein [Kolbenprober](https://de.wikipedia.org/wiki/Kathetometer) (mit Volumen $V=100\ \mathrm{ml}$); die Abmessungen des Kolbens sind: Durchmesser $d=31.1(1)\ \mathrm{mm}$, $m=109.80(5)\ \mathrm{g}$ (einschließlich Magnet zur automatischen Frequenzbestimmung).
 - Ein Frequenzzählgerät.
 - Ein Wassergefäß (mit Volumen $V=2\ \mathrm{l}$). 
-- Ein Dampfdruckgefäß, das mit $1\ \mathrm{mol}$ n-Hexan befüllt und direkt mit einem Hg-Manometer verbunden ist.
+- Ein Dampfdruckgefäß, das mit n-Hexan befüllt und direkt mit einem Hg-Manometer verbunden ist.
 - Ein Thermometer [Greisinger GTH 400](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/blob/main/Ideales_und_reales_Gas/doc/GTH_400_PT100.pdf) (Messbereich $-50-400^{\circ}\mathrm{C}$).
 - Im Versuchsraum ist ferner ein Barometer vom Typ [Greisinger GDH 11 A](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/blob/main/Ideales_und_reales_Gas/doc/GDH_11_A.pdf) zur Bestimmung des Umgebungsdrucks vorhanden.
 
@@ -21,7 +21,7 @@ Für die verschiedenen Aufgaben des Versuchs **Ideales und reales Gas** stehen I
 
 * Dampfdruck (bei $20^{\circ}\mathrm{C}$): $p_{\mathrm{Hex}}=162\ \mathrm{mbar}$.
 * Siedetemperatur bei Normdruck ($p_{0}=1013\ \mathrm{mbar}$): $T_{s}=314.9\ \mathrm{K};\ \theta_{s}=42.75^{\circ}\mathrm{C}$.
-* Verdampfungswärme bei Siedetemperatur: $Q_{\mathrm{M}}=28.85\ \mathrm{kJ/mol}$.
+* Molare Verdampfungswärme bei Siedetemperatur: $Q_{\mathrm{M}}=28.85\ \mathrm{kJ/mol}$.
 
 Hg hat die folgenden Eigenschaften, die für diesen Versuch von Relevanz sind: 
 
