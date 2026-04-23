@@ -1,4 +1,4 @@
-# Hinweise für den Versuch: **Ideales und reales Gas** 
+# Ideales und reales Gas
 
 ## Messung des Adiabatenexponenten nach der Methode von [Clément-Desormes](https://de.wikipedia.org/wiki/Experiment_von_Cl%C3%A9ment-Desormes)
 
@@ -14,9 +14,9 @@ Diese Methode zur Bestimmung von $\kappa$ ist nach [Nicolas Clément](https://de
 
 Im Zentrum der Apparatur steht ein Kolben K in den mit einer geeigneten Pumpe (mit nicht allzu hohem Überdruck!) zusätzliches Arbeitsgas (in unserem Fall Luft) gepumpt werden kann. Ein Flüssigkeitsmanometer dient zur Bestimmung des Drucks in K. Über ein Ventil (oben im Bild) kann der Überdruck in K abgelassen werden. 
 
-Aus dem Anfangszustand $(p_{0},V_{0},T_{0})$ gehen Sie wie folgt vor:
+🔔Aus dem Anfangszustand $(p_{0},V_{0},T_{0})$ gehen Sie wie folgt vor:
 
-- **Zustand (1)**: Erzeugen Sie mit dem Handblasebalg als Pumpe einen (nicht allzu großen) Überdruck in K. Warten Sie daraufhin einige Minuten lang den Temperaturausgleich durch **isochore Abkühlung** ab (gestrichelte Linie von **(0/3) nach (1) in Abbildung 1 (b)**). Dabei fällt der Überdruck wieder leicht ab. Das System hat nun den Zustand $(p_{1},V_{0},T_{0})$ mit $p_{1}\equiv p_{0}+\Delta p_{1}$ und $p_{1}\gt p_{0}$.
+- **Zustand (1)**: Erzeugen Sie mit dem Handblasebalg als Pumpe einen (nicht allzu großen) Überdruck in K. Warten Sie daraufhin einige Minuten lang den Temperaturausgleich durch **isochore Abkühlung** ab (gestrichelte Linie von **(0) nach (1) in Abbildung 1 (b)**). Dabei fällt der Überdruck wieder leicht ab. Das System hat nun den Zustand $(p_{1},V_{0},T_{0})$ mit $p_{1}\equiv p_{0}+\Delta p_{1}$ und $p_{1}\gt p_{0}$.
 
 - **Zustand (2)**: Öffnen Sie das Ventil der Flasche (für ${\approx}3\ \mathrm{s}$) und schließen Sie es unmittelbar wieder, so dass es zu einem Druckausgleich mit der Umgebung durch **adiabatische Expansion** kommen kann (durchgezogene Linie von **(1) nach (2) in Abbildung 1 (b)**). Das System hat daraufhin den Zustand $(p_{0},V_{0}+\Delta V,T_{1})$ mit $T_{1} = T_{0} - \Delta T$ und $T_{1}\lt T_{0}$. 
 
@@ -24,11 +24,13 @@ Aus dem Anfangszustand $(p_{0},V_{0},T_{0})$ gehen Sie wie folgt vor:
 
 - **Zustand (4)**: Durch Temperaturausgleich (nach einer Wartezeit von ${\approx}10\ \mathrm{s}$) stellt sich aufgrund **isochorer Erwärmung** erneut ein leichter Überdruck ein (durchgezogene Linie von **(3) nach (4) in Abbildung 1 (b)**). Das System hat daraufhin den Zustand $(p_{2},V_{0},T_{0})$ mit $p_{2}\equiv p_{0}+\Delta p_{2}$ und $p_{1}\gt p_{2}\gt p_{0}$.
 
-Aus **(4)** kehrt die Apparatur durch Belüftung wieder in **(0/3)** zurück. **(1)** ist der Zustand mit dem die Messung beginnt; **(3)** dient dazu das Volumen $V_{0}$ wieder durch äußere Randbedingungen vorzugeben. Beachten Sie, das in beiden Fällen die Stoffmenge $n$ des betrachteten Arbeitsgases nicht konstant ist (gestrichelte Linien in **Abbildung 1 (b)**). Für die Bestimmung von $\kappa$ sind die Änderungen von **(1) nach (2)** und von **(3) nach (4)** von Relevanz.  
+Aus **(4)** kehrt die Apparatur durch Belüftung wieder in **(0)** zurück. 
+
+🔔 **(1)** ist der Zustand mit dem die Messung beginnt; **(3)** dient dazu das Volumen $V_{0}$ wieder durch äußere Randbedingungen vorzugeben. Beachten Sie, das in beiden Fällen die Stoffmenge $n$ des betrachteten Arbeitsgases nicht konstant ist (gestrichelte Linien in **Abbildung 1 (b)**). Für die Bestimmung von $\kappa$ sind die Änderungen von **(1) nach (2)** und von **(3) nach (4)** von Relevanz.  
 
 ### Übergang von (1) nach (2)
 
-Für die **adiabatische Expansion** beim Übergang von **(1) nach (2)** gilt (nach den Gleichungen **(2)** [hier](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/blob/main/Ideales_und_reales_Gas/doc/Hinweise-Thermodynamik.md)): 
+Für die **adiabatische Expansion** beim Übergang von **(1) nach (2)** gilt (nach den Gleichungen **(2) [hier](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/blob/main/Ideales_und_reales_Gas/doc/Hinweise-Thermodynamik.md)**): 
 $$
 \begin{equation*}
 \begin{split}
@@ -62,7 +64,7 @@ folgt.
 
 ### Übergang von (3) nach (4):
 
-Für die **isochore Erwärmung** beim Übergang von **(3) nach (4)** gilt (nach Gleichung **(1)** [hier](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/blob/main/Ideales_und_reales_Gas/doc/Hinweise-Thermodynamik.md)):
+Für die **isochore Erwärmung** beim Übergang von **(3) nach (4)** gilt (nach Gleichung **(1) [hier](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/blob/main/Ideales_und_reales_Gas/doc/Hinweise-Thermodynamik.md)**):
 
 $$
 \begin{equation}
@@ -88,7 +90,7 @@ $$
 \end{split}
 \end{equation*}
 $$
-Für die Ablesekuppen im Flüssigkeitsmanometer gilt: 
+🔔 Für die Ablesekuppen im Flüssigkeitsmanometer gilt: 
 
 $$
 \begin{equation*}
@@ -106,22 +108,23 @@ $$
 \end{equation*}
 $$
 
-Eine numerische Simulation für den Versuch von Clément-Desormes (für das Edelgas Argon) finden Sie [hier](https://ressources.univ-lemans.fr/AccesLibre/UM/Pedago/physique/02/thermo/clement.html).
+ℹ️ Eine **numerische Simulation** für den Versuch von Clément-Desormes (für das Edelgas Argon) finden Sie [hier](https://ressources.univ-lemans.fr/AccesLibre/UM/Pedago/physique/02/thermo/clement.html).
 
-## Essentials
+## Erwartung
 
-Was Sie ab jetzt wissen sollten:
+Was wir an dieser Stelle von Ihnen erwarten:
 
-- Sie sollten die Methode von Clément-Desormes zur Bestimmung von $\kappa$ **beschreiben und die einzelnen Schritte im $pV$-Diagramm benennen und erklären** können. 
-- Sie sollten sich darüber im Klaren sein, wo und wann die Zustandsänderungen stattfinden, **die zur Berechnung von $\kappa$ von Relevanz** sind.
+- :white_check_mark: Sie können die Methode von Clément-Desormes zur Bestimmung von $\kappa$ **beschreiben und die einzelnen Schritte im $pV$-Diagramm benennen und erklären**. 
+- :white_check_mark: Sie erkennen, wo und wann die Zustandsänderungen stattfinden, **die zur Berechnung von $\kappa$ von Relevanz** sind.
 
 ## Testfragen
 
 1. Handelt es sich bei dem $pV$-Diagramm aus **Abbildung 1 (b)** um einen Kreisprozess?
 2. Ist dieser Prozess reversibel?
-3. An welchen Stellen in **Abbildung 1 (b)** sind die Zutandsgleichungen eines idealen Gases anwendbar?
+3. An welchen Stellen in **Abbildung 1 (b)** sind die Zustandsgleichungen eines idealen Gases anwendbar?
+4. Von welchen experimentellen Randbedingungen hängt diese Messung essentiell ab?
 
-# Navigation
+---
 
-[Main](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/tree/main/Ideales_und_reales_Gas)
+[Main](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/tree/main/Ideales_und_reales_Gas/README.md)
 

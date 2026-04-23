@@ -1,4 +1,4 @@
-# Hinweise für den Versuch: **Ideales und reales Gas** 
+# Ideales und reales Gas
 
 ## Grundbegriffe der Thermodynamik
 
@@ -22,9 +22,13 @@ charakterisiert sind. Die $\mathrm{S_{i}}$ sind Teil einer größeren Systemumge
 
 ---
 
-Eine Zustandsgröße heißt [**extensiv**](https://de.wikipedia.org/wiki/Intensive_und_extensive_Gr%C3%B6%C3%9Fen), wenn sich ihr Wert verdoppelt sobald man $\mathrm{S_{1}}$ und $\mathrm{S_{2}}$ zusammenfasst und [**intensiv**](https://de.wikipedia.org/wiki/Intensive_und_extensive_Gr%C3%B6%C3%9Fen) wenn ihr Wert gleich bleibt. Beispiele für extensive Zustandsgrößen sind $V$ und $n$. Beispiele für intensive Zustandsgrößen sind $p$ und $T$. Wir gehen im Folgenden der Einfachheit immer von $n=const.$ aus. Zueinander **adjungierte Variablen** zur vollständigen Beschreibung des Zustands eines Systems der Thermodynamik sind $(p,V)$ und $(S,T)$. Zustandsänderungen werden in $pV$- oder (seltener in) $ST$-Diagrammen in den durch diese Variablenpaare aufgespannten Zustandsräumen dargestellt. 
+Eine Zustandsgröße heißt [**extensiv**](https://de.wikipedia.org/wiki/Intensive_und_extensive_Gr%C3%B6%C3%9Fen), wenn sich ihr Wert verdoppelt sobald man $\mathrm{S_{1}}$ und $\mathrm{S_{2}}$ zusammenfasst und [**intensiv**](https://de.wikipedia.org/wiki/Intensive_und_extensive_Gr%C3%B6%C3%9Fen) wenn ihr Wert gleich bleibt. Beispiele für extensive Zustandsgrößen sind $V$ und $n$. 
 
-Ein zentrales Studienobjekt der Thermodynamik ist das [**ideale Gas**](https://de.wikipedia.org/wiki/Ideales_Gas). Typische Zustandsänderungen eines idealen Gases im $pV$- und $ST$-Diagramm sind in **Abbildung 2** gezeigt: 
+- 💡 Beispiele für intensive Zustandsgrößen sind $p$ und $T$. Wir gehen im Folgenden der Einfachheit immer von $n=const.$ aus. 
+- 💡 Zueinander **adjungierte Variablen** zur vollständigen Beschreibung des Zustands eines Systems der Thermodynamik sind $(p,V)$ und $(S,T)$. 
+- 💡 Zustandsänderungen werden in $pV$- oder (seltener in) $ST$-Diagrammen in den durch diese Variablenpaare aufgespannten Zustandsräumen dargestellt. 
+
+🔔 Ein zentrales Studienobjekt der Thermodynamik ist das [**ideale Gas**](https://de.wikipedia.org/wiki/Ideales_Gas). Typische Zustandsänderungen eines idealen Gases im $pV$- und $ST$-Diagramm sind in **Abbildung 2** gezeigt: 
 
 ---
 
@@ -36,21 +40,22 @@ Ein zentrales Studienobjekt der Thermodynamik ist das [**ideale Gas**](https://d
 
 Zustandsänderungen von Systemen, die umkehrbar sind, ohne dass $\mathrm{W}$ dadurch bleibende Änderungen erfährt nennt man [**reversibel**](https://de.wikipedia.org/wiki/Reversibler_Prozess). Einen statischen Zustand ohne Zustandsänderungen bezeichnet man als [**thermodynamisches Gleichgewicht**](https://de.wikipedia.org/wiki/Thermodynamisches_Gleichgewicht). 
 
-## Zustandsgleichungen
+### Zustandsgleichungen
 
-Mathematisch werden Zustandsänderungen thermodynamischer Systeme durch [**Zustandsgleichungen**](https://de.wikipedia.org/wiki/Zustandsgleichung) beschrieben. Die wichtigste Zustandsgleichung zur Beschreibung idealer Gase ist die [**ideale Gasgleichung**](https://de.wikipedia.org/wiki/Thermische_Zustandsgleichung_idealer_Gase) die in zwei Formen gebräuchlich ist:
-$$
-\begin{equation}
-\begin{split}
-&pV=n\,R\,T; \\
-&\\
-&pV=N\,k_{B}\,T. \\
-\end{split}
-\end{equation}
-$$
-Dabei entsprechen $R$ der idealen [Gaskonstanten](https://de.wikipedia.org/wiki/Gaskonstante), $N$ der Anzahl der Teilchen im Gas und $k_{B}$ der [Boltzmann-Konstanten](https://de.wikipedia.org/wiki/Boltzmann-Konstante). 
+> Mathematisch werden Zustandsänderungen thermodynamischer Systeme durch [**Zustandsgleichungen**](https://de.wikipedia.org/wiki/Zustandsgleichung) beschrieben. Die wichtigste Zustandsgleichung zur Beschreibung idealer Gase ist die [**ideale Gasgleichung**](https://de.wikipedia.org/wiki/Thermische_Zustandsgleichung_idealer_Gase) die in zwei Formen gebräuchlich ist:
+> $$
+> \begin{equation}
+> \begin{split}
+> &pV=n\,R\,T; \\
+> &\\
+> &pV=N\,k_{B}\,T. \\
+> \end{split}
+> \end{equation}
+> $$
+> Dabei entsprechen $R$ der idealen [Gaskonstanten](https://de.wikipedia.org/wiki/Gaskonstante), $N$ der Anzahl der Teilchen im Gas und $k_{B}$ der [Boltzmann-Konstanten](https://de.wikipedia.org/wiki/Boltzmann-Konstante). 
+>
 
-Führt man einem idealen Gas Wärme $\delta Q$ zu ändert sich seine Temperatur. **Diese Änderung ist von der Art und Weise abhängig, wie dies geschieht!** Erlaubt man z.B. eine Volumenänderung $\mathrm{d} V$ und hält dabei den Druck konstant ($p=const.$) fällt die Temperaturänderung $\mathrm{d} T$ geringer aus, als wenn man das Volumen konstant hält ($V=const.$) und Druckänderungen zulässt. Diese beiden Vorgänge werden durch die [kalorischen Zustandsgleichungen](https://de.wikipedia.org/wiki/Zustandsgleichung#Die_kalorische_Zustandsgleichung) des idealen Gases beschrieben: 
+Führt man einem idealen Gas Wärme $\delta Q$ zu ändert sich seine Temperatur. **Diese Änderung ist von der Art und Weise abhängig, wie dies geschieht!** Erlaubt man z.B. eine Volumenänderung $\mathrm{d} V$ und hält dabei den Druck konstant ($p=const.$) fällt die Temperaturänderung $\mathrm{d} T$ geringer aus, als wenn man das Volumen konstant hält ($V=const.$) und Druckänderungen zulässt. 🔔 Diese beiden Vorgänge werden durch die [kalorischen Zustandsgleichungen](https://de.wikipedia.org/wiki/Zustandsgleichung#Die_kalorische_Zustandsgleichung) des idealen Gases beschrieben: 
 $$
 \begin{equation*}
 \begin{split}
@@ -90,13 +95,13 @@ $$
 \delta W=- p\,\mathrm{d} V.
 \end{equation*}
 $$
-Die Spezifische Wärmekapazität bei konstantem Druck $c_{p}$ ist um den Betrag der bei der Erwärmung durch das System geleisteten Arbeit $\delta W$ größer als $c_{V}$:
+Die spezifische Wärmekapazität bei konstantem Druck $c_{p}$ ist um den Betrag der bei der Erwärmung durch das System geleisteten Arbeit $\delta W$ größer als $c_{V}$:
 $$
 \begin{equation*}
 c_{p} = c_{V}+R.
 \end{equation*}
 $$
- Den Quotienten $\kappa = c_{p}/c_{V}$ bezeichnet man als [**Adiabetanexponenten**](https://de.wikipedia.org/wiki/Isentropenexponent). 
+ 🔔 Den Quotienten $\kappa = c_{p}/c_{V}$ bezeichnet man als [**Adiabetanexponenten**](https://de.wikipedia.org/wiki/Isentropenexponent). 
 
 Für Prozesse idealer Gase bei denen **kein Wärmeaustausch stattfindet** ($\delta Q=0$) erhält man mit der [**Adiabatengleichung**](https://de.wikipedia.org/wiki/Adiabatische_Zustands%C3%A4nderung) eine weitere wichtige Zustandsgleichung: 
 $$
@@ -114,7 +119,7 @@ n\,c_{V}\,\mathrm{d}T = p\,\mathrm{d}V; \\
 \end{split}
 \end{equation*}
 $$
-Durch Einsetzen von Gleichung **(1)** erhält man die **Adiabatengleichung in drei Formen**: 
+🔔 Durch Einsetzen von Gleichung **(1)** erhält man die **Adiabatengleichung in drei Formen**: 
 $$
 \begin{equation}
 T\,V^{\kappa-1}=const;\qquad
@@ -123,23 +128,24 @@ p\,T^{\frac{1-\kappa}{\kappa}}=const.
 \end{equation}
 $$
 
-## Essentials
+## Erwartung
 
-Was Sie ab jetzt wissen sollten:
+Was wir an dieser Stelle von Ihnen erwarten:
 
-- Sie sollten die **im Text diskutierten Zustandsgrößen** kennen und verstehen.
-- Sie sollten die **ideale Gasgleichung, die kalorischen Zustandsgleichungen und die Adiabatengleichungen** kennen. 
-- Sie sollten die **Beziehung zwischen $c_{p},\ c_{v},\kappa$ kennen** und mit Unterstützung aus den kalorischen Zustandsgleichungen und der idealen Gasgleichung herleiten können.
+- :white_check_mark: Sie kennen und verstehen die **im Text diskutierten Zustandsgrößen**.
+- :white_check_mark: Sie kennen die **ideale Gasgleichung, die kalorischen Zustandsgleichungen und die Adiabatengleichungen**. 
+- :white_check_mark: Sie kennen die **Beziehung zwischen $c_{p},\ c_{v},\kappa$** und können diese (mit Unterstützung durch Ihre:n Tutor:in) aus den kalorischen Zustandsgleichungen und der idealen Gasgleichung herleiten.
 
 ## Testfragen
 
-1. Ist die Entropie eine intensive oder eine extensiver Zustandsgröße?
-2. Warum wird für Änderungen einer Zustandsgröße $O$ manchmal das Symbol $\delta O$ und manchmal das Symbol $\mathrm{d}O$ verwendet?
-3. Welche Darstellung der spezifischen Wärmekapazität ist ihrer Meinung nach in der Chemie wichtiger, $c_{p}$ oder $c_{V}$?
+1. Wie viele Zustandsgrößen im Zusammenhang mit idealen Gasen wurden im Text diskutiert?
+2. Ist die Entropie eine intensive oder eine extensiver Zustandsgröße?
+3. Warum wird für Änderungen einer Zustandsgröße $O$ manchmal das Symbol $\delta O$ und manchmal das Symbol $\mathrm{d}O$ verwendet?
+4. Welche Darstellung der spezifischen Wärmekapazität ist ihrer Meinung nach in der Chemie wichtiger, $c_{p}$ oder $c_{V}$?
 
-# Navigation
+---
 
-[Main](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/tree/main/Ideales_und_reales_Gas)
+[Main](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/tree/main/Ideales_und_reales_Gas/README.md)
 
 
 
