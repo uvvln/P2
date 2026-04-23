@@ -1,4 +1,4 @@
-# Hinweise für den Versuch **Vakuum**
+# Vakuum
 
 ## Grundbegriffe der Vakuumtechnik
 
@@ -10,7 +10,7 @@ $$
 S\equiv\dot{V}.
 \end{equation}
 $$
-Gebräuchliche Einheiten hierfür sind $[\mathrm{l/s}]$ oder $[\mathrm{m^{3}/h}]$. Für viskose Flüssigkeiten haben Sie $S$ in Form des Gesetzes von Hagen-Poiseuille in form von Gleichung **(4)** [hier](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/blob/main/Vakuum/doc/Hinweise-Vakuum.md) kennengelernt. 
+Gebräuchliche Einheiten hierfür sind $[\mathrm{l/s}]$ oder $[\mathrm{m^{3}/h}]$. 💡 Für viskose Flüssigkeiten haben Sie $S$ in Form des Gesetzes von Hagen-Poiseuille in der Form von Gleichung **(4) [hier](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/blob/main/Vakuum/doc/Hinweise-Vakuum.md)** kennengelernt. 
 
 Im Fall von [Verdrängerpumpen](https://de.wikipedia.org/wiki/Pumpe#Verdr%C3%A4ngerpumpen) (wie der DSP) lässt sich das **Nennsaugvermögen** als 
 $$
@@ -58,7 +58,7 @@ $$
 
 ### Zusammenhang zwischen Saugvermögen und Saugleistung
 
-Die **Saugleistung** einer Pumpe ist durch $q_{pV}$ an der Ansaugöffnung der Pumpe definiert. Für das das Pumpen eines Gases aus dem RZ betrachten wir zwei Grenzfälle: 
+Die **Saugleistung** einer Pumpe ist durch $q_{pV}$ an der Ansaugöffnung der Pumpe definiert. Für das Pumpen eines Gases aus dem RZ betrachten wir zwei Grenzfälle: 
 
 $$
 \begin{equation}
@@ -68,7 +68,7 @@ $$
 \end{split}
 \end{equation}
 $$
-Für einen in der Vakuumtechnik eher gebräuchlichen Aufbau, bei dem das Volumen $V=V_{\mathrm{RZ}}$ durch die Abmessungen des RZ fest vorgegeben ist, ist der Zusammenhang für $V=const.$ der praktischere. **Danach wird durch eine Pumpe mit höherer Saugleistung der Druck im RZ schneller reduziert.** 
+Für einen in der Vakuumtechnik eher gebräuchlichen Aufbau, bei dem das Volumen $V=V_{\mathrm{RZ}}$ durch die Abmessungen des RZ fest vorgegeben ist, ist der Zusammenhang für $V=const.$ der praktischere. 💡 **Danach wird durch eine Pumpe mit höherer Saugleistung der Druck im RZ schneller reduziert.** 
 
 Der Ausdruck für $p=const.$ mag im Sinne der verrichteten Arbeit zunächst anschaulicher erscheinen. Er stellt zudem einen nominellen Zusammenhang zwischen $q_{pV}$ und $S$ her. Tatsächlich ist die Voraussetzung $p=const.$ für einen realistischen Pumpvorgang mit einem RZ von endlichem Volumen jedoch so gut wie nie erfüllt. Die Beziehung 
 $$
@@ -76,7 +76,7 @@ $$
 \mathrm{d}q_{pV}=p\,\mathrm{d}S
 \end{equation*}
 $$
-spielt daher, analog zum Gesetz von Hagen-Poiseuille in der Formulierung von Gleichung **(5)** [hier](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/blob/main/Vakuum/doc/Hinweise-Vakuum.md), v.a. für differenzielle Betrachtungen eine Rolle.  
+spielt daher, analog zum Gesetz von Hagen-Poiseuille in der Formulierung von Gleichung **(5) [hier](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/blob/main/Vakuum/doc/Hinweise-Vakuum.md)**, v.a. für differenzielle Betrachtungen eine Rolle.  
 
 Wenn wir beim Saugvorgang von einer **adiabatischen** Zustandsänderung des Gases ($\delta Q=0$) ausgehen erhalten wir:
 $$
@@ -90,7 +90,7 @@ $$
 \end{split}
 \end{equation*}
 $$
-wobei $\kappa$ dem [**Adiabetanexponenten**](https://de.wikipedia.org/wiki/Isentropenexponent) des verwendeten Gases entspricht. Diese Annahme ist aufgrund der geringen Wärmeleitfähigkeit von Luft im Grobvakuum (d.h. für $p>1\ \mathrm{mbar}$) in sehr guter Näherung erfüllt. Im Feinvakuum liegt i.a. ein guter Temperaturausgleich mit den Behälterwänden vor [[1](https://onlinelibrary.wiley.com/page/journal/15222454/homepage/lex/lex_40.html)], so dass der Pumpvorgang **isotherm** ($\mathrm{d}T=0$) abläuft:   
+wobei $\kappa$ dem [**Adiabetanexponenten**](https://de.wikipedia.org/wiki/Isentropenexponent) des verwendeten Gases entspricht. 🔔 Diese Annahme ist aufgrund der geringen Wärmeleitfähigkeit von Luft im Grobvakuum (d.h. für $p>1\ \mathrm{mbar}$) in sehr guter Näherung erfüllt. Im Feinvakuum liegt i.a. ein guter Temperaturausgleich mit den Behälterwänden vor [[1](https://onlinelibrary.wiley.com/page/journal/15222454/homepage/lex/lex_40.html)], so dass der Pumpvorgang **isotherm** ($\mathrm{d}T=0$) abläuft:   
 $$
 \begin{equation*}
 \begin{split}
@@ -114,7 +114,7 @@ $$
 \end{split}
 \end{equation}
 $$
-erwarten, wobei man $n=1\ldots1.4$ (für Luft) als den [Polytropenexponenten](https://de.wikipedia.org/wiki/Polytrope_Zustands%C3%A4nderung) bezeichnet. Hierzu müssen $V$ groß und $\Delta t=t-t_{0}$ klein genug sein, so dass die Bedingungen $S\,\Delta t\ll V$ und $p=const.$ in guter Näherung erfüllt sind. Für einen Aufbau mit endlichem Volumen $V=V_{\mathrm{RZ}}$ sind diese Voraussetzungen nicht über beliebig große Zeiträume hinweg erfüllt. In einem solchen Fall lässt sich in Anlehnung an den oberen Teil von Gleichung **(5)** 
+erwarten, wobei man $n=1\ldots1.4$ (für Luft) als den [Polytropenexponenten](https://de.wikipedia.org/wiki/Polytrope_Zustands%C3%A4nderung) bezeichnet. Hierzu müssen $V$ groß und $\Delta t=t-t_{0}$ klein genug sein, so dass die Bedingungen $S\,\Delta t\ll V$ und $p=const.$ in guter Näherung erfüllt sind. 🔔 Für einen Aufbau mit endlichem Volumen $V=V_{\mathrm{RZ}}$ sind diese Voraussetzungen nicht über beliebig große Zeiträume hinweg erfüllt. In einem solchen Fall lässt sich in Anlehnung an den oberen Teil von Gleichung **(5)** 
 
 $$
 \begin{equation}
@@ -129,15 +129,17 @@ $$
 $$
 immer noch als Funktion von $p$ bestimmen.
 
-## Strömungsleitwert und -widerstand
+### Strömungsleitwert und Strömungswiderstand
 
-Laut Gleichung **(5)** [hier](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/blob/main/Vakuum/doc/Hinweise-Vakuum.md) ist die Saugleistung durch ein zylindrisches, hinreichend langes Rohr proportional zur Druckdifferenz $\Delta p$ an den Rohrenden. Die Proportionalitätskonstante 
-$$
-\begin{equation}
-L=\frac{\pi\,R^{4}\,\overline{p}}{8\,\eta\,\ell}
-\end{equation}
-$$
-(mit der Einheit $[\mathrm{l/s}]$) bezeichnet man als **Strömungsleitwert**, den Kehrwert von $L$ als **Strömungswiderstand** des Rohrs. Beide Größen lassen sich über den Zusammenhang 
+> Laut Gleichung **(5) [hier](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/blob/main/Vakuum/doc/Hinweise-Vakuum.md)** ist die Saugleistung durch ein zylindrisches, hinreichend langes Rohr proportional zur Druckdifferenz $\Delta p$ an den Rohrenden. Die Proportionalitätskonstante 
+> $$
+> \begin{equation}
+> L=\frac{\pi\,R^{4}\,\overline{p}}{8\,\eta\,\ell}
+> \end{equation}
+> $$
+> (mit der Einheit $[\mathrm{l/s}]$) bezeichnet man als **Strömungsleitwert**, den Kehrwert von $L$ als **Strömungswiderstand** des Rohrs. 
+
+🔔 Beide Größen lassen sich über den Zusammenhang 
 $$
 \begin{equation}
 q_{pV}\equiv L\,\Delta p
@@ -167,7 +169,7 @@ $$
 \end{split}
 \end{equation*}
 $$
-Es handelt sich dabei um ein Analogon zu den [**Kirchhoffschen Regeln**](https://de.wikipedia.org/wiki/Kirchhoffsche_Regeln) der Elektrizitätslehre mit den folgenden Ersetzungen: 
+💡 Es handelt sich dabei um ein Analogon zu den [**Kirchhoffschen Regeln**](https://de.wikipedia.org/wiki/Kirchhoffsche_Regeln) der Elektrizitätslehre mit den folgenden Ersetzungen: 
 $$
 \begin{equation*}
 \begin{split}
@@ -181,7 +183,7 @@ $$
 
 ### Effektives Saugvermögen
 
-Eine Pumpe schließt nur selten direkt an die zu evakuierende Apparatur an. Ist dies nicht der Fall, ist das Saugvermögen der Pumpe durch den Gesamtleitwert aller verbindenden Leitungselemente reduziert. 
+> Eine Pumpe schließt nur selten direkt an die zu evakuierende Apparatur an. Ist dies nicht der Fall, ist das Saugvermögen der Pumpe durch den Gesamtleitwert aller verbindenden Leitungselemente reduziert. 
 
 Nimmt man an, dass sich die Temperatur des Gases während des Durchflusses durch die Leitungselemente nicht wesentlich ändert, so dass also der $pV$-Durchfluss durch die Leitungselemente konstant ist, dann erhält man für das **effektive Saugvermögen** $S_{\mathrm{eff}}$ hinter den Leitungselementen den Zusammenhang 
 
@@ -218,7 +220,7 @@ $$
 \end{equation}
 $$
 
-**Die effektive Saugleistung der Pumpe ergibt sich durch Serienschaltung mit den entsprechenden Leitungselementen.** 
+🔔 **Die effektive Saugleistung der Pumpe ergibt sich durch Serienschaltung mit den entsprechenden Leitungselementen.** 🔔
 
 ### Knudsen-Gleichung
 
@@ -249,9 +251,9 @@ $$
 \end{split}
 \end{equation}
 $$
-wobei $d$ dem Durchmesser der Leitung entspricht. Die eckigen Klammern geben an, in welchen Einheiten die Messgrößen jeweils einzusetzen sind.
+wobei $d$ dem Durchmesser der Leitung entspricht. 💡 Die eckigen Klammern geben an, in welchen Einheiten die Messgrößen jeweils einzusetzen sind.
 
-Im Feinvakuum nimmt Gleichung **(9)** die Form 
+Im Feinvakuum nimmt Gleichung **(10)** die Form 
 $$
 \begin{equation}
 L[\mathrm{l/s}] = 135\frac{d^{4}}{\ell}\overline{p} + 12.1\frac{d^{3}}{\ell}\frac{1+192\, d\,\overline{p}}{1+237\, d\, \overline{p}}
@@ -259,7 +261,7 @@ L[\mathrm{l/s}] = 135\frac{d^{4}}{\ell}\overline{p} + 12.1\frac{d^{3}}{\ell}\fra
 $$
 an, wobei es sich um die sog. **Knudsen-Gleichung** handelt. 
 
-Die folgende Gleichung 
+💡 Die folgende Gleichung 
 $$
 \begin{equation}
 \begin{split}
@@ -296,15 +298,16 @@ $$
 \end{split}
 \end{equation}
 $$
-Es fällt auf, dass $L$ für molekulare Strömungen vom Druck unabhängig ist.   
+💡 Es fällt auf, dass $L$ für molekulare Strömungen vom Druck unabhängig ist. Diese Beobachtung deckt sich mit der Diskussion molekularer Strömungen [hier](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/blob/main/Vakuum/doc/Hinweise-Vakuum.md).  
 
-## Essentials
+## Erwartung
 
-Was Sie ab jetzt wissen sollten:
+Was wir an dieser Stelle von Ihnen erwarten:
 
-- Die Begriffe **Saugvermögen** und **Saugleistung** sollten Ihnen geläufig sein. Sie sollten Ähnlichkeiten und Unterschiede (z.B. der Einheiten) benennen können.
-- Sie sollten den Begriff des **Strömungsleitwerts** $L$ kennen. Sie sollten wissen in welchen Einheiten $L$ gemessen wird. Die Analogie zu den **Kirchhoffschen Gesetzen** der Elektrizitätslehre sollten Ihnen klar sein.
-- Der Zusammenhang zwischen $L$ und dem **Gesetz von Hagen-Poiseuille** sollte Ihnen bekannt sein. 
+- :white_check_mark: Sie kennen die Begriffe **Saugvermögen** und **Saugleistung** und können Ähnlichkeiten und Unterschiede (z.B. der Einheiten) benennen.
+- :white_check_mark: Sie kennen den Begriff des **Strömungsleitwerts** $L$ und wissen in welchen Einheiten $L$ gemessen wird. 
+- :white_check_mark: Sie kennen und verstehen die Analogie zu den **Kirchhoffschen Gesetzen** der Elektrizitätslehre, soweit es um die Parallel- oder Serienschaltung von Rohren geht.
+- :white_check_mark: Sie kennen und verstehen den Zusammenhang zwischen $L$ und dem **Gesetz von Hagen-Poiseuille**. 
 
 ## Testfragen
 
@@ -313,9 +316,6 @@ Was Sie ab jetzt wissen sollten:
 1. Sie pumpen Luft über ein zylindrisches Rohr aus einem luftdichten RZ ab. Wie ändert sich der Leitwert des Rohrs als Funktion der Zeit?
 1. Das Saugvermögen der verwendeten DSP können Sie aus dem [Datenblatt](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/blob/main/Vakuum/Datenblatt.md) zum Versuch ablesen. Nach welcher Zeitspanne hätte die DSP das Volumen des RZ bei Normaldruck abgesaugt?
 
-# Navigation
+---
 
-[Main](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/tree/main/Vakuum)
-
-
-
+[Main](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/tree/main/Vakuum/README.md)

@@ -1,6 +1,6 @@
 # Technische Daten und Inventar für den Versuch **Vakuum**
 
-Für die verschiedenen Aufgaben des Versuchs **Vakuum** stehen Ihnen die folgenden Geräte zur Verfügung: 
+Für den Versuch stehen Ihnen die folgenden Geräte und Apparaturen zur Verfügung:
 
 - Eine [Drehschieberpumpe](https://de.wikipedia.org/wiki/Drehschieberpumpe) (DSP) mit einem nominellen Saugvermögen (unter Normbedingungen) von $S=2.5\ \mathrm{m^{3}/h} = 0.694\ \mathrm{l/s}$. 
 
