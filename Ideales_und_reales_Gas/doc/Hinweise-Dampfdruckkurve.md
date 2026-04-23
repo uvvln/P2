@@ -129,7 +129,7 @@ $$
 \end{equation}
 $$
 
-### Hinweise zur verwendeten Apparatur
+### Hinweise zu den verwendeten Apparaturen
 
 #### Flüssiges n-Hexan über dem n-Hexan-seitigen Pegel des Hg-Barometers 
 
