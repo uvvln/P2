@@ -1,4 +1,4 @@
-# Hinweise für den Versuch: **Ideales und reales Gas** 
+# Ideales und reales Gas
 
 ##  Messung des absoluten Nullpunkts der Temperatur mit Hilfe eines Gasthermometers
 
@@ -12,7 +12,9 @@ Der grundsätzliche Aufbau eines Gasthermometers und die im weiteren Verlauf ver
 
 ---
 
-Ein Glaskolben (K) befindet sich in einem [Wärmebad](https://de.wikipedia.org/wiki/W%C3%A4rmebad) (W) und ist mit einem zweifach geschwungenen U-Rohr verbunden. Das untere U besteht aus einem flexiblen Gummischlauch. Dieser trennt das Rohr in einen (RL) linken und (RR) rechten Schenkel. RR ist beweglich montiert. In K ist das Volumen $V$ des Arbeitsgases eingeschlossen. Das Rohr wird durch eine Flüssigkeit (i.a. Hg) dicht abgeschlossen. Der Volumenanteil $\delta V$ in der Rohrzuleitung RZ ist klein gegen $V$. Für den Druck $p$ in K gilt 
+ℹ️ Ein Glaskolben (K) befindet sich in einem [Wärmebad](https://de.wikipedia.org/wiki/W%C3%A4rmebad) (W) und ist mit einem zweifach geschwungenen U-Rohr verbunden. Das untere U besteht aus einem flexiblen Gummischlauch. Dieser trennt das Rohr in einen (RL) linken und (RR) rechten Schenkel. RR ist beweglich montiert. In K ist das Volumen $V$ des Arbeitsgases eingeschlossen. Das Rohr wird durch eine Flüssigkeit (i.a. Hg) dicht abgeschlossen. Der Volumenanteil $\delta V$ in der Rohrzuleitung RZ ist klein gegen $V$. 
+
+Für den Druck $p$ in K gilt 
 $$
 \begin{equation*}
 p(\Delta h) = p_{\mathrm{norm}} + \rho(\mathrm{Hg})\,g\,\Delta h, 
@@ -26,7 +28,7 @@ $$
 p(V, T) = \frac{n\,R\,T}{V},
 \end{equation*}
 $$
-wobei $T$ der Temperatur (in Kelvin, $\mathrm{K}$), $n$ der Stoffmenge und $R$ der idealen [Gaskonstanten](https://de.wikipedia.org/wiki/Gaskonstante) entsprechen. Für Messungen auf der Kelvin-Skala werden wir die Variable $T$ verwenden, für Messungen auf der Celsius-Skala die Variable $\vartheta$. 
+wobei $T$ der Temperatur (in Kelvin, $\mathrm{K}$), $n$ der Stoffmenge und $R$ der idealen [Gaskonstanten](https://de.wikipedia.org/wiki/Gaskonstante) entsprechen. 💡 Für Messungen auf der Kelvin-Skala werden wir im Folgenden die Variable $T$ verwenden, für Messungen auf der Celsius-Skala die Variable $\vartheta$. 
 
 Das Thermometer wird nach dem Prinzip der Druckmessung bei $V=const.,\ n=const.$ betrieben ([Gesetz von Amontons](https://de.wikipedia.org/wiki/Thermische_Zustandsgleichung_idealer_Gase#Gesetz_von_Amontons)). In diesem Fall gilt $p\propto \vartheta$ mit 
 $$
@@ -46,7 +48,7 @@ $$
 \vartheta_{0}=-1/\gamma.
 \end{equation*}
 $$
-Diese Temperatur bezeichnet man als **absoluten Nullpunkt** der Temperatur.
+🔔 Diese Temperatur bezeichnet man als **absoluten Nullpunkt** der Temperatur.
 
 Zur Messung von $\gamma$ tauchen Sie K vollständig in ein [Wärmebad](https://de.wikipedia.org/wiki/W%C3%A4rmebad) ein, das Sie mit destilliertem Wasser herstellen. Wenn Sie den Druck bei der Siede- ($T_{s}$) und Schmelztemperatur von Wasser messen erhalten Sie, ohne ein weiteres Thermometer benutzen zu müssen, eine Abschätzung aus der Beziehung 
 $$
@@ -95,20 +97,24 @@ Es ergibt sich also ein additiver Korrekturterm $\delta\gamma$ zur ursprünglich
 
 Es zeigt sich, dass die Berechnung von $\delta\gamma$ bereits einen Wert für $T_{s}$ (und damit für $\gamma$) voraussetzt. Sie können Gleichung **(1)** nach $\gamma$ auflösen und die Korrektur exakt berechnen. Ein in der Praxis oft alternativ angewandtes Verfahren besteht darin iterativ vorzugehen. Hierzu bestimmen Sie $\gamma^{(0)}$ zunächst ohne Korrektur und verwenden diesen Wert zur Bestimmung von $\delta\gamma$. 
 
-## Essentials
+## Erwartung
 
-Was Sie ab jetzt wissen sollten:
+Was wir an dieser Stelle von Ihnen erwarten:
 
-- Sie sollten wissen **wie ein Gasthermometer funktioniert**.
+- :white_check_mark: Sie sollten wissen **wie ein Gasthermometer funktioniert**.
 
 ## Testfragen
 
 1. Wenn die Temperatur in W zunimmt wird die Flüssigkeitssäule im U-Rohr nach oben gedrückt. Offensichtlich dehnt sich das Volumen des in K gefangenen Arbeitsgases aus. Warum kann man immer noch von der Beziehung $V=const.$ ausgehen?
 2. Erklären Sie warum kochendes Wasser immer die gleiche Temperatur $\vartheta_{s}$ hat, obwohl dem Wasser ständig weitere Energie, z.B. von einer Kochplatte zugeführt wird? Was ist dabei unbedingt zu beachten, damit diese Annahme wirklich stimmt?
+3. Wie Ändert sich die Messung, wenn K nicht vollständig ins Wärmebad eingetaucht ist?
+4. Wie Ändert sich die Messung, wenn das Wasser nicht rein ist?
+5. Wie ändert sich die Messung, wenn RZ zu groß gewählt ist?
+6. Welche Einflüsse können Umgebungsvariablen, wie Druck ($p_{0}$), Temperatur oder Luftfeuchtigkeit auf die Messung haben? 
 
-# Navigation
+---
 
-[Main](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/tree/main/Ideales_und_reales_Gas)
+[Main](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/tree/main/Ideales_und_reales_Gas/README.md)
 
 
 
