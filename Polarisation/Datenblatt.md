@@ -1,6 +1,6 @@
 # Technische Daten und Inventar für den Versuch **Polarisation und Doppelbrechung**
 
-Für die verschiedenen Aufgaben des Versuchs **Polarisation und Doppelbrechung** stehen Ihnen die folgenden Geräte und Materialien zur Verfügung:
+Für den Versuch stehen Ihnen die folgenden Geräte und Apparaturen zur Verfügung:
 
 - Eine Halogen-Glühlampe (HL) mit integriertem Kondensor und Spannungsversorgung;
 - Ein Interferenzfarbfilter für die Wellenlänge $\lambda = 635\ \mathrm{nm}$;
@@ -12,6 +12,6 @@ Für die verschiedenen Aufgaben des Versuchs **Polarisation und Doppelbrechung**
 - Ein Linse mit der Brennweite $f = 5\ \mathrm{cm}$ oder $10\ \mathrm{cm}$;
 - Eine Irisblende;
 - Ein Phototransistor in einer Rundfassung, mit $5\ \mathrm{V}$-Netzteil;
-- Ein Tischmultimeter (GW-Instek GDM-8245);
+- Ein Tischmultimeter ([GW-Instek GDM-8245](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/blob/main/Franck_Hertz_Versuch/doc/Instek_GDM-8245_Manual.pdf));
 - Eine Zeiss-Schiene mit Reitern;
 - Eine Taschenlampe.
