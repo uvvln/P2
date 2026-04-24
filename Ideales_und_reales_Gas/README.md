@@ -8,8 +8,6 @@ Versuch **H14** (Stand: **April 2026**)
 
 [Raum F1-08](https://labs.physik.kit.edu/img/Klassische-Praktika/Lageplan_P2.png)
 
-
-
 # Ideales und reales Gas
 
 ## Motivation
@@ -62,10 +60,10 @@ Was Temperatur ist erscheint intuitiv und trivial. Wie man aber Temperatur erfol
 
 ## Wichtige Hinweise
 
-- Bei den hier verwendeten Glasgeräten handelt es sich zum Teil um eigens angefertigte empfindliche Präzisionsapparaturen zur Durchführung klassischer Experimente der Thermodynamik. **Gehen Sie vorsichtig mit den Geräten um und halten Sie sie möglichst sauber.** 
-- Beginnen Sie alle Versuche **erst nach Rücksprache** mit Ihrem:r Tutor:in. 
-- Beachten Sie die Hinweise zum [Umgang mit Hg](https://labs.physik.kit.edu/163.php?tab=%5B367%5D#tabpanel-367) auf den Webseiten des P1/P2. 
-- Um Stromschlägen vorzubeugen fassen Sie bei Feuchtigkeit nicht in den eingeschalteten Heizpilz.
+- 🚨  Bei den hier verwendeten Glasgeräten handelt es sich zum Teil um eigens angefertigte empfindliche Präzisionsapparaturen zur Durchführung klassischer Experimente der Thermodynamik. **Gehen Sie vorsichtig mit den Geräten um und halten Sie sie möglichst sauber.** 
+- 🚨  Beginnen Sie alle Versuche **erst nach Rücksprache** mit Ihrem:r Tutor:in. 
+- 🚨  Beachten Sie die Hinweise zum [Umgang mit Hg](https://labs.physik.kit.edu/163.php?tab=%5B367%5D#tabpanel-367) auf den Webseiten des P1/P2. 
+- 🚨  Um Stromschlägen vorzubeugen fassen Sie bei Feuchtigkeit nicht in den eingeschalteten Heizpilz.
 
 # Inventar des Versuchs
 
