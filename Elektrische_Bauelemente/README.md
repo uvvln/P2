@@ -8,9 +8,7 @@
 
 Versuch **H16** (Stand: **April 2026**)
 
-[Raum F1-17](https://labs.physik.kit.edu/img/Klassische-Praktika/Lageplan_P1P2.png)
-
-
+[Raum F1-17](https://labs.physik.kit.edu/img/Klassische-Praktika/Lageplan_P2.png)
 
 # Elektrische Bauelemente
 
@@ -75,9 +73,9 @@ Auch für ein grundlegendes Verständnis der Supraleitung sind eine klare Vorste
 
 ## Wichtige Hinweise
 
-- Sie benötigen einen USB-Stick zur Datensicherung.
-- Das Gehäuse des Ofens für **Aufgabe 2.2** erhitzt sich auch äußerlich stark! Vermeiden Sie daher jeglichen Kontakt mit der Oberfläche.
-- [Flüssigstickstoff](https://de.wikipedia.org/wiki/Fl%C3%BCssigstickstoff), wie Sie ihn für **Aufgabe 2.3** verwenden, kann schwere Kälteverbrennungen verursachen! Tragen Sie daher stets Handschuhe und Schutzbrille, wenn Sie damit umgehen.
+- 🚨  Sie benötigen u.U. einen USB-Stick zur Datensicherung.
+- 🚨  Das Gehäuse des Ofens für **Aufgabe 2.2** erhitzt sich auch äußerlich stark! Vermeiden Sie daher jeglichen Kontakt mit der Oberfläche.
+- 🚨  [Flüssigstickstoff](https://de.wikipedia.org/wiki/Fl%C3%BCssigstickstoff), wie Sie ihn für **Aufgabe 2.3** verwenden, kann schwere Kälteverbrennungen verursachen! Tragen Sie daher stets Handschuhe und Schutzbrille, wenn Sie damit umgehen.
 
 # Inventar des Versuchs
 

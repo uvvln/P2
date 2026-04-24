@@ -43,7 +43,7 @@ Einen typischer Aufbau der Apparatur für diesen Versuch ist in **Abbildung 2** 
 
 <img src="./figures/Vakuum.png" width="1000" style="zoom:100%;" />
 
-**Abbildung 2**: (Ein typischer Aufbau des Versuchs Vakuum)
+**Abbildung 2**: (Ein typischer Aufbau des Versuchs **Vakuum**)
 
 ---
 
