@@ -116,6 +116,7 @@ $$
 &\\
 &U_{T}=\frac{k_{B}\,T}{e},
 \end{split}
+\tag{1}
 \end{equation}
 $$
 wobei $I_{S}(T)$ dem temperaturabhängigen Sättigungsstrom (Sperrstrom), $n\approx 1\ldots 2$ dem sog. Emissionskoeffizienten und  $U_{T}$ der Temperaturspannung entsprechen.  
