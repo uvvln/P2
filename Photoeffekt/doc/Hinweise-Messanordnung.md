@@ -1,8 +1,10 @@
-# Hinweise für den Versuch **Photoeffekt**
+# Photoeffekt
 
-## Hg-Dampflampe
+## Experimentelle Aufbauten
 
-Für den Versuch wird die Photozelle mit dem Licht einer Hochdruck-Quecksilberdampflampe bestrahlt. [Hg](https://de.wikipedia.org/wiki/Quecksilberdampflampe) besitzt u.a. die folgenden für diesen Versuch relevanten diskreten Emissionslinien 
+### Hg-Dampflampe
+
+Für den Versuch wird die Photozelle mit dem Licht einer Hochdruck-Quecksilberdampflampe bestrahlt. 💡 [Hg](https://de.wikipedia.org/wiki/Quecksilberdampflampe) besitzt u.a. die folgenden für diesen Versuch relevanten diskreten Emissionslinien 
 
 - $\lambda=365.01\ \mathrm{nm}$ (UV);
 - $\lambda=404.66\ \mathrm{nm}$ (violett);
@@ -22,16 +24,18 @@ In der Überlagerung ergibt sich eine **grünliche Farbe**. Einzelne Wellenläng
 - $\lambda^{(5)}_{\mathrm{CWL}}=540\ \mathrm{nm}$;
 - $\lambda^{(6)}_{\mathrm{CWL}}=590\ \mathrm{nm}$.
 
-Die Abkürzung CWL steht dabei für *central wavelength*; es ist die Wellenlänge in der Mitte des Filterbandpasses. Laut Hersteller haben die Filter eine **[Halbwertsbreite](https://de.wikipedia.org/wiki/Halbwertsbreite) von $\pm10\ \mathrm{nm}$**, aus der Sie die Standardabweichung des eingestrahlten Lichts bestimmen können. Beachten Sie dabei die Umrechnung zwischen Halbwertsbreite und Standardabweichung unter Annahme einer Normalverteilung. 
+💡 Die Abkürzung CWL steht dabei für *central wavelength*; es ist die Wellenlänge in der Mitte des Filterbandpasses. Laut Hersteller haben die Filter eine **[Halbwertsbreite](https://de.wikipedia.org/wiki/Halbwertsbreite) von $\pm10\ \mathrm{nm}$**, aus der Sie die Standardabweichung des eingestrahlten Lichts bestimmen können. 💡 Beachten Sie dabei die Umrechnung zwischen Halbwertsbreite und Standardabweichung unter Annahme einer Normalverteilung. 
 
-## Spannungsmessung mit dem Messverstärker
+### Spannungsmessung mit dem Messverstärker
 
-Da die Photozelle nur sehr geringe Spannungen erzeugt würde sie bei direkter Messung mit einem einfachen Multimeter direkt über den Innenwiderstand des Messgeräts entladen werden. Die Messung kann daher als Spannungsmessung auf zweierlei Weise erfolgen: 
+Da die Photozelle nur sehr geringe Spannungen erzeugt würde sie bei direkter Messung mit einem einfachen Multimeter direkt über den Innenwiderstand des Messgeräts entladen werden. Ein gutes Handmultimeter besitzt zur Spannugnsmessung einen Innenwiderstand von $R_{i}\approx\mathcal{O}(1{-}10\ \mathrm{G\Omega})$. 
+
+Die Messung als Spannungsmessung kann auf zweierlei Weise erfolgen: 
 
 - Als sich aufbauende Spannung an einem Kondensator mit der bekannten Kapazität $C$. 
 - Als abfallende Spannung an einem bekannten Widerstand $R$. 
 
-Die Messanordnung hierzu sollte einen **maximal hohen Innenwiderstand $R_{i}$** aufweisen. Dies erreicht man durch Verwendung eines Operationsverstärkers (OPV) als Impedanzwandler (Spannungsfolger), wie in **Abbildung 1** gezeigt: 
+🔔 Die Messanordnung hierzu sollte einen **maximal hohen Innenwiderstand $R_{i}$** aufweisen. Dies erreicht man z.B. durch Verwendung eines Operationsverstärkers (OPV) als Impedanzwandler (Spannungsfolger), wie in **Abbildung 1** gezeigt: 
 
 ---
 
@@ -41,9 +45,11 @@ Die Messanordnung hierzu sollte einen **maximal hohen Innenwiderstand $R_{i}$** 
 
 ---
 
-Ein Impedanzwandler übersetzt $U_{e}$ ohne weitere Verstärkung (d.h. mit dem Verstärkungsfaktor $v_{U}=1$) in $U_{a}=U_{e}$. Der Versuch [**Signalverarbeitung**](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/tree/main/Signalverarbeitung/README.md) gibt Ihnen die Möglichkeit diese Art der Signalverarbeitung besser kennenzulernen. 
+🔔 Ein Impedanzwandler übersetzt $U_{e}$ ohne weitere Verstärkung (d.h. mit dem Verstärkungsfaktor $v_{U}=1$) in $U_{a}=U_{e}$. Der Versuch [**Signalverarbeitung**](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/tree/main/Signalverarbeitung/README.md) gibt Ihnen die Möglichkeit sich mit dieses Bauelement besser kennenzulernen. 
 
-Am Ausgang des Impedanzwandlers wird das Signal mit Hilfe eines Analog-Digital-Wandlers ([ADS1115](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/blob/main/doc/SOLDERED_ADS1115_DATASHEET.pdf)) digitalisiert und zur weiteren Verarbeitung an einen [Raspberry Pi 400](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/blob/main/doc/raspberry-pi-400-product-brief.pdf) weitergeleitet. Mit Hilfe des Impedanzwandlers kann $U_{a}$ weiterverarbeitet werden, ohne die am Eingang anliegende Spannung $U_{e}$ zu beeinflussen. Auf diese Weise wird die Photozelle effektiv von der weiteren Auslesekette zur Signalverarbeitung entkoppelt, so dass der Einfluss der Messung auf die Photozelle so gering wie möglich bleibt. 
+Am Ausgang des Impedanzwandlers wird das Signal mit Hilfe eines Analog-Digital-Wandlers ([ADS1115](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/blob/main/doc/SOLDERED_ADS1115_DATASHEET.pdf)) digitalisiert und zur weiteren Verarbeitung an einen [Raspberry Pi 400](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/blob/main/doc/raspberry-pi-400-product-brief.pdf) (oder höher) weitergeleitet. 
+
+> Mit Hilfe des Impedanzwandlers kann $U_{a}$ weiterverarbeitet werden, ohne die am Eingang anliegende Spannung $U_{e}$ zu beeinflussen. Auf diese Weise wird die Photozelle effektiv von der weiteren Auslesekette zur Signalverarbeitung entkoppelt, so dass der Einfluss der Messung auf die Photozelle so gering wie möglich bleibt. 
 
 Der Schaltkreis von der Aufnahme des Signals als $U_{e}$ bis zum 40-poligen Breitbandkabel zur Weiterleitung des digitalisierten Signals an den Raspberry Pi ist in **Abbildung 2** gezeigt: 
 
@@ -55,19 +61,19 @@ Der Schaltkreis von der Aufnahme des Signals als $U_{e}$ bis zum 40-poligen Brei
 
 ---
 
-### Bestimmung des Innenwiderstands $R_{i}$ der Messanordnung
+#### Bestimmung des Innenwiderstands $R_{i}$ der Messanordnung
 
-Das Ersatzschaltbild für eine typische Bestimmung des Innenwiderstands $R_{i}$ eines Spannungsmessgeräts ist in **Abbildung 3** gezeigt:
+Das Ersatzschaltbild für eine klassische Bestimmung des Innenwiderstands $R_{i}$ eines Spannungsmessgeräts ist in **Abbildung 3** gezeigt:
 
 ---
 
 <img src="../figures/Innenwiderstand.png" width="600" style="zoom:100%;"/>
 
-**Abbildung 3**: (Ersatzschaltbild für eine typische Bestimmung des Innenwiderstands $R_{i}$ eines Spannungsmessgeräts)
+**Abbildung 3**: (Ersatzschaltbild für eine klassische Bestimmung des Innenwiderstands $R_{i}$ eines Spannungsmessgeräts)
 
 ---
 
-Das Messgerät ist durch den gestrichelten Kasten dargestellt. Es hat den Ausgabewert $U_{a}$, den Eingabewert $U_{e}$ (jeweils relativ zu GND) und den Innenwiderstand $R_{i}$. Zum Messgerät ist mit $R_{V}$ ein bekannter Referenzwiderstand $R_{V}$ in Serie geschaltet. In der Messanordnung gehen wir zudem von einer bekannten idealen Spannungsquelle für die Spannung $U_{0}$ aus. Nach den [Kirchhoffschen Regeln](https://de.wikipedia.org/wiki/Kirchhoffsche_Regeln) gilt:
+🔔 Das Messgerät ist durch den gestrichelten Kasten dargestellt. Es hat den Ausgabewert $U_{a}$, den Eingabewert $U_{e}$ (jeweils relativ zu GND) und den Innenwiderstand $R_{i}$. Zum Messgerät ist mit $R_{V}$ ein bekannter Referenzwiderstand $R_{V}$ in Serie geschaltet. In der Messanordnung gehen wir zudem von einer bekannten idealen Spannungsquelle für die Spannung $U_{0}$ aus. Nach den [Kirchhoffschen Regeln](https://de.wikipedia.org/wiki/Kirchhoffsche_Regeln) gilt:
 $$
 \begin{equation*}
 \begin{split}
@@ -79,21 +85,26 @@ $$
 \end{split}
 \end{equation*}
 $$
-Das Problem bei der Messung von $R_{i}$ für die Messanordnung, wie wir sie für diesen Versuch verwenden, besteht darin, dass der Wert von $R_{i}$ im Bereich mehrerer $100\ \mathrm{G\Omega}$ und damit deutlich höher liegt als jeder im Handel erhältliche Referenzwiderstand $R_{V}$. Zum Vergleich: 
+🔔 Das Problem bei der Messung von $R_{i}$ für die Messanordnung, wie wir sie für diesen Versuch verwenden, besteht darin, dass der Wert von $R_{i}$ im Bereich mehrerer(!) $100\ \mathrm{G\Omega}$ und damit deutlich höher liegt als jeder im Handel erhältliche Referenzwiderstand $R_{V}$. 
+
+Zum Vergleich: 
 
 - Der Innenwiderstand des menschlichen Körpers wird mit ${\approx}70\ \mathrm{k\Omega}$ [[1](https://de.wikipedia.org/wiki/K%C3%B6rperwiderstand)] (von Fingerspitze zu Fingerspitze) angegeben.
 - Die höchsten im Handel erhältlichen Widerstände haben einen Nennwert von $10\ \mathrm{G\Omega}$. 
 
-Selbst unter Verwendung des im Handel erhältlichen Widerstands von $R_{V}=10\ \mathrm{G\Omega}$ läge der Spannungsabfall an $U_{a}$ durch Serienschaltung von $R_{V}$ im %-Bereich. 
+Selbst unter Verwendung eines im Handel erhältlichen Widerstands von $R_{V}=10\ \mathrm{G\Omega}$ läge der Spannungsabfall an $U_{a}$ durch Serienschaltung von $R_{V}$ mit dem Messgerät, für das $R_{i}$ zu bestimmen ist im %-Bereich. 
 
-Wir schlagen vor, den Kondensator mit der Kapazität $C=(4.7\pm0.05)\ \mathrm{nF}$ über die Messanordnung kurz zu schließen. Dadurch kommt es zur Entladung 
+💡Der Effekt, aus dem $R_{i}$ zu bestimmen wäre, wäre also tendenziell eher klein und daher sehr unpräzise. 
+
+**Wir schlagen vor, den Kondensator mit der Kapazität $C=(4.7\pm0.05)\ \mathrm{nF}$ über die Messanordnung kurz zu schließen.** Dadurch kommt es zur Entladung 
 $$
 \begin{equation}
 U_{a}(t, C, R_{i}) = U_{0}\,e^{-\frac{1}{C\,R_{i}}t},
+\tag{1}
 \end{equation}
 $$
 die Sie über die Messanordnung bestimmen können. Aus dem Verlauf der Entladekurve lässt sich $R_{i}$ bei Kenntnis von $C$ bestimmen.
 
-# Navigation
+---
 
-[Main](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/tree/main/Photoeffekt)
+[Main](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/tree/main/Photoeffekt/README.md)
