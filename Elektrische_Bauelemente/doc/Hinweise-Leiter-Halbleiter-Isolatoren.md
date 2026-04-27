@@ -102,6 +102,7 @@ Die elektrische Leitfähigkeit $\sigma$ eines FK
 $$
 \begin{equation}
 \sigma = q\,n\,\mu
+\tag{1}
 \end{equation}
 $$
 wird durch die Anzahl $n$ und die [Beweglichkeit](https://de.wikipedia.org/wiki/Beweglichkeit_(Physik)) $\mu$ der Ladungsträger bestimmt, wobei $q=e$ der Ladung der Elektronen (oder Löcher) entspricht. Entsprechende Werte für Kupfer (Cu) und Si sind in der folgenden Tabelle zusammengestellt:
@@ -117,6 +118,7 @@ Bei Leitern, wie Cu, nimmt $\sigma_{\mathrm{Cu}}$ mit zunehmender Temperatur ab,
 $$
 \begin{equation}
 R(T) = R_{0}\left(1+\alpha\,T\right),
+\tag{2}
 \end{equation}
 $$
  wobei $T$ in $\mathrm{K}$ anzugeben ist. $\alpha$ bezeichnet man als [Temperaturbeiwert](https://de.wikipedia.org/wiki/Temperaturkoeffizient#Beispiel:_Temperaturkoeffizient_des_elektrischen_Widerstands). 
@@ -137,6 +139,7 @@ Anders verhält es sich beim Si, das ohnehin eine sehr viel höhere Beweglichkei
 $$
 \begin{equation}
 \ln(R/[\Omega])(T) = C\left(\frac{1}{T} - C'\right)
+\tag{3}
 \end{equation}
 $$
 erwarten, wobei $C$ und $C'$ zu bestimmende Konstanten sind. 
@@ -179,6 +182,7 @@ U_{X} = U_{0}\,\frac{R_{X}+R_{V}}{R_{X}+R_{V}+R_{0}};\qquad \\
 &\\
 &R_{X} = \frac{R_{\mathrm{pot}}\,R_{0}-R_{1}\,\left(R_{V}+R_{0}\right)}{R_{1}}.\\
 \end{split}
+\tag{4}
 \end{equation}
 $$
 Dabei sind $R_{0}=1.8\ \mathrm{k\Omega},\ R_{V}=240\ \mathrm{\Omega},\ R_{\mathrm{pot}}=10\ \mathrm{k\Omega}$ vorgegeben. $R_{1}$ kann zwischen den Klemmen (3) und (4) abgegriffen werden. 
@@ -271,6 +275,7 @@ Das Messprinzip geht von einer einfachen Messung der über $R$ abfallenden Spann
 $$
 \begin{equation}
 R = \frac{U_{R}}{I_{0}}.
+\tag{5}
 \end{equation}
 $$
 Links im den Abbildungen ist jeweils eine bekannte [Konstantstromquelle](https://de.wikipedia.org/wiki/Konstantstromquelle) gezeigt, die als quasi [ideale Stromquelle](https://de.wikipedia.org/wiki/Stromquelle#Ideale_Stromquelle), selbst unter Last, immer den bekannten Strom $I_{0}$ abgibt. ☝️ Das Problem der Zweileiterschaltung besteht darin, dass das Spannungsmessgerät V die Summe aus $R$ und den Leitungswiderständen $R_{\mathrm{Leit.},i}$ misst. Für $R\to0$ führt dies zu einem offensichtlichen Fehler. 
