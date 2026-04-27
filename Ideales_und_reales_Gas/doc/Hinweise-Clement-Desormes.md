@@ -58,6 +58,7 @@ $$
 &\\
 &\frac{\Delta T}{T_{0}} = \frac{\kappa-1}{\kappa}\frac{\Delta p_{1}}{p_{0}}\\
 \end{split}
+\tag{1}
 \end{equation}
 $$
 folgt.
@@ -74,6 +75,7 @@ $$
 &\frac{\Delta T}{T_{0}} = 1-\frac{p_{0}}{p_{0}+\Delta p_{2}}
 \approx \frac{\Delta p_{2}}{p_{0}},\\
 \end{split}
+\tag{2}
 \end{equation}
 $$
 wobei der Quotient auf der rechten Seite von Gleichung **(2)** unten für $\Delta p_{2}\ll p_{0}$ durch eine geometrischen Reihe genähert wurde. 

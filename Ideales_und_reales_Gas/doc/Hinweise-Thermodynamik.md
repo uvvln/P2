@@ -50,6 +50,7 @@ Zustandsänderungen von Systemen, die umkehrbar sind, ohne dass $\mathrm{W}$ dad
 > &\\
 > &pV=N\,k_{B}\,T. \\
 > \end{split}
+> \tag{1}
 > \end{equation}
 > $$
 > Dabei entsprechen $R$ der idealen [Gaskonstanten](https://de.wikipedia.org/wiki/Gaskonstante), $N$ der Anzahl der Teilchen im Gas und $k_{B}$ der [Boltzmann-Konstanten](https://de.wikipedia.org/wiki/Boltzmann-Konstante). 
@@ -125,6 +126,7 @@ $$
 T\,V^{\kappa-1}=const;\qquad
 p\,V^{\kappa}=const.;\qquad
 p\,T^{\frac{1-\kappa}{\kappa}}=const.
+\tag{2}
 \end{equation}
 $$
 

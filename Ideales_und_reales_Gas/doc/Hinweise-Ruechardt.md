@@ -20,6 +20,7 @@ $$
 &\\
 &\mathrm{d}p = -\kappa\frac{p}{V}\,\mathrm{d}V. \\
 \end{split}
+\tag{1}
 \end{equation}
 $$
 Aus der Multiplikation von Gleichung **(1)** mit dem Rohrinnenquerschnitt $A$ ergibt sich die auf den Pfropfen wirkende Kraft und nach dem zweiten Newtonschen Axiom eine lineare **Schwingungsgleichung für die Bewegung des Pfropfens**:
@@ -35,6 +36,7 @@ $$
 &\\
 &m\,\ddot{x} = -\kappa\frac{p}{V}A^{2}\,x,
 \end{split}
+\tag{2}
 \end{equation}
 $$
 wobei $m$ der Masse des Pfropfens entspricht. 💡 An dieser Stelle nehmen wir die Näherung vor, dass sich $p$ und $V$ durch die Bewegung des Pfropfens aus seiner Ruhelage nur geringfügig ändern ($p\approx const.,\ V\approx const.$). Aus Gleichung **(2)** lässt sich die Periode 
@@ -42,6 +44,7 @@ wobei $m$ der Masse des Pfropfens entspricht. 💡 An dieser Stelle nehmen wir d
 $$
 \begin{equation}
 T_{\Omega} = 2\pi\sqrt{\frac{m\,V}{\kappa\,p\,A^{2}}}
+\tag{3}
 \end{equation}
 $$
 der Schwingung ableiten, woraus sich $\kappa$ bestimmen lässt:

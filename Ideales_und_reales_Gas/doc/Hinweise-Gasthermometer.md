@@ -40,6 +40,7 @@ $$
 &\\
 &p_{0}=p(\vartheta=0^{\circ}\mathrm{C}).\\
 \end{split}
+\tag{1}
 \end{equation}
 $$
 Die Steigung $\gamma$ wird als [**Volumenausdehnungskoeffizient**](https://de.wikipedia.org/wiki/Ausdehnungskoeffizient) bezeichnet. Laut Gleichung **(1)** verschwindet der Gasdruck $p(\vartheta_{0})$ bei einer Temperatur von 
@@ -91,6 +92,7 @@ $$
 &\\
 &T_{s} = \vartheta_{s}+\frac{1}{\gamma}.\\
 \end{split}
+\tag{2}
 \end{equation}
 $$
 Es ergibt sich also ein additiver Korrekturterm $\delta\gamma$ zur ursprünglichen Abschätzung $\gamma^{(0)}$. 
