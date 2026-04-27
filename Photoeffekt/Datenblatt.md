@@ -13,7 +13,7 @@ Für die verschiedenen Aufgaben des Versuchs **Photoeffekt** stehen Ihnen die fo
 - Ein Revolverhalter für sechs Fabry-Perot-Interferenzfilter für $\lambda_{\mathrm{CWL}} = 360,\ 400, \ 440,\ 490,\ 540,\ 590\ \mathrm{nm}$, jeweils mit einer Halbwertsbreite von $\pm10\ \mathrm{nm}$ und einer Durchlässigkeit im Maximum von 45%;
 - Eine Vakuumphotozelle mit vollflächig aufgedampfter Kaliumkathode (K) und ringförmiger Platin-Rhodium-Drahtanode (A);
 - Eine Messverstärkeranordnung, die wir im Hause hergestellt haben;
-- Ein [Rapberry Pi 400](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/blob/main/doc/raspberry-pi-400-product-brief.pdf) zur Aufnahme der Daten.
-- Eine Box mit Kondensatoren verschiedener Kapazitäten und verschiedenen Widerständen.
+- Ein $10\ \mathrm{G\Omega}$ widerstand und ein $4.7\ \mathrm{nF}$ Kondensator zur Signalaufnahme;
+- Ein [Rapberry Pi 400](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/blob/main/doc/raspberry-pi-400-product-brief.pdf) zur Aufzeichnung der Daten.
 - Eine Zeiss-Schiene mit Reitern;
 - Verbindungskabel.
