@@ -26,24 +26,24 @@ Die Abkürzung CWL steht dabei für *central wavelength*; es ist die Wellenläng
 
 ## Spannungsmessung mit dem Messverstärker
 
-Da die Photozelle nur sehr geringe Spannungen erzeugt würde sie bei direkter Messung mit einem einfachen Multimeter direkt über den Innenwiderstand des Messgeräts entladen werden. Die Messung erfolgt daher als Spannungsmessung auf zweierlei Weise: 
+Da die Photozelle nur sehr geringe Spannungen erzeugt würde sie bei direkter Messung mit einem einfachen Multimeter direkt über den Innenwiderstand des Messgeräts entladen werden. Die Messung kann daher als Spannungsmessung auf zweierlei Weise erfolgen: 
 
 - Als sich aufbauende Spannung an einem Kondensator mit der bekannten Kapazität $C$. 
 - Als abfallende Spannung an einem bekannten Widerstand $R$. 
 
-Die Messanordnung hierzu sollte einen **maximal hohen Innenwiderstand $R_{i}$** aufweisen. Dies erreicht man durch Verwendung eines Operationsverstärkers (OPV) als Impedanzwandler oder Spannungsfolger, wie in **Abbildung 1** gezeigt: 
+Die Messanordnung hierzu sollte einen **maximal hohen Innenwiderstand $R_{i}$** aufweisen. Dies erreicht man durch Verwendung eines Operationsverstärkers (OPV) als Impedanzwandler (Spannungsfolger), wie in **Abbildung 1** gezeigt: 
 
 ---
 
 <img src="../figures/Spannungsfolger.png" width="600" style="zoom:100%;"/>
 
-(**Abbildung 1:** Schaltbild eines Spannungsfolgers, wie er zur Auslese des Versuchs **Photoeffekt** verwendet wird)
+(**Abbildung 1:** Schaltbild eines Impedanzwandlers, wie er zur Auslese des Versuchs **Photoeffekt** verwendet wird)
 
 ---
 
-Ein Spannungsfolger übersetzt $U_{e}$ ohne weitere Verstärkung (d.h. mit dem Verstärkungsfaktor $v_{U}=1$) in $U_{a}=U_{e}$. Der Versuch [**Operationsverstärker (OPV)**](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/tree/main/Operationsverstaerker?ref_type=heads) gibt Ihnen die Möglichkeit diese Art der Signalverarbeitung besser kennenzulernen. 
+Ein Impedanzwandler übersetzt $U_{e}$ ohne weitere Verstärkung (d.h. mit dem Verstärkungsfaktor $v_{U}=1$) in $U_{a}=U_{e}$. Der Versuch [**Signalverarbeitung**](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/tree/main/Signalverarbeitung/README.md) gibt Ihnen die Möglichkeit diese Art der Signalverarbeitung besser kennenzulernen. 
 
-Am Ausgang des Spannungsfolgers wird das Signal mit Hilfe eines Analog-Digital-Wandlers ([ADS1115](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/blob/main/doc/SOLDERED_ADS1115_DATASHEET.pdf)) digitalisiert und zur weiteren Verarbeitung an einen [Raspberry Pi 400](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/blob/main/doc/raspberry-pi-400-product-brief.pdf) weitergeleitet. Mit Hilfe des Spannungsfolgers kann $U_{a}$ weiterverarbeitet werden, ohne die am Eingang anliegende Spannung $U_{e}$ zu beeinflussen. Auf diese Weise wird die Photozelle effektiv von der weiteren Auslesekette zur Signalverarbeitung entkoppelt, so dass der Einfluss der Messung auf die Photozelle so gering wie möglich bleibt. 
+Am Ausgang des Impedanzwandlers wird das Signal mit Hilfe eines Analog-Digital-Wandlers ([ADS1115](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/blob/main/doc/SOLDERED_ADS1115_DATASHEET.pdf)) digitalisiert und zur weiteren Verarbeitung an einen [Raspberry Pi 400](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/blob/main/doc/raspberry-pi-400-product-brief.pdf) weitergeleitet. Mit Hilfe des Impedanzwandlers kann $U_{a}$ weiterverarbeitet werden, ohne die am Eingang anliegende Spannung $U_{e}$ zu beeinflussen. Auf diese Weise wird die Photozelle effektiv von der weiteren Auslesekette zur Signalverarbeitung entkoppelt, so dass der Einfluss der Messung auf die Photozelle so gering wie möglich bleibt. 
 
 Der Schaltkreis von der Aufnahme des Signals als $U_{e}$ bis zum 40-poligen Breitbandkabel zur Weiterleitung des digitalisierten Signals an den Raspberry Pi ist in **Abbildung 2** gezeigt: 
 
@@ -79,14 +79,14 @@ $$
 \end{split}
 \end{equation*}
 $$
-Das Problem bei der Messung von $R_{i}$ für die Messanordnung, wie wir sie für diesen Versuch verwenden, besteht darin, dass der Wert von $R_{i}$ im Bereich mehrerer $100\ \mathrm{G\Omega}$ liegt und damit deutlich höher ist als jeder im Handel erhältliche Referenzwiderstand $R_{V}$. Zum Vergleich: 
+Das Problem bei der Messung von $R_{i}$ für die Messanordnung, wie wir sie für diesen Versuch verwenden, besteht darin, dass der Wert von $R_{i}$ im Bereich mehrerer $100\ \mathrm{G\Omega}$ und damit deutlich höher liegt als jeder im Handel erhältliche Referenzwiderstand $R_{V}$. Zum Vergleich: 
 
-- Der Innenwiderstand des menschlichen Körpers wird mit ${\approx}70\ \mathrm{k\Omega}$ [[1](https://de.wikipedia.org/wiki/K%C3%B6rperwiderstand)] (von Fingerspitze zu Fingerspitze)
+- Der Innenwiderstand des menschlichen Körpers wird mit ${\approx}70\ \mathrm{k\Omega}$ [[1](https://de.wikipedia.org/wiki/K%C3%B6rperwiderstand)] (von Fingerspitze zu Fingerspitze) angegeben.
 - Die höchsten im Handel erhältlichen Widerstände haben einen Nennwert von $10\ \mathrm{G\Omega}$. 
 
-Selbst unter Verwendung des am Versuch ausliegenden Widerstands von $R_{V}=10\ \mathrm{G\Omega}$ läge der Spannungsabfall an $U_{a}$ durch Serienschaltung von $R_{V}$ im %-Bereich. 
+Selbst unter Verwendung des im Handel erhältlichen Widerstands von $R_{V}=10\ \mathrm{G\Omega}$ läge der Spannungsabfall an $U_{a}$ durch Serienschaltung von $R_{V}$ im %-Bereich. 
 
-Wir schlagen vor, den Kondensator mit der Kapazität $C=(1\pm0.01)\ \mathrm{nF}$ über die Messanordnung kurz zu schließen. Dadurch kommt es zur Entladung 
+Wir schlagen vor, den Kondensator mit der Kapazität $C=(4.7\pm0.05)\ \mathrm{nF}$ über die Messanordnung kurz zu schließen. Dadurch kommt es zur Entladung 
 $$
 \begin{equation}
 U_{a}(t, C, R_{i}) = U_{0}\,e^{-\frac{1}{C\,R_{i}}t},
