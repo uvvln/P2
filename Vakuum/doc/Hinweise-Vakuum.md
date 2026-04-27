@@ -21,6 +21,7 @@ $$
 &\sigma= \pi\,r^{2};\qquad r=\sqrt[3]{\frac{3}{4\pi}V};
 \qquad V= \frac{M_{m}\,f}{N_{A}\,\rho_{\mathrm{fl}}},\\
 \end{split}
+\tag{1}
 \end{equation}
 $$
 
@@ -79,6 +80,7 @@ Wir stellen uns vor, dass sich die graue Fläche $A$ über dem Fluid mit der kon
 $$
 \begin{equation}
 F_{R}=-\eta\,A\frac{\mathrm{d}v}{\mathrm{d}z}.
+\tag{2}
 \end{equation}
 $$
 Die Proportionalitätskonstante $\eta$ heisst **Viskosität** des Fluids. Diese Beziehung gilt auch für turbulente Strömungen, die für infinitesimal kleine Volumenelemente immer noch näherungsweise als laminar angenommen werden können.  
@@ -121,12 +123,14 @@ Für den Fluss eines Fluids durch ein zylindrisches Rohr mit Radius $R$ wählen 
 $$
 \begin{equation}
 v(r) = \int\limits_{R}^{r}\frac{r}{2\,\eta}\,\frac{\mathrm{d}p}{\mathrm{d}x}\,\mathrm{d}r = \frac{r^{2}-R^{2}}{4\,\eta}\frac{\mathrm{d}p}{\mathrm{d}x},
+\tag{3}
 \end{equation}
 $$
 das eine $r^{2}$-Abhängigkeit aufweist. 💡 Eine laminare Strömung in kreiszylindrischen Rohren mit einer solchen Geschwindigkeitsverteilung nennt man [Poiseuille’sche Strömung](https://de.wikipedia.org/wiki/Gesetz_von_Hagen-Poiseuille). Integriert man das Geschwindigkeitsprofil aus Gleichung **(3)** zusätzlich über die Querschnittsfläche des Rohrs (in der $yz$-Ebene in **Abbildung 2**) erhält man den **Volumendurchfluss** durch das Rohr:
 $$
 \begin{equation}
 \dot{V} = \int\limits_{0}^{2\pi}\int\limits_{0}^{R}\frac{r^{2}-R^{2}}{4\,\eta}\frac{\mathrm{d}p}{\mathrm{d}x}\,r\,\mathrm{d}\varphi\,\mathrm{d}r = -\frac{\pi\,R^{4}}{8\,\eta}\,\frac{\mathrm{d}p}{\mathrm{d}x}.
+\tag{4}
 \end{equation}
 $$
 💡 Das Minuszeichen in Gleichung **(4)** zeigt, dass $\dot{V}$ der Druckdifferenz entgegen gerichtet ist, d.h. das Fluid fließt in Richtung des geringeren Drucks. ℹ️ Gleichung **(4)** bezeichnet man als das **Gesetz von Hagen-Poisseuille**. Demnach gilt entlang der Stömungsrichtung $x$: 
@@ -152,6 +156,7 @@ $$
 &\\
 &\overline{p} = \frac{p_{\mathrm{aus}}+p_{\mathrm{ein}}}{2}; \qquad \Delta p = p_{\mathrm{aus}}-p_{\mathrm{ein}},
 \end{split}
+\tag{5}
 \end{equation}
 $$
 

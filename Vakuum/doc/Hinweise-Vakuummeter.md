@@ -134,6 +134,7 @@ wobei $V_{\mathrm{RZ}}$ dem Volumen im RZ und $V_{\mathrm{RV}}$ dem RV entsprech
 $$
 \begin{equation}
 \Delta p_{i} = \frac{V_{\mathrm{RV}}}{V_{\mathrm{RV}}+V_{\mathrm{RZ}}}\left(p_{0} - p_{\mathrm{RZ},i}\right).
+\tag{1}
 \end{equation}
 $$
 Mit zunehmendem Druck im RZ nimmt $\Delta p_{i}$ also linear ab! Da es sich bei T3 um das Messgerät handelt, das zu kalibrieren ist, können Sie $p_{\mathrm{RZ},i}$ als Eingangsparameter für Gleichung **(1)** nicht von T3 ablesen. Gehen Sie stattdessen wie folgt vor: 

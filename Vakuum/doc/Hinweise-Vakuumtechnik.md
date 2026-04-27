@@ -8,6 +8,7 @@ In der Vakuuumtechnik bezeichnet man den **Volumendurchfluss** ([Volumenstrom](h
 $$
 \begin{equation}
 S\equiv\dot{V}.
+\tag{1}
 \end{equation}
 $$
 Gebräuchliche Einheiten hierfür sind $[\mathrm{l/s}]$ oder $[\mathrm{m^{3}/h}]$. 💡 Für viskose Flüssigkeiten haben Sie $S$ in Form des Gesetzes von Hagen-Poiseuille in der Form von Gleichung **(4) [hier](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/blob/main/Vakuum/doc/Hinweise-Vakuum.md)** kennengelernt. 
@@ -24,6 +25,7 @@ Für einen Pumpvorgang ist die physikalisch relevantere Größe die in der Zeits
 $$
 \begin{equation}
 q_{m}\equiv\dot{m}
+\tag{2}
 \end{equation}
 $$
 äquivalent ist. Zwischen $n$ und $m$ besteht dabei der Zusammenhang
@@ -52,6 +54,7 @@ die bei vorgegebener Temperatur zur Angabe der Masse äquivalent ist. Für Gase 
 $$
 \begin{equation}
 q_{pV} = \frac{\mathrm{d}(pV)}{\mathrm{dt}}
+\tag{3}
 \end{equation}
 $$
 (mit der Einheit $[\mathrm{W}]$) in Verwendung.
@@ -66,6 +69,7 @@ $$
 & q_{pV} = \left.\frac{\mathrm{d}(pV)}{\mathrm{d}t}\right|_{p=const.} = p\dot{V} = p\,S; \\
 &q_{pV} = \left.\frac{\mathrm{d}(pV)}{\mathrm{d}t}\right|_{V=const.} = \dot{p}V.\\
 \end{split}
+\tag{4}
 \end{equation}
 $$
 Für einen in der Vakuumtechnik eher gebräuchlichen Aufbau, bei dem das Volumen $V=V_{\mathrm{RZ}}$ durch die Abmessungen des RZ fest vorgegeben ist, ist der Zusammenhang für $V=const.$ der praktischere. 💡 **Danach wird durch eine Pumpe mit höherer Saugleistung der Druck im RZ schneller reduziert.** 
@@ -112,6 +116,7 @@ $$
 &\\
 &p(t) = p_{0}\,\exp\left(-n\frac{S}{V}\left(t-t_{0}\right)\right)
 \end{split}
+\tag{5}
 \end{equation}
 $$
 erwarten, wobei man $n=1\ldots1.4$ (für Luft) als den [Polytropenexponenten](https://de.wikipedia.org/wiki/Polytrope_Zustands%C3%A4nderung) bezeichnet. Hierzu müssen $V$ groß und $\Delta t=t-t_{0}$ klein genug sein, so dass die Bedingungen $S\,\Delta t\ll V$ und $p=const.$ in guter Näherung erfüllt sind. 🔔 Für einen Aufbau mit endlichem Volumen $V=V_{\mathrm{RZ}}$ sind diese Voraussetzungen nicht über beliebig große Zeiträume hinweg erfüllt. In einem solchen Fall lässt sich in Anlehnung an den oberen Teil von Gleichung **(5)** 
@@ -125,6 +130,7 @@ $$
 &\\
 &t_{i+1}>t_{i};\qquad p_{i}>p_{i+1}\\
 \end{split}
+\tag{6}
 \end{equation}
 $$
 immer noch als Funktion von $p$ bestimmen.
@@ -135,6 +141,7 @@ immer noch als Funktion von $p$ bestimmen.
 > $$
 > \begin{equation}
 > L=\frac{\pi\,R^{4}\,\overline{p}}{8\,\eta\,\ell}
+> \tag{7}
 > \end{equation}
 > $$
 > (mit der Einheit $[\mathrm{l/s}]$) bezeichnet man als **Strömungsleitwert**, den Kehrwert von $L$ als **Strömungswiderstand** des Rohrs. 
@@ -143,6 +150,7 @@ immer noch als Funktion von $p$ bestimmen.
 $$
 \begin{equation}
 q_{pV}\equiv L\,\Delta p
+\tag{8}
 \end{equation}
 $$
 allgemein definieren. Gleichung **(7)** gilt nur für viskose, laminare Fluide. Im allgemeinen hängt $L$ stärker vom Druck ab, als es durch Gleichung **(7)** wiedergegeben wird, da sich druckabhängig die Art der Strömung verändert (siehe Abschnitt Vakuumbereiche [hier](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/blob/main/Vakuum/doc/Hinweise-Vakuum.md)). Zudem hängt $L$ von der Art des strömenden Gases, dem Querschnitt der Leitung, sowie dem Umstand ab, ob die Leitung geradlinig verläuft oder in irgendeiner Weise gekrümmt ist. 
@@ -217,6 +225,7 @@ $$
 &\\
 &S_{\mathrm{eff}} = \left(\frac{1}{L} + \frac{1}{S}\right)^{-1}. \\
 \end{split}
+\tag{9}
 \end{equation}
 $$
 
@@ -249,6 +258,7 @@ $$
 1\ \mathrm{Pa}=100\ \mathrm{mbar}; \qquad
 \eta_{\mathrm{Luft}} = 18.1\times10^{-6}\ \mathrm{Pa\ s},\\
 \end{split}
+\tag{10}
 \end{equation}
 $$
 wobei $d$ dem Durchmesser der Leitung entspricht. 💡 Die eckigen Klammern geben an, in welchen Einheiten die Messgrößen jeweils einzusetzen sind.
@@ -257,6 +267,7 @@ Im Feinvakuum nimmt Gleichung **(10)** die Form
 $$
 \begin{equation}
 L[\mathrm{l/s}] = 135\frac{d^{4}}{\ell}\overline{p} + 12.1\frac{d^{3}}{\ell}\frac{1+192\, d\,\overline{p}}{1+237\, d\, \overline{p}}
+\tag{11}
 \end{equation}
 $$
 an, wobei es sich um die sog. **Knudsen-Gleichung** handelt. 
@@ -268,6 +279,7 @@ $$
 &L[\mathrm{l/s}] = 12.1\frac{d^{3}}{\ell}\cdot\underbrace{\frac{1+203\, d\, \overline{p} + 2.78\times 10^{3}\,\left(d\,\overline{p}\right)^{2}}{1+237\, d\, \overline{p}}}\\
 &\hphantom{L[\mathrm{l/s}] = 12.1\frac{d^{3}}{\ell}1+203\, d\, \overline{p}c}\equiv f(d\,\overline{p}) \\
 \end{split}
+\tag{12}
 \end{equation}
 $$
 eignet sich gut dazu, basierend auf der dimensionsbehafteten Skala $d\,\overline{p}\ [\mathrm{mbar\ cm}]$, **zwischen Grob-, Fein- und Hochvakuum zu interpolieren**, wie man aus **Abbildung 1** ersehen kann: 
@@ -296,6 +308,7 @@ $$
 &\\
 &L[\mathrm{l/s}] = 12.1\frac{d^{3}}{\ell}.\\
 \end{split}
+\tag{13}
 \end{equation}
 $$
 💡 Es fällt auf, dass $L$ für molekulare Strömungen vom Druck unabhängig ist. Diese Beobachtung deckt sich mit der Diskussion molekularer Strömungen [hier](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/blob/main/Vakuum/doc/Hinweise-Vakuum.md).  
