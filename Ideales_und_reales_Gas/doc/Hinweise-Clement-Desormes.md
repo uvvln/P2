@@ -8,25 +8,31 @@ Diese Methode zur Bestimmung von $\kappa$ ist nach [Nicolas Clément](https://de
 
 <img src="../figures/Clement-Desormes.png" width="1000" style="zoom:60%;" />
 
-**Abbildung 1**: (a) Apparatur zur Bestimmung von $\kappa$ nach dem Verfahren von Clément-Desormes. (b) Phasendiagramm zum Messverfahren. Entlang der gestrichelten Linien findet Stoffaustausch statt (d.h. $n\neq const.$))
+**Abbildung 1**: (a) Apparatur zur Bestimmung von $\kappa$ nach dem Verfahren von Clément-Desormes. Ein Mischventil verbindet die Handpumpe mit dem Rest der Apparatur. Verschiedene Stellung des Mischventils sind in den Abbildungen (b)–(d) zu sehen. Abbildung (b) zeigt das entsprechende Phasendiagramm zum Messverfahren. Entlang der gestrichelten Linien findet dabei jeweils Stoffaustausch statt (d.h. $n\neq const.$). Für die Zustandsänderung von (0) nach (1) sind die gestrichelten Linien, zur besseren Sichtbarkeit, etwas nach recht und links versetzt gezeichnet)
 
 ---
 
-Im Zentrum der Apparatur steht ein Kolben K in den mit einer geeigneten Pumpe (mit nicht allzu hohem Überdruck!) zusätzliches Arbeitsgas (in unserem Fall Luft) gepumpt werden kann. Ein Flüssigkeitsmanometer dient zur Bestimmung des Drucks in K. Über ein Ventil (oben im Bild) kann der Überdruck in K abgelassen werden. 
+🔔 Im Zentrum der Apparatur steht ein Kolben K in den mit einer Handpumpe zusätzliches Arbeitsgas gepumpt werden kann. Im konkreten Fall ist das Arbeitsgas Luft. Ein Flüssigkeitsmanometer dient zur Bestimmung des Drucks in K. Über ein Belüftungsventil (oben im Bild) kann der Überdruck in K in die Umgebung abgelassen werden.
 
-🔔Aus dem Anfangszustand $(p_{0},V_{0},T_{0})$ gehen Sie wie folgt vor:
+🔔 Beachten Sie bei der Durchführung des Experiments, die folgenden wichtigen Punkte: 
 
-- **Zustand (1)**: Erzeugen Sie mit dem Handblasebalg als Pumpe einen (nicht allzu großen) Überdruck in K. Warten Sie daraufhin einige Minuten lang den Temperaturausgleich durch **isochore Abkühlung** ab (gestrichelte Linie von **(0) nach (1) in Abbildung 1 (b)**). Dabei fällt der Überdruck wieder leicht ab. Das System hat nun den Zustand $(p_{1},V_{0},T_{0})$ mit $p_{1}\equiv p_{0}+\Delta p_{1}$ und $p_{1}\gt p_{0}$.
+- Die Handpumpe ist durch ein [Mischventil](https://de.wikipedia.org/wiki/Mischventil) mit K verbunden. Bringen Sie das Ventil in die in **Abbildung 1 (b)** gezeigte Stellung, um in K den Überdruck zu erzeugen. 
+- Bringen Sie das Mischventil danach in die in **Abbildung 1 (c)** gezeigte Stellung, um die Handpumpe von K ab- und das Manometer anzuschließen.  
+- ⚠️ Achten Sie darauf, dass der Überdruck, den Sie mit der Handpumpe in K erzeugen, nicht zu groß ist. Sie riskieren sonst, dass Flüssigkeit aus dem anderen Ende des Manometers gepresst wird. Erfahrungsgemäß genügt des 5 mal auf die Handpumpe zu pressen.
 
-- **Zustand (2)**: Öffnen Sie das Ventil der Flasche (für ${\approx}3\ \mathrm{s}$) und schließen Sie es unmittelbar wieder, so dass es zu einem Druckausgleich mit der Umgebung durch **adiabatische Expansion** kommen kann (durchgezogene Linie von **(1) nach (2) in Abbildung 1 (b)**). Das System hat daraufhin den Zustand $(p_{0},V_{0}+\Delta V,T_{1})$ mit $T_{1} = T_{0} - \Delta T$ und $T_{1}\lt T_{0}$. 
+🔔 Aus dem Anfangszustand $(p_{0},V_{0},T_{0})$ gehen Sie wie folgt vor:
 
-- **Zustand (3)**: Nach Schließen des Ventils ist $V_{0}$ in der Flasche wieder als äußere Randbedingung vorgegeben (gestrichelte Linie von **(2) nach (3) in Abbildung 1 (b)**). Das System hat somit den Zustand $(p_{0},V_{0},T_{1})$.
+- **Zustand (1)**: Erzeugen Sie mit der Handpumpe einen (nicht allzu großen) Überdruck in K und bringen Sie das Mischventil in die in **Abbildung 1 (c)** gezeigte Stellung. Warten Sie daraufhin einige Minuten lang den Temperaturausgleich durch **isochore Abkühlung** ab (gestrichelte Linie von **(0) nach (1) in Abbildung 1 (e)**). Dabei fällt der Überdruck wieder leicht ab. Das System hat nun den Zustand $(p_{1},V_{0},T_{0})$ mit $p_{1}\equiv p_{0}+\Delta p_{1}$ und $p_{1}\gt p_{0}$.
 
-- **Zustand (4)**: Durch Temperaturausgleich (nach einer Wartezeit von ${\approx}10\ \mathrm{s}$) stellt sich aufgrund **isochorer Erwärmung** erneut ein leichter Überdruck ein (durchgezogene Linie von **(3) nach (4) in Abbildung 1 (b)**). Das System hat daraufhin den Zustand $(p_{2},V_{0},T_{0})$ mit $p_{2}\equiv p_{0}+\Delta p_{2}$ und $p_{1}\gt p_{2}\gt p_{0}$.
+- **Zustand (2)**: Öffnen Sie das Belüftungsventil der Flasche (für ${\approx}3\ \mathrm{s}$) und schließen Sie es unmittelbar wieder, so dass es zu einem Druckausgleich mit der Umgebung durch **adiabatische Expansion** kommen kann (durchgezogene Linie von **(1) nach (2) in Abbildung 1 (e)**). Das System hat daraufhin den Zustand $(p_{0},V_{0}+\Delta V,T_{1})$ mit $T_{1} = T_{0} - \Delta T$ und $T_{1}\lt T_{0}$. 
 
-Aus **(4)** kehrt die Apparatur durch Belüftung wieder in **(0)** zurück. 
+- **Zustand (3)**: Nach Schließen des Ventils ist $V_{0}$ in der Flasche wieder als äußere Randbedingung vorgegeben (gestrichelte Linie von **(2) nach (3) in Abbildung 1 (e)**). Das System hat somit den Zustand $(p_{0},V_{0},T_{1})$.
 
-🔔 **(1)** ist der Zustand mit dem die Messung beginnt; **(3)** dient dazu das Volumen $V_{0}$ wieder durch äußere Randbedingungen vorzugeben. Beachten Sie, das in beiden Fällen die Stoffmenge $n$ des betrachteten Arbeitsgases nicht konstant ist (gestrichelte Linien in **Abbildung 1 (b)**). Für die Bestimmung von $\kappa$ sind die Änderungen von **(1) nach (2)** und von **(3) nach (4)** von Relevanz.  
+- **Zustand (4)**: Durch Temperaturausgleich (nach einer Wartezeit von ${\approx}10\ \mathrm{s}$) stellt sich aufgrund **isochorer Erwärmung** erneut ein leichter Überdruck ein (durchgezogene Linie von **(3) nach (4) in Abbildung 1 (e)**). Das System hat daraufhin den Zustand $(p_{2},V_{0},T_{0})$ mit $p_{2}\equiv p_{0}+\Delta p_{2}$ und $p_{1}\gt p_{2}\gt p_{0}$.
+
+Aus **(4)** kehrt die Apparatur durch erneute Belüftung wieder in **(0)** zurück. 
+
+🔔 **(1)** ist der Zustand mit dem die Messung beginnt; **(3)** dient dazu das Volumen $V_{0}$ wieder durch äußere Randbedingungen vorzugeben. Beachten Sie, das in beiden Fällen die Stoffmenge $n$ des betrachteten Arbeitsgases nicht konstant ist (gestrichelte Linien in **Abbildung 1 (e)**). Für die Bestimmung von $\kappa$ sind die Änderungen von **(1) nach (2)** und von **(3) nach (4)** von Relevanz.  
 
 ### Übergang von (1) nach (2)
 
@@ -72,13 +78,14 @@ $$
 \begin{split}
 &\frac{T_{0}-\Delta T}{T_{0}} = \frac{p_{0}}{p_{0}+\Delta p_{2}};\\
 &\\
-&\frac{\Delta T}{T_{0}} = 1-\frac{p_{0}}{p_{0}+\Delta p_{2}}
+&\frac{\Delta T}{T_{0}} = 1-\underbrace{\frac{p_{0}}{p_{0}+\Delta p_{2}}}
 \approx \frac{\Delta p_{2}}{p_{0}},\\
+&\hphantom{ccccccccccc}=\sum\limits_{n\geq0}\left(-\frac{\Delta p_{2}}{p_{0}}\right)^{n}\\
 \end{split}
 \tag{2}
 \end{equation}
 $$
-wobei der Quotient auf der rechten Seite von Gleichung **(2)** unten für $\Delta p_{2}\ll p_{0}$ durch eine geometrischen Reihe genähert wurde. 
+wobei der Quotient auf der rechten Seite von Gleichung **(2)** (zweite Zeile) für $\Delta p_{2}\ll p_{0}$ durch eine [geometrischen Reihe](https://de.wikipedia.org/wiki/Geometrische_Reihe) genähert wurde. 
 
 ### Berechnung von $\kappa$ 
 
@@ -121,10 +128,12 @@ Was wir an dieser Stelle von Ihnen erwarten:
 
 ## Testfragen
 
-1. Handelt es sich bei dem $pV$-Diagramm aus **Abbildung 1 (b)** um einen Kreisprozess?
-2. Ist dieser Prozess reversibel?
-3. An welchen Stellen in **Abbildung 1 (b)** sind die Zustandsgleichungen eines idealen Gases anwendbar?
-4. Von welchen experimentellen Randbedingungen hängt diese Messung essentiell ab?
+1. Welchem Zustand in **Abbildung 1 (e)** entspricht **Abbildung 1 (a)**?
+2. Worin besteht bei der Messung der Vorteil das Mischventil, nach Verwendung der Handpumpe, in die in **Abbildung 1 (c)** statt in die in **Abbildung 1 (d)** gezeigte Stellung zu bringen? 
+3. Handelt es sich bei dem $pV$-Diagramm aus **Abbildung 1 (e)** um einen Kreisprozess?
+4. Ist dieser Prozess reversibel?
+5. An welchen Stellen in **Abbildung 1 (e)** sind die Zustandsgleichungen eines idealen Gases anwendbar?
+6. Von welchen experimentellen Randbedingungen hängt diese Messung essentiell ab?
 
 ---
 
