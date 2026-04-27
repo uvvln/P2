@@ -10,7 +10,7 @@
 >
 > eines Stoffes werden durch [**Phasendiagramme**](https://de.wikipedia.org/wiki/Phasendiagramm) dargestellt. 
 
-🔔 In einem abgeschlossenen Volumen $V$ gibt es, für eine gegebene Temperatur $T$, jeweils nur einen bestimmten Druck $p(T)$, bei dem zwischen zwei Phasen eines Stoffes ein thermodynamisches Gleichgewicht herrscht. Ein thermodynamisches Gleichgewicht zwischen allen drei Phasen eines Stoffs existiert nur an einem einzigen Punkt im Phasendiagramm, dem **Tripelpunkt**. Das Phasendiagramm für den **Übergang von flüssig zu gasförmig heißt Dampfdruckkurve**. 
+🔔 In einem abgeschlossenen Volumen $V$ gibt es, für eine gegebene Temperatur $T$, jeweils nur einen bestimmten Druck $p(T)$, bei dem zwischen zwei Phasen eines Stoffes ein thermodynamisches Gleichgewicht besteht. Ein thermodynamisches Gleichgewicht zwischen allen drei Phasen eines Stoffs existiert nur an einem einzigen Punkt im Phasendiagramm, dem **Tripelpunkt**. 🔔 Das Phasendiagramm für den **Übergang von flüssig zu gasförmig heißt Dampfdruckkurve**. 
 
 Für einen reversiblen Kreisprozess (Carnot-Prozess) gilt allgemein:
 $$
@@ -23,6 +23,7 @@ Mit $\mathrm{d}W = \left(V_{\mathrm{fl}}-V_{\mathrm{gas}}\right)\mathrm{d}p$ und
 $$
 \begin{equation}
 \frac{\mathrm{d}p}{\mathrm{d}T} = \frac{Q}{T\,\left(V_{\mathrm{gas}} - V_{\mathrm{fl}}\right)}.
+\tag{1}
 \end{equation}
 $$
 🔔 Man benötigt also die Wärme $Q$, um bei der Temperatur $T$ eine Flüssigkeit mit dem Volumen $V_{\mathrm{fl}}$ in ein Gas mit dem Volumen $V_{\mathrm{gas}}$ zu überführen. 
@@ -50,13 +51,14 @@ $$
 &\\
 &p(T) = p(T_{0})\exp\left(-\frac{Q}{n\,R}\left(\frac{1}{T}-\frac{1}{T_{0}}\right)\right), \\
 \end{split}
+\tag{2}
 \end{equation}
 $$
-wobei $T_{0}$ einer Referenztemperatur entspricht. 🔔 Bei Gleichung **(2)** handelt es sich um die zu erwartende funktionale Form der Dampfdruckkurve für ein ideales Gas. Zur Vereinfachung führen wir noch die molare Verdampfungswärme 
+wobei $T_{0}$ einer Referenztemperatur entspricht. 🔔 Bei Gleichung **(2)** handelt es sich um die zu erwartende funktionale Form der Dampfdruckkurve für ein ideales Gas. Zur weiteren Vereinfachung führen wir die molare Verdampfungswärme 
 $$
-\begin{equation}
+\begin{equation*}
 Q_{\mathrm{M}}\equiv\frac{Q}{n}
-\end{equation}
+\end{equation*}
 $$
 ein. 
 
@@ -92,9 +94,12 @@ p_{\mathrm{Hex}}(T_{0})&=\rho\,g\,h_{0}+p_{\mathrm{Hg}}(T_{0})\\
 &\\
 &\approx\rho\,g\,h_{0}\\
 \end{split}
+\tag{3}
 \end{equation}
 $$
-von n-Hexan vor, wobei $\rho$ der Dichte von Hg und $g$ der Erdbeschleunigung entsprechen. O.b.d.A gehen wir für unsere weiteren Betrachtungen von einer Senkung der Temperatur von $T_{0}$ auf $T<T_{0}$ aus. Bei $T_{0}$ zeigt das Barometer die Höhendifferenz $h_{0}$ an. Bei abnehmender Temperatur sollte $p_{\mathrm{Hex}}$ ebenfalls abnehmen. Durch die Senkung der Temperatur hebt sich also der n-Hexan-seitige Pegel des Barometers (rechts im Bild) um den Betrag $\Delta h$; um den gleichen Betrag sinkt der Hg-seitige Pegel (links im Bild). Diese Änderung führt zu einer Höhendifferenz von 
+von n-Hexan vor, wobei $\rho$ der Dichte von Hg und $g$ der Erdbeschleunigung entsprechen. 
+
+💡 O.b.d.A gehen wir für unsere weiteren Betrachtungen von einer Senkung der Temperatur von $T_{0}$ auf $T<T_{0}$ aus. Bei $T_{0}$ zeigt das Barometer die Höhendifferenz $h_{0}$ an. Bei abnehmender Temperatur sollte $p_{\mathrm{Hex}}$ ebenfalls abnehmen. Durch die Senkung der Temperatur hebt sich also der n-Hexan-seitige Pegel des Barometers (rechts im Bild) um den Betrag $\Delta h$; um den gleichen Betrag sinkt der Hg-seitige Pegel (links im Bild). Diese Änderung führt zu einer Höhendifferenz von 
 $$
 \begin{equation*}
 h=h_{0}-2\,\Delta h.
@@ -120,12 +125,14 @@ $$
 &\\
 &\Delta h(T) = \frac{h_{0}}{2}\,\left(1-\exp\left(-\frac{Q_{\mathrm{M}}}{R}\left(\frac{1}{T}-\frac{1}{T_{0}}\right)\right)\right).\\
 \end{split}
+\tag{4}
 \end{equation}
 $$
 Daraus lässt sich das folgende Modell zur Anpassung an die Daten ableiten: 
 $$
 \begin{equation}
 \ln\left(1-2\frac{\Delta h}{h_{0}}\right) = -\frac{Q_{\mathrm{M}}}{R}\left(\frac{1}{T}-\frac{1}{T_{0}}\right).
+\tag{5}
 \end{equation}
 $$
 
@@ -133,7 +140,7 @@ $$
 
 #### Flüssiges n-Hexan über dem n-Hexan-seitigen Pegel des Hg-Barometers 
 
-Es kann vorkommen, dass sich flüssiges n-Hexan über dem n-Hexan-seitigen Pegel des Hg-Barometers (BR in **Abbildung 1**) niederschlägt, was zu einer Verfälschung der Messung führen kann. 
+⚠️ Es kann vorkommen, dass sich flüssiges n-Hexan über dem n-Hexan-seitigen Pegel des Hg-Barometers (BR in **Abbildung 1**) niederschlägt, was zu einer Verfälschung der Messung führen kann, weil sich dieses n-Hexan nicht in W befindet. 
 
 Sie können den Niederschlag leicht entfernen, indem Sie BR, z.B. mit Hilfe eines Föhns erwärmen und gleichzeitig K abkühlen. Sie können einen entsprechenden Föhn bei den Technikern erhalten. 
 
@@ -141,10 +148,11 @@ Sie können den Niederschlag leicht entfernen, indem Sie BR, z.B. mit Hilfe eine
 
 ⚠️ Ungleich schwieriger zu korrigieren ist der Fall, wenn sich flüssiges n-Hexan auf dem Hg-Pegel in V (BL in **Abbildung 1**) niedergeschlagen hat. In diesem Fall müsste das n-Hexan durch die komplette Hg-Säule nach K zurückgeführt werden. 
 
-In diesem Fall müssen Sie in Gleichung **(4)** den Dampfdruck von Hg in V durch den Dampfdruck von n-Hexan bei $T_{0}$ ($p_{\mathrm{Hex}}(T_{0})$) ersetzen. Gleichung **(5)** wird dadurch wie folgt modifiziert:
+In diesem Fall müssen Sie in Gleichung **(3)** den Dampfdruck von Hg in V durch den Dampfdruck von n-Hexan bei $T_{0}$ ($p_{\mathrm{Hex}}(T_{0})$) ersetzen. Gleichung **(5)** wird dadurch wie folgt modifiziert:
 $$
 \begin{equation}
 \ln\left(1-2\frac{\rho\,g\,\Delta h}{p_{\mathrm{Hex}}(T_{0})}\right) = -\frac{Q_{\mathrm{M}}}{R}\left(\frac{1}{T}-\frac{1}{T_{0}}\right).
+\tag{6}
 \end{equation}
 $$
 Die entsprechenden Daten entnehmen Sie dem [Datenblatt](https://gitlab.kit.edu/kit/etp-lehre/p2-praktikum/students/-/blob/main/Ideales_und_reales_Gas/Datenblatt.md) zum Versuch. 
