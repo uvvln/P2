@@ -68,6 +68,7 @@ geometrisch vorgegeben. Die Phasendifferenz $\Delta\phi$ zwischen S und L nach D
 $$
 \begin{equation}
 \Delta\phi = \frac{2\pi\,d}{\lambda}\left(n_{\mathrm{L}}-n_{\mathrm{S}}\right).
+\tag{1}
 \end{equation}
 $$
 🔔 Für die Parameterwahl aus **Abbildung 2** erhält man $\Delta\phi=\pi/2$, die für **Abbildung 2** gewählten Abmessungen entsprechen also den Abmessungen für ein $\lambda/4$-Plättchen zur Erzeugung zirkularer Polarisation für die Wellenlänge $\lambda$.
@@ -116,7 +117,7 @@ Was wir an dieser Stelle von Ihnen erwarten:
 
 ## Testfragen
 
-1. Welche Polarisation des Lichts erwarten Sie, wenn Sie nach oben in den blauen Himmel sehen? Welche Polarisation erwarten Sie für das rote Licht im Abend- oder Morgenrot?
+1. Welche Polarisation des Lichts erwarten Sie, wenn Sie nach oben in den blauen Himmel sehen? Welche Polarisation erwarten Sie für das rote Licht im Abendrot?
 1. Welche Intensität erwarten Sie für einen zirkular polarisierten Lichtstrahl hinter einem linearen Polarisationsfilter? Welche Polarisation erwarten Sie?
 
 ---

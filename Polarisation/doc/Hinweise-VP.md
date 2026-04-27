@@ -28,6 +28,7 @@ Ein passendes Modell zur Beschreibung des Spannungsverlaufs der PZ ist
 $$
 \begin{equation}
 U(\varphi) = U_{0}+U_{A}\sin(\Omega\,\varphi+\phi_{0}).
+\tag{1}
 \end{equation}
 $$
 Mit $U_{0}$, $U_{A}$, $\Omega$ und $\phi_{0}$ besitzt dieses Modell **vier freie Parameter**.  
@@ -78,6 +79,7 @@ Zusammenfassend ergibt sich die Formel:
 $$
 \begin{equation}
 \Delta n = \frac{\lambda_{0}}{2\pi\,d}\arctan\left(\sqrt{\frac{U_{\mathrm{min}}}{U_{\mathrm{min}}+2\,\Delta U}}\right),
+\tag{2}
 \end{equation}
 $$
 wobei $d$ der Dicke der VP und $\lambda_{0}$ der Wellenlänge des Lichts (im Vakuum) entsprechen. Verwenden Sie geeignete Unsicherheiten für $U_{\mathrm{min}},\  \Delta U,\ d,\ \lambda_{0}$. 
