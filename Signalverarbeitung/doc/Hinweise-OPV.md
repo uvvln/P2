@@ -112,12 +112,14 @@ Der Nicht-invertierende Verstärker verwendet einen Spannungsteiler in der *Feed
 $$
 \begin{equation}
 U_{-} = U_{\mathrm{out}}\,\frac{R_{2}}{R_{1} + R_{2}}
+\tag{1}
 \end{equation}
 $$
 Nach den goldenen Regeln gilt $U_{-} = U_{+} = U_{\mathrm{in}}$. Diese Gleichung lässt sich nach der Ausgangsspannung umstellen:
 $$
 \begin{equation}
 U_{\mathrm{out}} = U_{\mathrm{in}}\,\left(1 + \frac{R_{1}}{R_{2}}\right)
+\tag{2}
 \end{equation}
 $$
 

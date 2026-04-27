@@ -36,6 +36,7 @@ wobei $R_{1}+R_{2}$ dem Gesamtwiderstand der Schaltung entspricht. Nach dem Ohms
 $$
 \begin{equation}
 U_{2} = R_{2}\,I = R_{2}\,\frac{U_{0}}{R_{1}+R_{2}}.
+\tag{1}
 \end{equation}
 $$
 Analoge Rechnung führt auf $U_{1}$.
@@ -48,6 +49,7 @@ Aus dem Verhältnis aus $U_{1}$ und $U_{2}$ lässt sich die beschreibende Gleich
 $$
 \begin{equation}
 \frac{U_{1}}{U_{2}} = \frac{R_{1}}{R_{2}}.
+\tag{2}
 \end{equation}
 $$
 
@@ -129,12 +131,14 @@ gegeben. Daraus lässt sich der Spannungsabfall an $C_{2}$ zu
 $$
 \begin{equation}
 U_{2} = \frac{Q}{C_{2}} = \frac{C\,U_{0}}{C_{2}} = \frac{U_{0}}{C_{2}} \cdot \frac{C_{1}\,C_{2}}{C_{1} + C_{2}} = U_{0} \cdot \frac{C_{1}}{C_{1} + C_{2}}
+\tag{3}
 \end{equation}
 $$
 berechnen. Analoge Rechnung führt auf $U_{1}$. Aus dem Verhältnis von $U_{1}$ zu $U_{2}$ lässt sich die beschreibende Gleichung für den kapazitiven Spannungsteiler ableiten:
 $$
 \begin{equation}
 \frac{U_{1}}{U_{2}} = \frac{C_{2}}{C_{1}}
+\tag{4}
 \end{equation}
 $$
 💡 Im Vergleich zu Gleichung **(2)** liegen hier die Kapazitäten in Zähler und Nenner vertauscht vor, es gilt also: 
@@ -169,6 +173,7 @@ $$
 &\\
 &R_{1}\,C_{1} = R_{2}\,C_{2}.\\
 \end{split}
+\tag{5}
 \end{equation}
 $$
 Durch passend gewählte Lastwiderstände und -kapazitäten lassen sich damit Verzerrungen von $U_{\mathrm{Osz}}$ kontrollieren. 

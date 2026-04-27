@@ -60,6 +60,7 @@ Die Schaltung des Summierverstärkers ist in **Abbildung 4** dargestellt:
 $$
 \begin{equation}
 \frac{V_{1}}{R_{1}} = - \frac{V_{\mathrm{out}}}{R_{f}} \quad\Longrightarrow\quad V_{\mathrm{out}} = - V_{1}\,\frac{R_{f}}{R_{1}}.
+\tag{1}
 \end{equation}
 $$
 
@@ -68,6 +69,7 @@ $$
 \begin{equation}
 \frac{V_{1}}{R_{1}} + \frac{V_{2}}{R_{2}} = - \frac{V_{\mathrm{out}}}{R_{f}} \quad\Longrightarrow\quad 
 V_{\mathrm{out}} = - \left( V_{1}\,\frac{R_{f}}{R_{1}} + V_{2} \,\frac{R_{f}}{R_{2}}\right).
+\tag{2}
 \end{equation}
 $$
 Die Ausgangsspannung setzt sich somit aus der Summe der einzelnen Eingangsspannungen mit ihren jeweiligen Verstärkungsfaktoren zusammen.
