@@ -36,6 +36,7 @@ $$
 0 & 0 & \eta_{33} \\
 \end{array}
 \right),
+\tag{1}
 \end{equation}
 $$
 aus deren Eigenwerten $\eta_{ii}$ sich die **Hauptbrechungsindizes** 
