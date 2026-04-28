@@ -57,7 +57,7 @@ Der Schaltkreis von der Aufnahme des Signals als $U_{e}$ bis zum 40-poligen Brei
 
 <img src="../figures/Ausleseplatine.png" width="600" style="zoom:100%;"/>
 
-(**Abbildung 2**: Platine zur Auslese der Photozelle)
+(**Abbildung 2**: Platine zur Auslese der Photozelle. Abbildung (a) zeigt die Platine noch in rohem Zustand, nach Abschluss der Entwicklungen. Abbildung (b) zeigt die Platine im finalen Gehäuse. Die Anschlüsse sind einzeln identifizierbar)
 
 ---
 
