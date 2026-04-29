@@ -117,7 +117,7 @@ Der Startbildschirm, nachdem Sie das Programm *PhyPi* zur digitalen Auslese der 
 
 ---
 
-<img src="../figures/phypi-fig-002.png" width="600" style="zoom:100%;"/>
+<img src="../figures/phypi-fig-002.png" width="1000" style="zoom:100%;"/>
 
 **Abbildung 4**: (Startbildschirm des Raspberry Pi nach Öffnen des Programms PhyPi zur digitalen Auslese der Daten und Klick auf das Symbol rechts neben der ersten Eingabezeile. Die ausgewählte Konfigurationsdatei `photoeffekt.daq` ist in der Darstellung der Verzeichnisinhalte an vierter Stelle zu sehen)
 
@@ -140,7 +140,7 @@ Schließen Sie die Konfiguration durch **Klicken auf das Symbol `Start Run`** au
 
 ---
 
-<img src="../figures/phypi-fig-003.png" width="600" style="zoom:100%;"/>
+<img src="../figures/phypi-fig-003.png" width="1000" style="zoom:100%;"/>
 
 **Abbildung 5**: (Bildschirm zur Überwachung und Steuerung der Datennahme)
 
@@ -162,7 +162,7 @@ Ein typisches Arbeitsverzeichnis ist in **Abbildung 6** gezeigt:
 
 ---
 
-<img src="../figures/phypi-fig-005.png" width="600" style="zoom:100%;"/>
+<img src="../figures/phypi-fig-005.png" width="1000" style="zoom:100%;"/>
 
 **Abbildung 6**: (Ein typisches Arbeitsverzeichnis und die Struktur einer Datei mit der Endung *.dat*)
 
