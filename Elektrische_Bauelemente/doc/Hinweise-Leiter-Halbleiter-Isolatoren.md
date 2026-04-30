@@ -148,44 +148,44 @@ erwarten, wobei $C$ und $C'$ zu bestimmende Konstanten sind.
 
 #### Stromlose Messung des Widerstands von RTCs und NTCs
 
-Fließt ein Strom $I$ durch einen Widerstand $R$ gibt dieser die Leistung $P_{\mathrm{th}}=R\ I^{2}$ ab, die zur (weiteren) Erwärmung des Widerstands führt. ☝️ Um den Widerstand minimal durch die Messung zu beeinflussen erfolgt diese im Versuch **stromfrei**, mit Hilfe eines Referenzwiderstands ($R_{0}=1.8\ \mathrm{k\Omega}$) und einer [Wheatstoneschen Brückenschaltung](https://de.wikipedia.org/wiki/Wheatstonesche_Messbr%C3%BCcke), wie Sie sie aus dem **P1 Grundversuch [Elektrische Messtechnik](https://gitlab.kit.edu/kit/etp-lehre/p1-praktikum/students/-/blob/main/Elektrische_Messtechnik/doc/Hinweise-Widerstaende.md#wheatstonesche-messbr%C3%BCcke)** kennen. 
+Fließt ein Strom $I$ durch einen Widerstand $R_{X}$ gibt dieser die Leistung $P_{\mathrm{th}}=R_{X}\ I^{2}$ ab, die zur (weiteren) Erwärmung des Widerstands führt. ☝️ Um den Widerstand minimal durch die Messung zu beeinflussen erfolgt diese im Versuch **stromfrei**, mit Hilfe eines Referenzwiderstands ($R_{0}=240\ \mathrm{\Omega}$) und einer [Wheatstoneschen Brückenschaltung](https://de.wikipedia.org/wiki/Wheatstonesche_Messbr%C3%BCcke), wie Sie sie aus dem **P1 Grundversuch [Elektrische Messtechnik](https://gitlab.kit.edu/kit/etp-lehre/p1-praktikum/students/-/blob/main/Elektrische_Messtechnik/doc/Hinweise-Widerstaende.md#wheatstonesche-messbr%C3%BCcke)** kennen. 
 
-Die konkrete Messanordnung, wie sie in einer am Versuch ausliegenden Messbox realisiert ist, ist in **Abbildung 5** gezeigt:  
+Die konkrete Messanordnung, wie sie mit einer am Versuch ausliegenden Messbox realisiert werden kann, ist in **Abbildung 5** gezeigt:  
 
 ---
 
 <img src="../figures/Messanordnung_Widerstand.png" width="600" style="zoom:100%;"/>
 
-(**Abbildung 5**: Eine Wheatstonesche Brückenschaltung zur stromlosen Messung von $R$, wie Sie in einer am Versuch ausliegenden Messbox realisiert ist. $R$ befindet sich in einem Heizofen. Abbildung (a) zeigt ein Ersatzschaltbild der Messbox aus Abbildung (b). Die Klemmen (1)–(5) sind zur besseren Identifikation mit der Messbox im Schaltbild markiert)
+(**Abbildung 5**: Eine Wheatstonesche Brückenschaltung zur stromlosen Messung von $R$, wie Sie in einer am Versuch ausliegenden Messbox realisiert ist. $R_{X}$ befindet sich in einem Heizofen. Abbildung (a) zeigt ein Ersatzschaltbild der Messbox aus Abbildung (b). Die Klemmen (1)–(5) sind zur besseren Identifikation mit der Messbox im Schaltbild markiert)
 
 ---
 
-In **Abbildung 5 (b)** entspricht $R_{V}=240\ \mathrm{\Omega}$ einem Vorwiderstand. Der Widerstand $R_{1}$ entspricht dem Teilwiderstand des Drehpotentiometers, der zwischen den Klemmen (3) und (4) abgegriffen werden kann. Der zu bestimmende Widerstand $R_{X}$ befindet sich im Heizofen. Der Schalter im Bild oben links erlaubt es zusätzlich den Stromfluss während der Einstellung des Potentiometers zu unterbrechen, um den Einfluss der Messung auf die Temperatur von $R_{X}$ noch weiter zu reduzieren. 
+In **Abbildung 5 (b)** entspricht $R_{V}=1.8\ \mathrm{k\Omega}$ einem Vorwiderstand. Der Widerstand $R_{1}$ entspricht dem Teilwiderstand des Drehpotentiometers, der zwischen den Klemmen (3) und (4) abgegriffen werden kann. Der zu bestimmende Widerstand $R_{X}$ befindet sich im Heizofen. Der Schalter im Bild oben links erlaubt es zusätzlich den Stromfluss während der Einstellung des Potentiometers zu unterbrechen, um den Einfluss der Messung auf die Temperatur von $R_{X}$ noch weiter zu reduzieren. Im bestehenden Aufbau wird die Messbrücke durch ein Ampèremeter abgeglichen. 
 
-Für den Fall, dass zwischen den Klemmen (1) und (4) keine Spannung abfällt (d.h. $U_{V}=0$) gilt:
+Für den Fall, dass zwischen den Klemmen (2) und (4) keine Spannung abfällt (d.h. $U_{V}=0,\,I_{A}=0$) gilt:
 $$
 \begin{equation}
 \begin{split}
-&U_{45} = U_{0}\,\frac{R_{\mathrm{pot}}-R_{1}}{R_{\mathrm{pot}}};\qquad
+&U_{43} = U_{0}\,\frac{R_{1}}{R_{\mathrm{pot}}};\qquad
 U_{X} = U_{0}\,\frac{R_{X}+R_{V}}{R_{X}+R_{V}+R_{0}};\qquad \\
 &\\
-&U_{V} = U_{45}-U_{X}\\
+&U_{V} = U_{X}-U_{43}\\
 &\\
-&\vphantom{\frac{R_{x}}{R_{X}+R_{1}}}
-\hphantom{U_{V}}= U_{0}\left(\frac{R_{\mathrm{pot}}-R_{1}}{R_{\mathrm{pot}}}-\frac{R_{X}+R_{V}}{R_{X}+R_{V}+R_{0}}\right)\\
-&\\
-&\hphantom{U_{V}}
-= U_{0}\,\frac{\left(R_{\mathrm{pot}}-R_{1}\right)\,\left(R_{X}+R_{V}+R_{0}\right) - \left(R_{X}+R_{V}\right)\,R_{\mathrm{pot}}}{R_{\mathrm{pot}}\,\left(R_{X}+R_{V}+R_{0}\right)} \\
+&\vphantom{\frac{R_{x}}{R_{X}+R_{1}}}\hphantom{U_{V}}
+= U_{0}\left(\frac{R_{X}+R_{V}}{R_{X}+R_{V}+R_{0}}-\frac{R_{1}}{R_{\mathrm{pot}}}\right)\\
 &\\
 &\hphantom{U_{V}}
-=U_{0}\,\frac{R_{\mathrm{pot}}\,R_{0} - R_{1}\left(R_{X}+R_{V}+R_{0}\right)}{R_{\mathrm{pot}}\,\left(R_{X}+R_{V}+R_{0}\right)}=0; \\
+= U_{0}\,\frac{\left(R_{X}+R_{V}\right)\,R_{\mathrm{pot}}-R_{1}\,\left(R_{X}+R_{V}+R_{0}\right)}{\left(R_{X}+R_{V}+R_{0}\right)\,R_{\mathrm{pot}}} \\
 &\\
-&R_{X} = \frac{R_{\mathrm{pot}}\,R_{0}-R_{1}\,\left(R_{V}+R_{0}\right)}{R_{1}}.\\
+&\hphantom{U_{V}}
+=U_{0}\,\frac{\left(R_{V}+R_{X}\right)\,\left(R_{\mathrm{pot}}-R_{1}\right) - R_{1}\,R_{0}}{\left(R_{X}+R_{V}+R_{0}\right)\,R_{\mathrm{pot}}}=0; \\
+&\\
+&R_{X} = \frac{R_{1}}{R_{\mathrm{pot}}-R_{1}}\,R_{0}-R_{V}.\\
 \end{split}
 \tag{4}
 \end{equation}
 $$
-Dabei sind $R_{0}=1.8\ \mathrm{k\Omega},\ R_{V}=240\ \mathrm{\Omega},\ R_{\mathrm{pot}}=10\ \mathrm{k\Omega}$ vorgegeben. $R_{1}$ kann zwischen den Klemmen (3) und (4) abgegriffen werden. 
+Dabei sind $R_{0}=240\ \mathrm{\Omega},\ R_{V}=1.8\ \mathrm{k\Omega},\ R_{\mathrm{pot}}=10\ \mathrm{k\Omega}$ vorgegeben. $R_{1}$ kann zwischen den Klemmen (3) und (4) abgegriffen werden. 
 
 ⚠️ Für die Messung sollten Sie alle Widerstände mit dem Multimeter nachmessen und als Unsicherheit die Messunsicherheit des Multimeters im entsprechenden Messbereich annehmen. 
 
