@@ -154,7 +154,7 @@ Die konkrete Messanordnung, wie sie mit einer am Versuch ausliegenden Messbox re
 
 ---
 
-<img src="../figures/Messanordnung_Widerstand.png" width="600" style="zoom:100%;"/>
+<img src="../figures/Messanordnung_Widerstand.png" width="800" style="zoom:100%;"/>
 
 (**Abbildung 5**: Eine Wheatstonesche Brückenschaltung zur stromlosen Messung von $R$, wie Sie in einer am Versuch ausliegenden Messbox realisiert ist. $R_{X}$ befindet sich in einem Heizofen. Abbildung (a) zeigt ein Ersatzschaltbild der Messbox aus Abbildung (b). Die Klemmen (1)–(5) sind zur besseren Identifikation mit der Messbox im Schaltbild markiert)
 
