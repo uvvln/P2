@@ -160,7 +160,7 @@ Die konkrete Messanordnung, wie sie mit einer am Versuch ausliegenden Messbox re
 
 ---
 
-In **Abbildung 5 (b)** entspricht $R_{V}=1.8\ \mathrm{k\Omega}$ einem Vorwiderstand. Der Widerstand $R_{1}$ entspricht dem Teilwiderstand des Drehpotentiometers, der zwischen den Klemmen (3) und (4) abgegriffen werden kann. Der zu bestimmende Widerstand $R_{X}$ befindet sich im Heizofen. Der Schalter im Bild oben links erlaubt es zusätzlich den Stromfluss während der Einstellung des Potentiometers zu unterbrechen, um den Einfluss der Messung auf die Temperatur von $R_{X}$ noch weiter zu reduzieren. Im bestehenden Aufbau wird die Messbrücke durch ein Ampèremeter abgeglichen. 
+In **Abbildung 5 (b)** entspricht $R_{V}=1.8\ \mathrm{k\Omega}$ einem Vorwiderstand. Der Widerstand $R_{1}$ entspricht dem Teilwiderstand des Drehpotentiometers, der zwischen den Klemmen (3) und (4) abgegriffen werden kann. Der zu bestimmende Widerstand $R_{X}$ befindet sich im Heizofen. Der Schalter im Bild oben links erlaubt es zusätzlich den Stromfluss während der Einstellung des Potentiometers zu unterbrechen, um den Einfluss der Messung auf die Temperatur von $R_{X}$ noch weiter zu reduzieren. Im bestehenden Aufbau wird die Messbrücke durch ein Ampèremeter zwischen den Klemmen (2) und (4) abgeglichen. 
 
 Für den Fall, dass zwischen den Klemmen (2) und (4) keine Spannung abfällt (d.h. $U_{V}=0,\,I_{A}=0$) gilt:
 $$
