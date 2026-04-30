@@ -68,6 +68,7 @@ Bei diesem Versuch haben Sie mit kleinsten Strömen im $\mathrm{nA}$-Bereich zu 
 - 🚨 Schalten Sie die Hg-Dampflampe für **Aufgabe 2** frühzeitig ein, um einen stabilen Betrieb zu gewährleisten. Die Lampe erreicht ihre volle Intensität erst ${\approx}10\ \mathrm{min}$ nach Inbetriebnahme. Die Lampe muss nach dem Ausschalten einige Zeit abkühlen, bevor sie wieder eingeschaltet werden kann. **Schalten Sie sie daher also nicht aus!**
 - 🚨 Da ein signifikanter Anteil der Emissionslinien von Hg im UV-Bereich liegt sollten Sie vermeiden offen in das Licht der Lampe zu sehen. 
 - 🚨 Beim Messen so geringer Ströme, wie für diesen Versuch ist es essentiell die gesamte Messapparatur auf dem gleichen wohldefinierten elektrischen Potential zu halten, so dass das Elektrometer nicht auf störende Streusignale reagiert. Bei unzureichender Erdung können winzige Umladeströme und Kontaktpotentiale, die bei jeglicher Form von Reibung und oder Berührung auftreten einen störenden Einfluss haben. Das Reiben der Füße auf dem Boden oder elektrostatisch aufgeladene Textilien gehören z.B. zu solchen Einflüssen.
+- 🚨 **Bringen Sie einen USB-Stick mit**, um die Daten vom Raspberry Pi herunterzuladen.
 
 # Inventar des Versuchs
 
